@@ -12,6 +12,8 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+import com.teckarck.constants.FileConstants;
+
 /**
  * 
  */
@@ -47,8 +49,11 @@ public class ExcelUtils {
 //	return userCreds;
 	
 	 cell=row.getCell(cellNum);
+	 
+	 String cellValue=cell.getStringCellValue();
+	 wb.close();
 	
-	return cell.getStringCellValue();
+	return cellValue;
 	
 	
 	
@@ -59,7 +64,10 @@ public class ExcelUtils {
 	public static String[][] readExcelFile(String sheetName) throws InvalidFormatException, IOException {
 		
 		
-		String filePath=System.getProperty("user.dir")+"\\src\\test\\resources\\testData\\LoginTestData.xlsx";
+//		String filePath=System.getProperty("user.dir")+"\\src\\test\\resources\\testData\\LoginTestData.xlsx";
+		
+		String filePath=FileConstants.LOGIN_TEST_DATA_EXCEL_FILE_PATH;
+		
 		
 		wb=new XSSFWorkbook(new File(filePath));
 		
@@ -85,6 +93,8 @@ public class ExcelUtils {
 			
 			System.out.println();
 		}
+		
+		wb.close();
 		
 		return userCreds;
 		

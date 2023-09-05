@@ -33,8 +33,8 @@ public class TC05_ValidateUserMenuDropDown extends BaseTest {
 	@Test
 	void validateUserMenuDropDown() throws InvalidFormatException, IOException {
 		
-		lp=new LoginPage(driver);
-		hp=new HomePage(driver);
+		lp=new LoginPage(getDriver());
+		hp=new HomePage(getDriver());
 		
 		String userName=ExcelUtils.readCellDataFromExcelFile("UserCreds",1,1);
 		String password=ExcelUtils.readCellDataFromExcelFile("UserCreds",1,2);

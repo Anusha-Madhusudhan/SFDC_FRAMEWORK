@@ -23,16 +23,16 @@ public class TC12_EditView extends BaseTest {
 		
 		
 		loginToSalesForceApp();
-		Assert.assertTrue(CommonUtils.waitForTitleOfThePage(driver, TitleConstants.HOME_PAGE_TITLE));
+		Assert.assertTrue(CommonUtils.waitForTitleOfThePage(getDriver(), TitleConstants.HOME_PAGE_TITLE));
 		
-		ap=new AccountsPage(driver);
+		ap=new AccountsPage(getDriver());
 		
 		ap.clickAccountTab();
 		ap.selectViewNameToEdit("LMN");// Need to change the view name before running the test.
 		ap.clickEdit();
-		Assert.assertTrue(CommonUtils.waitForTitleOfThePage(driver, TitleConstants.EDIT_VIEW_PAGE_TITLE));
+		Assert.assertTrue(CommonUtils.waitForTitleOfThePage(getDriver(), TitleConstants.EDIT_VIEW_PAGE_TITLE));
 		
-		Assert.assertTrue(ap.verifyViewNameToBeEditedOnEditPage(driver,"LMN"));
+		Assert.assertTrue(ap.verifyViewNameToBeEditedOnEditPage(getDriver(),"LMN"));
 		
 		ap.enterNewVieName("ABCD_PPPPP");
 		ap.selectField("Account Name");
@@ -41,7 +41,7 @@ public class TC12_EditView extends BaseTest {
 		
 		ap.selectAvailabeFields("Last Activity");
 		ap.clickAddBtn();
-		ap.clickSaveBtn(driver);
+		ap.clickSaveBtn(getDriver());
 		Assert.assertTrue(ap.verifyTheEditedNewViewNameDisplayed("ABCD_PPPPP"));
 		Assert.assertTrue(ap.verifyTheColumnAddedToViewTable("Last Activity"));
 	}

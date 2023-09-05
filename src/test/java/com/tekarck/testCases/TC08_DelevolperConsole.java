@@ -21,7 +21,7 @@ public class TC08_DelevolperConsole extends BaseTest {
 	void userMenuItems() {
 		loginToSalesForceApp();
 
-		hp = new HomePage(driver);
+		hp = new HomePage(getDriver());
 
 		List<String> actualMenuItems = hp.getUserMenuItemList();
 
@@ -62,11 +62,11 @@ public class TC08_DelevolperConsole extends BaseTest {
 	@Test
 	void developerConsole() throws InterruptedException {
 		loginToSalesForceApp();
-		hp = new HomePage(driver);
+		hp = new HomePage(getDriver());
 		hp.clickUserMenu();
-		hp.clickDeveloperCosole(driver);
+		hp.clickDeveloperCosole(getDriver());
 
-		Assert.assertTrue(hp.verifyDeveloperWindowDisolayed(driver));
+		Assert.assertTrue(hp.verifyDeveloperWindowDisolayed(getDriver()));
 
 	}
 

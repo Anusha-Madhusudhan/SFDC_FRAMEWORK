@@ -20,15 +20,15 @@ public class TC11_CreateNewView extends BaseTest {
 	@Test
 	void createNewView() {
 		loginToSalesForceApp();
-		ap=new AccountsPage(driver);
-		Assert.assertTrue(CommonUtils.waitForTitleOfThePage(driver, TitleConstants.HOME_PAGE_TITLE));
+		ap=new AccountsPage(getDriver());
+		Assert.assertTrue(CommonUtils.waitForTitleOfThePage(getDriver(), TitleConstants.HOME_PAGE_TITLE));
 		ap.clickAccountTab();
-	    Assert.assertTrue(ap.verifyAccountPageDisplayed(driver));
-	    ap.clickCreateNewView(driver);
-	    Assert.assertTrue(ap.verifyCreateNewViewPageisDaisplayed(driver));
+	    Assert.assertTrue(ap.verifyAccountPageDisplayed(getDriver()));
+	    ap.clickCreateNewView(getDriver());
+	    Assert.assertTrue(ap.verifyCreateNewViewPageisDaisplayed(getDriver()));
 	    ap.enterViewName("ABCDEF");
 	    ap.enterViewUniqueName("ABCDEFQA");
-	    ap.clickSaveBtn(driver);
+	    ap.clickSaveBtn(getDriver());
 	    Assert.assertTrue(ap.verifyNewViewCreatedAndDisplyed("ABCDEF"));
 	    
 	    

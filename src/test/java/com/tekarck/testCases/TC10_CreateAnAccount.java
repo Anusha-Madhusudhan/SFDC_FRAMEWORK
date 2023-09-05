@@ -19,16 +19,16 @@ public class TC10_CreateAnAccount extends BaseTest {
 	void createNewaccount() {
 		
 		loginToSalesForceApp();
-		ap=new AccountsPage(driver);
+		ap=new AccountsPage(getDriver());
 		ap.clickAccountTab();
-		Assert.assertTrue(ap.verifyAccountPageDisplayed(driver));
-		ap.clickNewBtn(driver);
-		Assert.assertTrue(ap.verifyAccountEditPageDisplayed(driver));;
+		Assert.assertTrue(ap.verifyAccountPageDisplayed(getDriver()));
+		ap.clickNewBtn(getDriver());
+		Assert.assertTrue(ap.verifyAccountEditPageDisplayed(getDriver()));;
 		ap.enterAccountName("QQQQQQQPP");
 		ap.selectType("Technology Partner");
 		ap.selectCustomerPriority("High");
-		ap.clickSaveBtn(driver);
-		Assert.assertTrue(ap.verifyAccountIsCreatd(driver,"QQQQQQQPP"));
+		ap.clickSaveBtn(getDriver());
+		Assert.assertTrue(ap.verifyAccountIsCreatd(getDriver(),"QQQQQQQPP"));
 		
 		
 	}

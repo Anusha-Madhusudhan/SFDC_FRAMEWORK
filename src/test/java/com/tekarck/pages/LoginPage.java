@@ -6,6 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
+import com.tekarch.utils.CommonUtils;
+
 public class LoginPage {
 	
 	public LoginPage(WebDriver driver) {
@@ -59,11 +61,15 @@ public class LoginPage {
 	
 
 	
-	public String getSavedUserName() {
+	public String getSavedUserName(WebDriver driver,String sExpectedText) {
 		
-		String savedUserName;
-		if(this.savedUsername.isDisplayed()) {
-			savedUserName=this.savedUsername.getText();
+		String savedUserName = null;
+//		if(this.savedUsername.isDisplayed()) {
+		if(CommonUtils.waitForElementToVisible(driver, savedUsername)) {
+			if(CommonUtils.waitForText(driver, savedUsername, sExpectedText)) {
+				savedUserName=this.savedUsername.getText();
+			}
+			
 		}
 		else {
 			savedUserName=null;
@@ -170,17 +176,24 @@ public class LoginPage {
 		
 	}
 
-	public String getErrorMsg() {
+	public boolean isErrorMsgDisaplyed(WebDriver driver, String expectedErrorMsg) {
 		
-		String errorMsg;
-		if(this.errorMsg.isDisplayed()) {
-			errorMsg= this.errorMsg.getText();
+		boolean isErrorMessageMatched=false;
+//		if(this.errorMsg.isDisplayed()) {
+		if(CommonUtils.waitForElementToVisible(driver, errorMsg)) {
+			if(CommonUtils.waitForText(driver, errorMsg, expectedErrorMsg)) {
+				isErrorMessageMatched=true;
+			}
+			else {
+				isErrorMessageMatched=false;
+			}
+
 		}
 		else {
-			errorMsg= null;
+			System.out.println("Error message not displayed");
 		}
 		
-		return errorMsg;
+		return isErrorMessageMatched;
 	}
 
 	
@@ -196,6 +209,20 @@ public class LoginPage {
 			System.out.println("continue btn is not displayed");
 		}
 		
+	}
+
+
+	public String getErrorMsg() {
+		String errorMessage;
+		if(errorMsg.isDisplayed()) {
+			errorMessage=errorMsg.getText();
+			
+		}
+		else {
+			errorMessage=null;
+			System.out.println("Error message not displayed");
+		}
+		return errorMessage;
 	}
 	
 	

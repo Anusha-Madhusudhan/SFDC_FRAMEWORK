@@ -19,12 +19,12 @@ public class TC09_Logout extends BaseTest{
 	@Test
 	void logout() {
 		loginToSalesForceApp();
-		hp=new HomePage(driver);
+		hp=new HomePage(getDriver());
 		
 		hp.clickUserMenu();
 		hp.clickLogOut();
 		
-		Assert.assertTrue(CommonUtils.waitForTitleOfThePage(driver, "Login | Salesforce"));
+		Assert.assertTrue(CommonUtils.waitForTitleOfThePage(getDriver(), "Login | Salesforce"));
 	}
 	
 	

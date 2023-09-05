@@ -30,10 +30,14 @@ public class MyProfilePage extends BasePage {
  
 //	@FindBy(xpath="(//h3//div[@class='vfButtonBarButton']//div//a)[1]")
    
-   @FindBy(xpath = "//div[@class='editPen']//a")
+   @FindBy(xpath = "//a[@class='contactInfoLaunch editLink']")
    private WebElement editProfile;
 	
 //	private String editProfileFrame="contactInfoContentId";
+   
+   
+   @FindBy(id = "profileTab_sfdc.ProfilePlatformFeed")
+   WebElement profilePage;
 	
 	@FindBy(id="contactInfoContentId")
 	private WebElement editProfileFrame;
@@ -350,6 +354,20 @@ public class MyProfilePage extends BasePage {
 		}
 		
 		return isFileUploaded;
+	}
+
+	public boolean isMyProfilePageIsVisible() {
+		boolean isMyProfilePageIsVisible=false;
+		
+		if(profilePage.isDisplayed()) {
+			isMyProfilePageIsVisible=true;
+		}
+		return isMyProfilePageIsVisible;
+	}
+
+	public WebElement getProfilePage() {
+		
+		return profilePage;
 	}
 
 	

@@ -34,7 +34,7 @@ public class TC06_MyProfile extends BaseTest {
 	@Test
 	void editMyProfile() throws InterruptedException {
 		
-		hp=new HomePage(driver);
+		hp=new HomePage(getDriver());
 		
 		
 		loginToSalesForceApp();
@@ -43,19 +43,23 @@ public class TC06_MyProfile extends BaseTest {
 		
 		hp.clickMyProfile();
 		
-		Thread.sleep(2000);
+
 		
-		myProfilePage=new MyProfilePage(driver);
+		myProfilePage=new MyProfilePage(getDriver());
 		
-		Assert.assertTrue(myProfilePage.clickEditMyProfile(driver));
+		CommonUtils.waitForElement(getDriver(), myProfilePage.getProfilePage());
 		
-		myProfilePage.switchFrame(driver);
+		Assert.assertTrue(myProfilePage.isMyProfilePageIsVisible());
+		
+		Assert.assertTrue(myProfilePage.clickEditMyProfile(getDriver()));
+		
+		myProfilePage.switchFrame(getDriver());
 		
 		myProfilePage.clickAboutTab();
 		
 		myProfilePage.setLastName("XXXX");
 		
-		myProfilePage.clickSaveAll(driver);
+		myProfilePage.clickSaveAll(getDriver());
 		
 		Assert.assertTrue(myProfilePage.verifyEditedLastName("XXXX"));
 		
@@ -77,17 +81,17 @@ public class TC06_MyProfile extends BaseTest {
 		
 		myProfilePage.clickPost();
 		
-		myProfilePage.switchToPostFrame(driver);
+		myProfilePage.switchToPostFrame(getDriver());
 		
 		myProfilePage.setpostText("Hello welcome to java");
 		
-		driver.switchTo().defaultContent();
+		getDriver().switchTo().defaultContent();
 		
 		myProfilePage.clickShare();
 		
 		
 		
-		Assert.assertTrue(myProfilePage.verifyPostText(driver,"Hello welcome to java"));
+		Assert.assertTrue(myProfilePage.verifyPostText(getDriver(),"Hello welcome to java"));
 		
 		
 		
@@ -102,12 +106,12 @@ public class TC06_MyProfile extends BaseTest {
 	void uploadFile(){
 		
 		myProfilePage.clickFile();
-		myProfilePage.clickUpLoadFile(driver);
+		myProfilePage.clickUpLoadFile(getDriver());
 		String filePath=System.getProperty("user.dir")+"\\src\\test\\resources\\testData\\LoginTestData.xlsx";
 		myProfilePage.sendFile(filePath);
 		myProfilePage.clickShare();
 		
-		Assert.assertTrue(myProfilePage.verifyUploadedFileName(driver,"LoginTestData"));
+		Assert.assertTrue(myProfilePage.verifyUploadedFileName(getDriver(),"LoginTestData"));
 		
 	}
 	
@@ -118,15 +122,15 @@ public class TC06_MyProfile extends BaseTest {
 	@Test(dependsOnMethods = "uploadFile")
 	void addPhoto(){
 		
-		myProfilePage.clickUploadPhoto(driver);
-		myProfilePage.switchtoUploadPhotoIFrameID(driver);
+		myProfilePage.clickUploadPhoto(getDriver());
+		myProfilePage.switchtoUploadPhotoIFrameID(getDriver());
 		myProfilePage.sendphoto("C:\\Users\\anush\\OneDrive\\Desktop\\TekArch\\Dummy files\\th.jpg");
 		
 		myProfilePage.clickSaveBtn();
 		
-		driver.findElement(By.xpath("//input[@id='j_id0:j_id7:save']")).click();
+		getDriver().findElement(By.xpath("//input[@id='j_id0:j_id7:save']")).click();
 		
-		driver.switchTo().defaultContent();
+		getDriver().switchTo().defaultContent();
 		
 		
 	}

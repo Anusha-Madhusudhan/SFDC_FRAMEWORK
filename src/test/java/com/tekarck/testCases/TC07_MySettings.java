@@ -21,7 +21,7 @@ public class TC07_MySettings extends BaseTest {
 	
 	@Test
 	void mySetting() {
-		hp=new HomePage(driver);
+		hp=new HomePage(getDriver());
 		
 		loginToSalesForceApp();
 		
@@ -30,14 +30,14 @@ public class TC07_MySettings extends BaseTest {
 		
 		String expectedText="My Settings";
 		
-		String actualText=driver.findElement(By.xpath("//span[@class='folderText']")).getText();
+		String actualText=getDriver().findElement(By.xpath("//span[@class='folderText']")).getText();
 		
 		Assert.assertEquals(actualText, expectedText);
 		
 	}
 	@Test(dependsOnMethods ="mySetting" )
 	void personalLink() {
-		mySettingPage=new MySettingPage(driver);
+		mySettingPage=new MySettingPage(getDriver());
 		mySettingPage.clickPersonalLink();
 		mySettingPage.clickLoginHistory();
 		Assert.assertTrue(mySettingPage.clickDownloadLogin());
@@ -55,7 +55,7 @@ public class TC07_MySettings extends BaseTest {
 	
 	@Test(dependsOnMethods ="mySetting" )
 	void displayAndLayout() {
-		mySettingPage=new MySettingPage(driver);
+		mySettingPage=new MySettingPage(getDriver());
 		mySettingPage.clickDispalyAndLayoutLink();
 		mySettingPage.clickCustomizeTabs();
 		mySettingPage.selectSalesForceChatter("Salesforce Chatter");
@@ -80,7 +80,7 @@ public class TC07_MySettings extends BaseTest {
 	
 	@Test(dependsOnMethods ="mySetting" )
 	void email() {
-		mySettingPage=new MySettingPage(driver);
+		mySettingPage=new MySettingPage(getDriver());
 		
 		mySettingPage.clickEmail();
 		mySettingPage.clickEmailSettings();
@@ -91,11 +91,11 @@ public class TC07_MySettings extends BaseTest {
 		
 		
 		
-		Assert.assertTrue(mySettingPage.verifyEmailUpdation(driver));
+		Assert.assertTrue(mySettingPage.verifyEmailUpdation(getDriver()));
 		
 		String expectedTitle="My Email Settings ~ Salesforce - Developer Edition";
 		
-		Assert.assertTrue(CommonUtils.waitForTitleOfThePage(driver, expectedTitle));
+		Assert.assertTrue(CommonUtils.waitForTitleOfThePage(getDriver(), expectedTitle));
 		
 	}
 	
@@ -107,10 +107,10 @@ public class TC07_MySettings extends BaseTest {
 	
 	@Test(dependsOnMethods ="mySetting" )
 	void calenderAndReminders() throws InterruptedException {
-		mySettingPage=new MySettingPage(driver);
+		mySettingPage=new MySettingPage(getDriver());
 		mySettingPage.clickCalenderAndRamainder();
 		mySettingPage.clickActivityRemainder();
-        mySettingPage.clickOpenTestRemainder(driver);
-		Assert.assertTrue(mySettingPage.verifyThePopUpWindow(driver));
+        mySettingPage.clickOpenTestRemainder(getDriver());
+		Assert.assertTrue(mySettingPage.verifyThePopUpWindow(getDriver()));
 	}
 }

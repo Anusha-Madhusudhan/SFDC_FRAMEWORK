@@ -3,18 +3,49 @@
  */
 package com.tekarch.utils;
 
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.teckarck.constants.WaitCostants;
+import com.tekarck.testCases.BaseTest;
 
 /**
  * 
  */
 public class CommonUtils {
 	
+	
+	public static String getScreenShot(String sTestName) throws IOException {
+		  
+//		  String screenShotPath=FileConstants.SCREENSHOT_FILE_PATH;
+		  
+		   String screenShotPath=System.getProperty("user.dir")+"\\src\\test\\resources\\screenshots\\"+getTimeStamp()+sTestName+"ScreenShot.png";
+		  
+		  TakesScreenshot ts=(TakesScreenshot) BaseTest.getDriver();
+		  File src= ts.getScreenshotAs(OutputType.FILE);
+		 
+		  File destn=new File(screenShotPath);
+		  
+		  org.apache.commons.io.FileUtils.copyFile(src, destn);
+		 
+		  return screenShotPath;
+	  }
+	
+	
+  public static String getTimeStamp() {
+		
+		String timeStamp=new SimpleDateFormat("yyyy-MM-dd-hh-mm-ss").format(new Date());
+		return timeStamp;
+	}
 	
 	public static boolean waitForElement(WebDriver driver, WebElement element) {
 		boolean isElementClickable = false;
@@ -23,7 +54,7 @@ public class CommonUtils {
 			wait.until(ExpectedConditions.elementToBeClickable(element));
 			isElementClickable = true;
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println(e.getMessage());
 		}
 		return isElementClickable;
 	}
@@ -36,7 +67,7 @@ public class CommonUtils {
 			isAllWindowsOpened =wait.until(ExpectedConditions.numberOfWindowsToBe(iNumberOfWindows));
 			
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println(e.getMessage());
 		}
 		return isAllWindowsOpened;
 	}
@@ -50,7 +81,7 @@ public class CommonUtils {
 			wait.until(ExpectedConditions.textToBePresentInElement(element,text));
 			isTextPresent = true;
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println(e.getMessage());
 		}
 		return isTextPresent;
 	}
@@ -58,12 +89,12 @@ public class CommonUtils {
 	
 	public static boolean waitForTitleOfThePage(WebDriver driver,String title) {
 		boolean isTitlePresent = false;
-		WebDriverWait wait = new WebDriverWait(driver, WaitCostants.WAIT_FOR_ELEMENT);
+		WebDriverWait wait = new WebDriverWait(driver, WaitCostants.WAIT_FOR_TITLE_OF_THE_PAGE);
 		try {
 			isTitlePresent =wait.until(ExpectedConditions.titleIs(title));
 			
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println(e.getMessage());
 		}
 		return isTitlePresent;
 	}
@@ -75,7 +106,7 @@ public class CommonUtils {
 			wait.until(ExpectedConditions.visibilityOf(element));
 			isElementVisible = true;
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println(e.getMessage());
 		}
 		return isElementVisible;
 	}

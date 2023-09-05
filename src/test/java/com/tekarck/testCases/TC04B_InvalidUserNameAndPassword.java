@@ -27,7 +27,7 @@ public class TC04B_InvalidUserNameAndPassword extends BaseTest {
 	
 	@Test
 	void loginToAppWithInvalidCreds() throws InvalidFormatException, IOException {
-		lp=new LoginPage(driver);
+		lp=new LoginPage(getDriver());
 		
 		lp.setUserName(ExcelUtils.readCellDataFromExcelFile("UserCreds",4, 1));
 		
