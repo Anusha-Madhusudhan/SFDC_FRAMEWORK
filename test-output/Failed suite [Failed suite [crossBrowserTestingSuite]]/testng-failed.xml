@@ -24,17 +24,10 @@
       <class name="com.tekarck.testCases.TC02_ValidLoginToSalesForce">
         <methods>
           <include name="setUp"/>
-          <include name="tearDown"/>
           <include name="loginToSalesForceAppUsingDataProviders" invocation-numbers="1 2 3"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- com.tekarck.testCases.TC02_ValidLoginToSalesForce -->
-      <class name="com.tekarck.testCases.TC01_LoginErrorMessage">
-        <methods>
-          <include name="validateLoginToTheApplnWithBlankPassword" invocation-numbers="0"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.tekarck.testCases.TC01_LoginErrorMessage -->
     </classes>
   </test> <!-- EDGE(failed)(failed)(failed) -->
   <test thread-count="5" name="FIREFOX(failed)(failed)(failed)">
@@ -44,17 +37,10 @@
       <class name="com.tekarck.testCases.TC02_ValidLoginToSalesForce">
         <methods>
           <include name="setUp"/>
-          <include name="loginToSalesForceAppUsingDataProviders" invocation-numbers="1 2 3"/>
           <include name="tearDown"/>
+          <include name="loginToSalesForceAppUsingDataProviders" invocation-numbers="1 2 3"/>
         </methods>
       </class> <!-- com.tekarck.testCases.TC02_ValidLoginToSalesForce -->
-      <class name="com.tekarck.testCases.TC03_CheckRememberMe">
-        <methods>
-          <include name="loginAndCheckRememberMe"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.tekarck.testCases.TC03_CheckRememberMe -->
     </classes>
   </test> <!-- FIREFOX(failed)(failed)(failed) -->
 </suite> <!-- Failed suite [Failed suite [Failed suite [crossBrowserTestingSuite]]] -->

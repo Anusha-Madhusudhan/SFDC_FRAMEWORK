@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.tekarck.testCases.TC02_ValidLoginToSalesForce">
+      <class name="com.tekarck.testCases.TC01_LoginErrorMessage">
         <methods>
-          <include name="launchApp"/>
-          <include name="setDriver"/>
-          <include name="closeDriver"/>
-          <include name="loginToSalesForceAppUsingDataProviders"/>
+          <include name="validateLoginToTheApplnWithBlankPassword" invocation-numbers="0"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.tekarck.testCases.TC02_ValidLoginToSalesForce -->
+      </class> <!-- com.tekarck.testCases.TC01_LoginErrorMessage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

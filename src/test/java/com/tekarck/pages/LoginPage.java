@@ -212,9 +212,10 @@ public class LoginPage {
 	}
 
 
-	public String getErrorMsg() {
+	public String getErrorMsg(WebDriver driver) {
 		String errorMessage;
-		if(errorMsg.isDisplayed()) {
+//		if(errorMsg.isDisplayed()) {
+		if(CommonUtils.waitForElementToVisible(driver, errorMsg)) {
 			errorMessage=errorMsg.getText();
 			
 		}

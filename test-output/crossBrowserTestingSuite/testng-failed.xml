@@ -5,6 +5,7 @@
     <listener class-name="com.tekarch.listeners.SFDC_Listener"/>
   </listeners>
   <test thread-count="5" name="CHROME(failed)">
+    <parameter name="isHeadless" value="true"/>
     <parameter name="browser" value="chrome"/>
     <parameter name="URL" value="https://login.salesforce.com/"/>
     <classes>
@@ -18,6 +19,7 @@
     </classes>
   </test> <!-- CHROME(failed) -->
   <test thread-count="5" name="EDGE(failed)">
+    <parameter name="isHeadless" value="true"/>
     <parameter name="browser" value="edge"/>
     <parameter name="URL" value="https://login.salesforce.com/"/>
     <classes>
@@ -31,16 +33,10 @@
     </classes>
   </test> <!-- EDGE(failed) -->
   <test thread-count="5" name="FIREFOX(failed)">
+    <parameter name="isHeadless" value="true"/>
     <parameter name="browser" value="firefox"/>
     <parameter name="URL" value="https://login.salesforce.com/"/>
     <classes>
-      <class name="com.tekarck.testCases.TC03_CheckRememberMe">
-        <methods>
-          <include name="loginAndCheckRememberMe"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.tekarck.testCases.TC03_CheckRememberMe -->
       <class name="com.tekarck.testCases.TC02_ValidLoginToSalesForce">
         <methods>
           <include name="setUp"/>

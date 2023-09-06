@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Failed suite [crossBrowserTestingSuite]]" guice-stage="DEVELOPMENT">
+<suite name="Failed suite [crossBrowserTestingSuite]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="com.tekarch.listeners.SFDC_Listener"/>
   </listeners>
-  <test thread-count="5" name="CHROME(failed)(failed)">
+  <test thread-count="5" name="CHROME(failed)">
+    <parameter name="isHeadless" value="true"/>
     <parameter name="browser" value="chrome"/>
     <parameter name="URL" value="https://login.salesforce.com/"/>
     <classes>
       <class name="com.tekarck.testCases.TC02_ValidLoginToSalesForce">
         <methods>
           <include name="setUp"/>
-          <include name="tearDown"/>
           <include name="loginToSalesForceAppUsingDataProviders" invocation-numbers="1 2 3"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- com.tekarck.testCases.TC02_ValidLoginToSalesForce -->
     </classes>
-  </test> <!-- CHROME(failed)(failed) -->
-  <test thread-count="5" name="EDGE(failed)(failed)">
+  </test> <!-- CHROME(failed) -->
+  <test thread-count="5" name="EDGE(failed)">
+    <parameter name="isHeadless" value="true"/>
     <parameter name="browser" value="edge"/>
     <parameter name="URL" value="https://login.salesforce.com/"/>
     <classes>
@@ -29,18 +31,19 @@
         </methods>
       </class> <!-- com.tekarck.testCases.TC02_ValidLoginToSalesForce -->
     </classes>
-  </test> <!-- EDGE(failed)(failed) -->
-  <test thread-count="5" name="FIREFOX(failed)(failed)">
+  </test> <!-- EDGE(failed) -->
+  <test thread-count="5" name="FIREFOX(failed)">
+    <parameter name="isHeadless" value="true"/>
     <parameter name="browser" value="firefox"/>
     <parameter name="URL" value="https://login.salesforce.com/"/>
     <classes>
       <class name="com.tekarck.testCases.TC02_ValidLoginToSalesForce">
         <methods>
           <include name="setUp"/>
-          <include name="tearDown"/>
           <include name="loginToSalesForceAppUsingDataProviders" invocation-numbers="1 2 3"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- com.tekarck.testCases.TC02_ValidLoginToSalesForce -->
     </classes>
-  </test> <!-- FIREFOX(failed)(failed) -->
-</suite> <!-- Failed suite [Failed suite [crossBrowserTestingSuite]] -->
+  </test> <!-- FIREFOX(failed) -->
+</suite> <!-- Failed suite [crossBrowserTestingSuite] -->

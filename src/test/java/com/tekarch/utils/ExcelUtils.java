@@ -28,7 +28,7 @@ public class ExcelUtils {
 	
 	public static String readCellDataFromExcelFile(String sheetName,int rowNum,int cellNum) throws InvalidFormatException, IOException {
 		
-	String filePath=System.getProperty("user.dir")+"\\src\\test\\resources\\testData\\LoginTestData.xlsx";
+	String filePath=FileConstants.LOGIN_TEST_DATA_EXCEL_FILE_PATH;
 	
 	 wb=new XSSFWorkbook(new File(filePath));
 	 sheet=wb.getSheet(sheetName);

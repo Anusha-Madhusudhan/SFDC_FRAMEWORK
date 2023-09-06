@@ -4,14 +4,19 @@
 <listeners>
 	<listener class-name="com.tekarch.listeners.SFDC_Listener"></listener>
 </listeners>
-	  <test name="CHROME">
+	  <test name="CHROME" >
 		<parameter name="browser" value="chrome"></parameter>
 	    <parameter name="URL" value="https://login.salesforce.com/"></parameter>
+	    <parameter name="isHeadless" value="true"></parameter>
+	    
 		<classes>
 			<!--<class name="com.tekarck.testCases.BaseTest"></class>-->
 			<class name="com.tekarck.testCases.TC01_LoginErrorMessage"></class>
 			<class name="com.tekarck.testCases.TC02_ValidLoginToSalesForce"></class>
 			<class name="com.tekarck.testCases.TC03_CheckRememberMe"></class>
+			<class name="com.tekarck.testCases.TC04A_TestForgotPassword"></class>
+			<class name="com.tekarck.testCases.TC04B_InvalidUserNameAndPassword"></class>
+			<class name="com.tekarck.testCases.TC05_ValidateUserMenuDropDown"></class>
 		</classes>
 	</test> 
 	
@@ -19,11 +24,15 @@
 	 <test name="EDGE" >
 		<parameter name="browser" value="edge"></parameter>
 	    <parameter name="URL" value="https://login.salesforce.com/"></parameter>
+	     <parameter name="isHeadless" value="true"></parameter>
 		<classes>
 		<!--	<class name="com.tekarck.testCases.BaseTest"></class>-->
 			<class name="com.tekarck.testCases.TC01_LoginErrorMessage"></class>
 			<class name="com.tekarck.testCases.TC02_ValidLoginToSalesForce"></class>
 			<class name="com.tekarck.testCases.TC03_CheckRememberMe"></class>
+			<class name="com.tekarck.testCases.TC04A_TestForgotPassword"></class>
+			<class name="com.tekarck.testCases.TC04B_InvalidUserNameAndPassword"></class>
+			<class name="com.tekarck.testCases.TC05_ValidateUserMenuDropDown"></class>
 		</classes>
 	</test>
 	
@@ -31,11 +40,15 @@
 	<test name="FIREFOX" >
 		<parameter name="browser" value="firefox"></parameter>
 	    <parameter name="URL" value="https://login.salesforce.com/"></parameter>
+	     <parameter name="isHeadless" value="true"></parameter>
 		<classes>
 		<!--	<class name="com.tekarck.testCases.BaseTest"></class>-->
 			<class name="com.tekarck.testCases.TC01_LoginErrorMessage"></class>
 			<class name="com.tekarck.testCases.TC02_ValidLoginToSalesForce"></class>
 			<class name="com.tekarck.testCases.TC03_CheckRememberMe"></class>
+			<class name="com.tekarck.testCases.TC04A_TestForgotPassword"></class>
+			<class name="com.tekarck.testCases.TC04B_InvalidUserNameAndPassword"></class>
+			<class name="com.tekarck.testCases.TC05_ValidateUserMenuDropDown"></class>
 		</classes>
 	</test>
 	
