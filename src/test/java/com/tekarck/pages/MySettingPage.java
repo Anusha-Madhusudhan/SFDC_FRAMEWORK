@@ -322,7 +322,7 @@ public class MySettingPage extends BasePage {
 	public void clickOpenTestRemainder(WebDriver driver) {
 		if(tsetReminderBtn.isDisplayed()) {
 			
-			if(CommonUtils.waitForElement(driver, tsetReminderBtn)) {
+			if(CommonUtils.waitForElementClickable(driver, tsetReminderBtn)) {
 //				JavascriptExecutor js=(JavascriptExecutor) driver;
 //				js.executeScript("arguments[0].click();", tsetReminderBtn);
 				tsetReminderBtn.sendKeys(Keys.ENTER);

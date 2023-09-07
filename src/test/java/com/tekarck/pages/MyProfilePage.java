@@ -148,7 +148,7 @@ public class MyProfilePage extends BasePage {
 	public void clickUpLoadFile(WebDriver driver) {
 		if(upLoadFile.isDisplayed()) {
 			
-			if(CommonUtils.waitForElement(driver, upLoadFile)) {
+			if(CommonUtils.waitForElementClickable(driver, upLoadFile)) {
 				
 				JavascriptExecutor js=(JavascriptExecutor) driver;
 				js.executeScript("arguments[0].click();", upLoadFile);
@@ -218,7 +218,7 @@ public class MyProfilePage extends BasePage {
 		
 		if(editProfile.isDisplayed()) {
 			
-		if(CommonUtils.waitForElement(driver, editProfile)) {
+		if(CommonUtils.waitForElementClickable(driver, editProfile)) {
 			
 //			JavascriptExecutor js=(JavascriptExecutor) driver;
 //			js.executeScript("arguments[0].click();", editProfile);

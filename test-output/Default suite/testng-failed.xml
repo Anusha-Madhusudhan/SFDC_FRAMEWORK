@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.tekarck.testCases.TC01_LoginErrorMessage">
+      <class name="com.tekarck.testCases.TC19_TestQuarterlySummaryReport">
         <methods>
-          <include name="validateLoginToTheApplnWithBlankPassword" invocation-numbers="0"/>
+          <include name="verifyStucOpportunitiesReport"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.tekarck.testCases.TC01_LoginErrorMessage -->
+      </class> <!-- com.tekarck.testCases.TC19_TestQuarterlySummaryReport -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

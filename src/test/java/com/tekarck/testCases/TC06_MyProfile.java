@@ -48,7 +48,7 @@ public class TC06_MyProfile extends BaseTest {
 		
 		myProfilePage=new MyProfilePage(getDriver());
 		
-		CommonUtils.waitForElement(getDriver(), myProfilePage.getProfilePage());
+		CommonUtils.waitForElementClickable(getDriver(), myProfilePage.getProfilePage());
 		
 		Assert.assertTrue(myProfilePage.isMyProfilePageIsVisible());
 		

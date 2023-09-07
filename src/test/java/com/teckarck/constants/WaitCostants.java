@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 package com.teckarck.constants;
 
 import java.time.Duration;

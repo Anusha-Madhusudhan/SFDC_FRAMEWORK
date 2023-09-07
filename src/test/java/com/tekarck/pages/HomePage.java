@@ -94,7 +94,7 @@ public class HomePage extends BasePage {
 
 	public void clickDeveloperCosole(WebDriver driver) {
 		if(developerCosole.isDisplayed()) {
-			if(CommonUtils.waitForElement(driver, developerCosole)) {
+			if(CommonUtils.waitForElementClickable(driver, developerCosole)) {
 				developerCosole.click();
 			}
 		}

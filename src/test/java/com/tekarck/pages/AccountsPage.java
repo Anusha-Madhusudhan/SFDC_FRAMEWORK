@@ -3,10 +3,16 @@
  */
 package com.tekarck.pages;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Pattern;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
@@ -66,7 +72,7 @@ public class AccountsPage extends BasePage {
     @FindBy(id = "fcf")
     WebElement viewDropDown;
     
-    @FindBy(xpath = "//div[@class='bFilterView']//a[1]")
+    @FindBy(xpath = "//div[@class='filterLinks']//a[1]")
     private WebElement editView;
     
     @FindBy(css = "#fcol1")
@@ -81,12 +87,61 @@ public class AccountsPage extends BasePage {
     @FindBy(css = "#colselector_select_0")
 	private WebElement availableFields;
     
+    @FindBy(css = "#colselector_select_1")
+	private WebElement selectedFields;
+    
+    @FindBy(css = "#ext-gen20")
+   	private WebElement selectDateField;
+    
+    @FindBy(xpath = "//div[@class='x-combo-list-inner']//div[text()='Created Date']")
+    private WebElement createDate;
+       
     @FindBy(xpath = "(//div[@class='zen-mbs text']//a)[1]")
     private WebElement addBtn;
     
     @FindBy(xpath = "//div[@class='x-grid3-header-offset']//table//thead//tr//td//div")
     private List<WebElement> viewColumnNames;
     
+    @FindBy(xpath = "//table[@class='x-grid3-row-table']//tbody//tr//td[4]//div//a//span")
+    private List<WebElement> accNameList;
+    
+    @FindBy(xpath = "//div[@class='lbBody']//ul//li//a[contains(text(),'activity')]")
+    private WebElement lastActivity;
+    
+    @FindBy(xpath = "(//img[@class='x-form-trigger x-form-date-trigger'])[1]")
+    private WebElement fromDateImg;
+    
+    @FindBy(xpath = "(//img[@class='x-form-trigger x-form-date-trigger'])[2]")
+    private WebElement toDateImg;
+    
+    @FindBy(xpath = "(//div[@class='x-date-picker x-unselectable']//td//em//button[text()='Today'])[1]")
+    private WebElement fromToday;
+    
+    @FindBy(xpath = "(//div[@class='x-date-picker x-unselectable']//td//em//button[text()='Today'])[2]")
+    private WebElement toToday;
+  
+    @FindBy(xpath = "//div[text()='Loading...']")
+    private WebElement loading;
+    
+    @FindBy(xpath = "//button[@id='ext-gen49']")
+    private WebElement reportSaveBtn;
+    
+    @FindBy(xpath = "//input[@id='saveReportDlg_reportNameField']")
+    private WebElement reportName;
+    
+    @FindBy(xpath = "//input[@id='saveReportDlg_DeveloperName']")
+    private WebElement reportUniqueName;
+    
+    @FindBy(xpath = "//table[@id='dlgSaveAndRun']")
+    private WebElement saveAndRunBtn;
+    
+    
+    @FindBy(id = "ext-gen291")
+    WebElement saveAndRunBtnDiv;
+  
+    
+    @FindBy(xpath = "//div[@class='content']//h1")
+    private WebElement reportNameOnReportPage;
 
 	public void clickAccountTab() {
 		if(accountTab.isDisplayed()) {
@@ -114,7 +169,7 @@ public class AccountsPage extends BasePage {
 	public void clickNewBtn(WebDriver driver) {
 		
 		if(newBtn.isDisplayed()) {
-			if(CommonUtils.waitForElement(driver, newBtn)) {
+			if(CommonUtils.waitForElementClickable(driver, newBtn)) {
 				newBtn.click();
 			}
 		}else {
@@ -156,7 +211,7 @@ public class AccountsPage extends BasePage {
 	public void clickSaveBtn(WebDriver driver) {
 		
 		if(saveBtn.isDisplayed()) {
-			if(CommonUtils.waitForElement(driver, saveBtn)) {
+			if(CommonUtils.waitForElementClickable(driver, saveBtn)) {
 				saveBtn.click();
 			}
 		}else {
@@ -189,7 +244,7 @@ public class AccountsPage extends BasePage {
 		public void clickCreateNewView(WebDriver driver) {
 			
 			if(creatNewView.isDisplayed()) {
-				if(CommonUtils.waitForElement(driver, creatNewView)) {
+				if(CommonUtils.waitForElementClickable(driver, creatNewView)) {
 					
 					creatNewView.click();
 				}
@@ -257,6 +312,18 @@ public class AccountsPage extends BasePage {
 			}
 			
 		}
+		
+		
+         public List<WebElement> getAllOptionsToEdit() {
+        	 List<WebElement> options = new ArrayList<WebElement>();
+			if(viewDropDown.isDisplayed()){
+				Select s=new Select(viewDropDown);
+				 options= s.getOptions();
+			}else {
+				System.out.println("View drop down is not displayed");
+			}
+			return options;
+		}
 
 		public void clickEdit() {
 			
@@ -323,15 +390,34 @@ public class AccountsPage extends BasePage {
 			}
 		}
 
-		public void selectAvailabeFields(String sAvailableFieldOption) {
+		public boolean selectAvailabeFields(String sAvailableFieldOption) {
+			
+			boolean isOptionSelected=false;
 			if(availableFields.isDisplayed()){
 				Select s=new Select(availableFields);
+				try {
 				s.selectByVisibleText(sAvailableFieldOption);
+				isOptionSelected=true;
+				}catch(Exception e){
+					
+					System.out.println("Element to be selected is not in the list");
+					
+					if(selectedFields.isDisplayed()){
+					
+						Select s2=new Select(selectedFields);
+						s2.selectByVisibleText(sAvailableFieldOption);
+						isOptionSelected=true;
+				}
+			}
 			}else {
 				System.out.println("AvailableFieldOption is not displayed");
 			}
+			
+			return isOptionSelected;
 		}
 
+		
+		
 		public void clickAddBtn() {
 			
 			if(addBtn.isDisplayed()) {
@@ -366,6 +452,173 @@ public class AccountsPage extends BasePage {
 			}
 			
 			return isTheColumnAddedToViewTable;
+		}
+
+		public boolean verifyAccountNameContainsLetterADispalyed(String letterShouldBeInTheAccountName) {
+			
+			boolean isAccountNameContainsLetterADispalyed=false;
+			
+			for(WebElement ele:accNameList) {
+				
+		if(ele.getText().contains("letterShouldBeInTheAccountName")){
+				
+				isAccountNameContainsLetterADispalyed=true;
+					continue;
+				}
+			else {
+				isAccountNameContainsLetterADispalyed=false;
+				break;
+			}
+				
+			}
+			
+			return isAccountNameContainsLetterADispalyed;
+		}
+
+		public void clickAccountsWithLastActivityGreaterThan30Days() {
+			
+			if(lastActivity.isDisplayed()) {
+				lastActivity.click();
+			}else {
+				System.out.println("Last activity is not Displayed");
+			}
+		}
+
+		public void clickDateField() {
+			
+			if(selectDateField.isDisplayed()) {
+				
+				selectDateField.click();
+			}else {
+				System.out.println("Date Field is not Displayed");
+			}
+			
+		}
+
+		public void clickCreateDate() {
+
+			if(createDate.isDisplayed()) {
+				
+				createDate.click();
+			}else {
+				System.out.println("CreateDate is not Displayed");
+			}
+			
+		}
+
+		public boolean WaitforLoadToDisappear(WebDriver driver) {
+			
+			boolean isLoadingDisapear=false;
+			if(CommonUtils.waitForElementToDisapear(driver, loading)) {
+				isLoadingDisapear=true;
+			}
+			else {
+				isLoadingDisapear=false;
+			}
+			return isLoadingDisapear;
+		}
+
+		public void clickFromDateImg() {
+			
+			if(fromDateImg.isDisplayed()) {
+				fromDateImg.click();
+			}else {
+				System.out.println("From date img is not displayed");
+			}
+			
+		}
+
+		public void clickFromTodayBtn() {
+			if(fromToday.isDisplayed()) {
+				fromToday.click();
+			}else {
+				System.out.println("fromToday Btn is not displayed");
+			}
+			
+		}
+
+		public void clickToDateImg() {
+			if(toDateImg.isDisplayed()) {
+				toDateImg.click();
+			}else {
+				System.out.println("toDateImg img is not displayed");
+			}
+			
+		}
+
+		public void clickToTodayBtn() {
+			if(toToday.isDisplayed()) {
+				toToday.click();
+			}else {
+				System.out.println("toToday Btn is not displayed");
+			}
+			
+		}
+
+		public void clickSaveReportBtn() {
+			
+			if(reportSaveBtn.isDisplayed()) {
+				reportSaveBtn.click();
+			}else {
+				System.out.println("Report Save btn is not displayed");
+			}
+			
+		}
+
+		public void enterReportName(String sReportName) {
+			
+			if(reportName.isDisplayed()) {
+				reportName.clear();
+				reportName.sendKeys(sReportName);
+			}else {
+				System.out.println("Report NAme is not displayed");
+			}
+			
+		}
+
+		public void enterReportUniqueName(String sReportUniquename)  {
+			if(reportUniqueName.isEnabled()&& reportUniqueName.isDisplayed()) {
+				
+				
+				reportUniqueName.sendKeys(sReportUniquename);
+				
+				
+				
+			}else {
+				System.out.println("Report Unique NAme is not displayed");
+			}
+		}
+
+		public void clickSaveAndRunBtn(WebDriver driver) {
+		CommonUtils.waitForElementToVisible(driver, saveAndRunBtnDiv);
+			
+			if(saveAndRunBtn.isDisplayed()) {
+				if(CommonUtils.waitForElementToVisible(driver, saveAndRunBtn)) {
+					
+					saveAndRunBtn.click();
+					
+				}
+			}else {
+				System.out.println("saveAndRunBtn is not displayed");
+			}
+			
+		}
+
+		public boolean verifyReportPageIsDispalyedWithReportName(WebDriver driver, String sReportName) {
+			
+			boolean isReportNamePresentOnTheReportPage=false;
+			
+			if(CommonUtils.waitForTitleContais(driver, sReportName)) {
+				
+				if(CommonUtils.waitForText(driver, reportNameOnReportPage, sReportName)) {
+					isReportNamePresentOnTheReportPage=true;
+					
+				}
+				
+			}else {
+				System.out.println("Report page does not contains Report name");
+			}
+			return isReportNamePresentOnTheReportPage;
 		}
 	
 	

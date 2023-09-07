@@ -6,6 +6,7 @@ package com.tekarck.testCases;
 
 import java.io.IOException;
 import java.time.Duration;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -26,6 +27,7 @@ import com.tekarch.utils.FileUtils;
 import com.tekarck.pages.LoginPage;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import net.bytebuddy.utility.RandomString;
 
 
 /**
@@ -60,7 +62,7 @@ public class BaseTest {
 		driver.get(FileUtils.readPropertiesFile(FileConstants.TEST_DATA_PROPERTIES_FILE_PATH,"URL"));
 		*/
 		
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+    	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.manage().window().maximize();
 		
 	}
@@ -151,7 +153,13 @@ public class BaseTest {
 	
   
   
-  
+	static String generateRandomString(){
+		
+		
+		
+		return RandomString.make(5);
+		
+	}
   
 
 

@@ -47,7 +47,7 @@ public class CommonUtils {
 		return timeStamp;
 	}
 	
-	public static boolean waitForElement(WebDriver driver, WebElement element) {
+	public static boolean waitForElementClickable(WebDriver driver, WebElement element) {
 		boolean isElementClickable = false;
 		WebDriverWait wait = new WebDriverWait(driver, WaitCostants.WAIT_FOR_ELEMENT);
 		try {
@@ -142,7 +142,7 @@ public class CommonUtils {
 
 	public static boolean waitForTitleContais(WebDriver driver, String sText) {
 		boolean isTitleContainsText = false;
-		WebDriverWait wait = new WebDriverWait(driver, WaitCostants.WAIT_FOR_ELEMENT_TO_DISAPEAR);
+		WebDriverWait wait = new WebDriverWait(driver, WaitCostants.WAIT_FOR_ELEMENT);
 		try {
 			isTitleContainsText =wait.until(ExpectedConditions.titleContains(sText));
 			 
@@ -151,5 +151,17 @@ public class CommonUtils {
 		}
 		return isTitleContainsText;
 	}
+	
+//	public static boolean waitForSelectedOption(WebDriver driver, String sText) {
+//		boolean isSelctedOptionPresent = false;
+//		WebDriverWait wait = new WebDriverWait(driver, WaitCostants.WAIT_FOR_ELEMENT);
+//		try {
+//			isSelctedOptionPresent =wait.until(ExpectedConditions.(sText));
+//			 
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//		return isSelctedOptionPresent;
+//	}
 }
 
