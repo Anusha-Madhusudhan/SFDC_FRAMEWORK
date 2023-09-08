@@ -19,5 +19,11 @@ public class TitleConstants {
 	public static final String OPPORTUNITIES_PAGE_TITLE="Opportunities: Home ~ Salesforce - Developer Edition";
 	public static final String OPPORTUNITIES_PIPELINE_PAGE_TITLE="Opportunity Pipeline ~ Salesforce - Developer Edition";
 	public static final String OPPORTUNITIES_REPORT_PAGE_TITLE="Opportunity Report ~ Salesforce - Developer Edition";
+	public static final String LEADS_PAGE_TITLE="Leads: Home ~ Salesforce - Developer Edition";
+	public static final String LEADS_EDIT_PAGE_TITLE="Lead Edit: New Lead ~ Salesforce - Developer Edition";
 	public static final String STUCK_OPPORTUNITIES_PAGE_TITLE="Stuck Opportunities ~ Salesforce - Developer Edition";
+	public static final String CONTACTS_PAGE_TITLE="Contacts: Home ~ Salesforce - Developer Edition";
+	public static final String CONTACTS_EDIT_PAGE_TITLE="Contact Edit: New Contact ~ Salesforce - Developer Edition";
+	public static final String CONTACTS_CREATE_NEW_VIEW_PAGE_TITLE="Contacts: Create New View ~ Salesforce - Developer Edition";
+	
 }
