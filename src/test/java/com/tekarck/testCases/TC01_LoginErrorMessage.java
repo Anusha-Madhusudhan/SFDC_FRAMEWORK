@@ -37,9 +37,6 @@ public class TC01_LoginErrorMessage extends BaseTest {
 		Assert.assertTrue(isLoginPageTitleIsPresent);
 		logger.info("application launched with title :"+ expectedPagetitle);
 		
-		
-		
-		
 		lp=new LoginPage(getDriver());
 		String userNme=ExcelUtils.readCellDataFromExcelFile("UserCreds", 2, 1);
 //		String password=ExcelUtils.readExcelFile("UserCreds", 2, 2);

@@ -6,22 +6,23 @@ package com.tekarck.testCases;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.tekarck.pages.HomePage;
+
 import com.tekarck.pages.LeadsPage;
+import com.tekarck.pages.UserMenuPage;
 
 /**
  * 
  */
 public class TC22_DefaultView extends BaseTest {
 	LeadsPage lp;
-	HomePage hp;
+	UserMenuPage hp;
 
 	@Test
 	void verifyLeadsTab() {
 		
 		loginToSalesForceApp();
 		lp=new LeadsPage(getDriver());
-		hp=new HomePage(getDriver());
+		hp=new UserMenuPage(getDriver());
 		lp.clickLeadsTab();
 	    Assert.assertTrue(lp.verifyLeadsPageDisplayed(getDriver()));
 	    lp.selectMyUnreadLeads("My Unread Leads");

@@ -8,8 +8,9 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.tekarch.utils.CommonUtils;
-import com.tekarck.pages.HomePage;
+
 import com.tekarck.pages.MyProfilePage;
+import com.tekarck.pages.UserMenuPage;
 
 /**
  * 
@@ -20,7 +21,7 @@ import com.tekarck.pages.MyProfilePage;
 public class TC06_MyProfile extends BaseTest {
 	
 	
-	HomePage hp;
+	UserMenuPage hp;
 	MyProfilePage myProfilePage;
 	
 	
@@ -35,7 +36,7 @@ public class TC06_MyProfile extends BaseTest {
 	@Test
 	void editMyProfile() throws InterruptedException {
 		
-		hp=new HomePage(getDriver());
+		hp=new UserMenuPage(getDriver());
 		
 		
 		loginToSalesForceApp();

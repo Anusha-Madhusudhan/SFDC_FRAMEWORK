@@ -12,8 +12,9 @@ import org.testng.asserts.SoftAssert;
 import com.teckarck.constants.TitleConstants;
 import com.tekarch.utils.CommonUtils;
 import com.tekarch.utils.ExcelUtils;
-import com.tekarck.pages.HomePage;
+
 import com.tekarck.pages.LoginPage;
+import com.tekarck.pages.UserMenuPage;
 
 /**
  * 
@@ -22,7 +23,7 @@ import com.tekarck.pages.LoginPage;
 public class TC02_ValidLoginToSalesForce extends BaseTest {
 
 	LoginPage lp;
-	HomePage hp;
+	UserMenuPage hp;
 
 	// Launch App
 //	@Test
@@ -80,7 +81,7 @@ public class TC02_ValidLoginToSalesForce extends BaseTest {
 //	@Test
 	void loginToSalesForceAppForMultipleUsers(Method mName) throws InvalidFormatException, IOException {
 		lp = new LoginPage(getDriver());
-		hp = new HomePage(getDriver());
+		hp = new UserMenuPage(getDriver());
 		logger.info("Test case satrted here :    "+mName.getName());
 		logger.info("Validating Login for multiple users");
 		SoftAssert softAssert = new SoftAssert();
@@ -149,7 +150,7 @@ public class TC02_ValidLoginToSalesForce extends BaseTest {
 		
 		
 		lp = new LoginPage(getDriver());
-		hp = new HomePage(getDriver());
+		hp = new UserMenuPage(getDriver());
 		logger.info("Test case satrted here :    "+sMethodName .getName());
 		logger.info("Validating Login for multiple users");
 		

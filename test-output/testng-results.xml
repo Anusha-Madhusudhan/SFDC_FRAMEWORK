@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-07T23:51:39 EDT" name="Default suite" finished-at="2023-09-07T23:51:48 EDT" duration-ms="9379">
+  <suite started-at="2023-09-10T18:58:37 EDT" name="Default suite" finished-at="2023-09-10T18:58:50 EDT" duration-ms="12501">
     <groups>
     </groups>
-    <test started-at="2023-09-07T23:51:39 EDT" name="Default test" finished-at="2023-09-07T23:51:48 EDT" duration-ms="9379">
-      <class name="com.tekarck.testCases.TC27_RecentlyCreatedContacts">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,boolean)[pri:0, instance:com.tekarck.testCases.TC27_RecentlyCreatedContacts@662ac478]" started-at="2023-09-07T23:51:39 EDT" name="setUp" finished-at="2023-09-07T23:51:43 EDT" duration-ms="3826" status="PASS">
+    <test started-at="2023-09-10T18:58:37 EDT" name="Default test" finished-at="2023-09-10T18:58:50 EDT" duration-ms="12501">
+      <class name="com.tekarck.testCases.TC36_BlockingAnEventInTheCalender">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,boolean)[pri:0, instance:com.tekarck.testCases.TC36_BlockingAnEventInTheCalender@217ed35e]" started-at="2023-09-10T18:58:37 EDT" name="setUp" finished-at="2023-09-10T18:58:41 EDT" duration-ms="3495" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -28,15 +28,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyCreateNewViewInTheContactPage()[pri:0, instance:com.tekarck.testCases.TC27_RecentlyCreatedContacts@662ac478]" started-at="2023-09-07T23:51:43 EDT" name="verifyCreateNewViewInTheContactPage" finished-at="2023-09-07T23:51:48 EDT" duration-ms="5408" status="PASS">
+        <test-method signature="verifyBlockingAnEventInTheCalender()[pri:0, instance:com.tekarck.testCases.TC36_BlockingAnEventInTheCalender@217ed35e]" started-at="2023-09-10T18:58:41 EDT" name="verifyBlockingAnEventInTheCalender" finished-at="2023-09-10T18:58:50 EDT" duration-ms="8864" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyCreateNewViewInTheContactPage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tekarck.testCases.TC27_RecentlyCreatedContacts@662ac478]" started-at="2023-09-07T23:51:48 EDT" name="tearDown" finished-at="2023-09-07T23:51:48 EDT" duration-ms="111" status="PASS">
+        </test-method> <!-- verifyBlockingAnEventInTheCalender -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tekarck.testCases.TC36_BlockingAnEventInTheCalender@217ed35e]" started-at="2023-09-10T18:58:50 EDT" name="tearDown" finished-at="2023-09-10T18:58:50 EDT" duration-ms="102" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.tekarck.testCases.TC27_RecentlyCreatedContacts -->
+      </class> <!-- com.tekarck.testCases.TC36_BlockingAnEventInTheCalender -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

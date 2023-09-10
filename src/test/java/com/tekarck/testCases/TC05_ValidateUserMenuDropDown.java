@@ -14,8 +14,9 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.tekarch.utils.ExcelUtils;
-import com.tekarck.pages.HomePage;
+
 import com.tekarck.pages.LoginPage;
+import com.tekarck.pages.UserMenuPage;
 
 /**
  * 
@@ -24,7 +25,7 @@ public class TC05_ValidateUserMenuDropDown extends BaseTest {
 	
 	LoginPage lp;
 	
-	HomePage hp;
+	UserMenuPage hp;
 	
 	  
 	 
@@ -45,7 +46,7 @@ public class TC05_ValidateUserMenuDropDown extends BaseTest {
 		logger.info("Inside the Class ::"+this.getClass().getName());
 		logger.info("Inside the method ::"+sMethodName.getName());
 		lp=new LoginPage(getDriver());
-		hp=new HomePage(getDriver());
+		hp=new UserMenuPage(getDriver());
 		
 		String userName=ExcelUtils.readCellDataFromExcelFile("UserCreds",1,1);
 		String password=ExcelUtils.readCellDataFromExcelFile("UserCreds",1,2);

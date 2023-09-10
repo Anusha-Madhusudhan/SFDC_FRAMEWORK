@@ -77,6 +77,40 @@ public class ContactsPage extends BasePage {
 	
 	@FindBy(xpath = "//table[@class='list']//tbody//tr[contains(@class,'dataRow')]//th")
 	private List<WebElement> contactList;
+	
+	@FindBy(id = "fcf")
+	private WebElement viewSelect;
+	
+	@FindBy(xpath ="//table//thead//tr")
+	private WebElement myContactstableHeaderRow;
+	
+	@FindBy(xpath = "//table//thead//tr//td")
+	private List<WebElement> myContactstableHeaderColoumns;
+	
+	
+	@FindBy(xpath ="//table[@class='x-grid3-row-table']//tbody//tr")
+	private List<WebElement> myContactstableBodyRow;
+	
+	@FindBy(xpath = "//table[@class='x-grid3-row-table']//tbody//tr//td")
+	private List<WebElement> myContactstableBodyColoumns;
+	
+	
+	@FindBy(xpath ="//table[@class='list']//tbody//tr[contains(@class,'dataRow')]//th//a")
+	List<WebElement> contactsList;
+	
+	
+	@FindBy(xpath ="(//table[@class='list']//tbody//tr[contains(@class,'dataRow')]//th//a)[1]")
+	private WebElement myContact;
+	
+	@FindBy(xpath ="//input[@value='Cancel']")
+	private WebElement cancelBtn;
+	
+	
+	String expectedErrorMsg=" You must enter a value";
+	
+	@FindBy(xpath ="//input[@value='Save & New']")
+	private WebElement saveAndNewBtn;
+	
 
 	public void clickOnContactsTab() {
 		
@@ -259,6 +293,179 @@ public class ContactsPage extends BasePage {
 			System.out.println(ele.getText());
 		}
 		return isRecenlyCeatedContactsAreDisplayed;
+	}
+
+
+	public void selectMyContacts(String sOption) {
+		if(viewSelect.isDisplayed()) {
+			
+			Select s=new Select(viewSelect);
+			s.selectByVisibleText(sOption);
+		}else {
+			System.out.println("View drop down is not displayed");
+		}
+		
+	}
+
+
+	public void clickGoBtn() {
+		if(goBtn.isDisplayed()) {
+			goBtn.click();
+		}else {
+			System.out.println("Go btn is not displayed");
+		}
+	}
+
+
+	public boolean verifyAllContactsDispalyed() {
+		
+		boolean allContactsDisplyed=false;
+		
+		for(WebElement ele:myContactstableHeaderColoumns) {
+			
+			System.out.print(ele.getText()+"   ");
+		}
+		System.out.println();
+		
+		int length=myContactstableHeaderColoumns.size();
+		
+
+		
+		int i=0;
+		
+		for(WebElement colm:myContactstableBodyColoumns) {
+				
+			
+		if(i<length) {
+			System.out.print(colm.getText()+"   ");
+			allContactsDisplyed=true;
+			i++;
+		}
+		else if(i>=length){
+			i=0;
+			System.out.println();
+		}
+		}
+		
+		
+		return allContactsDisplyed;
+	}
+	
+	
+	public List<WebElement> getcontactList() {
+        return contactList;
+    }
+
+
+	public String selectContact(WebDriver driver) throws InterruptedException {
+		
+		
+		
+		
+		String contactName=myContact.getText();
+//		
+		if(CommonUtils.waitForElementClickable(driver, myContact)) {
+//			
+//			
+			myContact.click();
+		}
+		
+		
+		
+		
+//		  WebElement contact=getcontactList().get(0);
+//		  String contactName=contact.getText(); 
+//		  for(WebElement ele:contactList) 
+//		  { 
+//		  System.out.println(ele.getText());
+//		  } 
+//		  
+////		  driver.findElement(By.linkText(contactName)).click(); 
+//		  
+//		  if(CommonUtils.waitForElementClickable(driver, contact)) { 
+//			  contact.click(); 
+//			  }
+		 
+		return contactName;
+		
+	}
+
+
+	public boolean verifySelectedCotactPageDisplayed(WebDriver driver, String contactName) {
+		
+		
+		boolean isSelectedCotactPageDisplayed=false;
+		
+		if(CommonUtils.waitForTitleContais(driver, contactName)) {
+			
+			isSelectedCotactPageDisplayed=true;
+			
+			
+		}
+		return isSelectedCotactPageDisplayed;
+	}
+
+
+	public boolean verifyErrorMsgDisplayed(WebDriver driver) {
+		boolean isErrorMsgDisplayed=false;
+		
+		if(driver.getPageSource().contains(expectedErrorMsg)) {
+			isErrorMsgDisplayed=true;
+		}
+		
+		return isErrorMsgDisplayed;
+	}
+
+
+	public void clickCancelBtn() {
+		
+		if(cancelBtn.isDisplayed()) {
+			cancelBtn.click();
+		}else {
+			System.out.println("Cancel Btn is not Dispalyed");
+		}
+		
+	}
+
+
+	public boolean verifyNewViewNotCreated(String sViewName) {
+		  boolean isNewViewNotCreated=true;
+		
+		
+		if(viewSelect.isDisplayed()) {
+			Select s=new Select(viewSelect);
+			 List<WebElement> options=s.getOptions();
+			    for(WebElement ele:options) {
+			    	
+			    	if(ele.getText().equals(sViewName)) {
+			    		isNewViewNotCreated=false;
+			    		break;
+			    	}
+			    }
+		}
+		return isNewViewNotCreated;
+	}
+
+
+	public boolean verifyContactsHomePageIsDispalyed(WebDriver driver) {
+		
+		boolean isContactsHomePageIsDispalyed=false;
+		
+		if(CommonUtils.waitForTitleOfThePage(driver, TitleConstants.CONTACTS_PAGE_TITLE)) {
+			isContactsHomePageIsDispalyed=true;
+		}
+		
+		return isContactsHomePageIsDispalyed;
+	}
+
+
+	public void clickSaveAndNewBtn() {
+
+		if(saveAndNewBtn.isDisplayed()) {
+			saveAndNewBtn.click();
+		}else {
+			System.out.println("saveAndNewBtn is not displayed");
+		}
 	}
 	
 	

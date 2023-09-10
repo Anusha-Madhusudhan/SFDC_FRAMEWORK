@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.tekarck.testCases.TC25_CreateNewContact">
+      <class name="com.tekarck.testCases.TC37_BlockingAnEventInTheCalenderWithWeeklyRecurrance">
         <methods>
-          <include name="verifyCreateNewContact"/>
+          <include name="verifyBlockingAnEventInTheCalenderWithWeeklyRecurrance"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.tekarck.testCases.TC25_CreateNewContact -->
+      </class> <!-- com.tekarck.testCases.TC37_BlockingAnEventInTheCalenderWithWeeklyRecurrance -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -7,19 +7,20 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.tekarch.utils.CommonUtils;
-import com.tekarck.pages.HomePage;
+
+import com.tekarck.pages.UserMenuPage;
 
 /**
  * 
  */
 public class TC09_Logout extends BaseTest{
 	
-	HomePage hp;
+	UserMenuPage hp;
 	
 	@Test
 	void logout() {
 		loginToSalesForceApp();
-		hp=new HomePage(getDriver());
+		hp=new UserMenuPage(getDriver());
 		
 		hp.clickUserMenu();
 		hp.clickLogOut();

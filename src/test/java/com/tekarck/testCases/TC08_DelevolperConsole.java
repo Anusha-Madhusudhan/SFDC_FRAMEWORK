@@ -9,19 +9,20 @@ import java.util.List;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.tekarck.pages.HomePage;
+
+import com.tekarck.pages.UserMenuPage;
 
 /**
  * 
  */
 public class TC08_DelevolperConsole extends BaseTest {
-	HomePage hp;
+	UserMenuPage hp;
 
 //	@Test
 	void userMenuItems() {
 		loginToSalesForceApp();
 
-		hp = new HomePage(getDriver());
+		hp = new UserMenuPage(getDriver());
 
 		List<String> actualMenuItems = hp.getUserMenuItemList();
 
@@ -62,7 +63,7 @@ public class TC08_DelevolperConsole extends BaseTest {
 	@Test
 	void developerConsole() throws InterruptedException {
 		loginToSalesForceApp();
-		hp = new HomePage(getDriver());
+		hp = new UserMenuPage(getDriver());
 		hp.clickUserMenu();
 		hp.clickDeveloperCosole(getDriver());
 

@@ -8,20 +8,21 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.tekarch.utils.CommonUtils;
-import com.tekarck.pages.HomePage;
+
 import com.tekarck.pages.MySettingPage;
+import com.tekarck.pages.UserMenuPage;
 
 /**
  * 
  */
 public class TC07_MySettings extends BaseTest {
 
-	HomePage hp;
+	UserMenuPage hp;
 	MySettingPage mySettingPage;
 	
 	@Test
 	void mySetting() {
-		hp=new HomePage(getDriver());
+		hp=new UserMenuPage(getDriver());
 		
 		loginToSalesForceApp();
 		

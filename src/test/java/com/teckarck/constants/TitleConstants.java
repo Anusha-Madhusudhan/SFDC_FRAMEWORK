@@ -25,5 +25,9 @@ public class TitleConstants {
 	public static final String CONTACTS_PAGE_TITLE="Contacts: Home ~ Salesforce - Developer Edition";
 	public static final String CONTACTS_EDIT_PAGE_TITLE="Contact Edit: New Contact ~ Salesforce - Developer Edition";
 	public static final String CONTACTS_CREATE_NEW_VIEW_PAGE_TITLE="Contacts: Create New View ~ Salesforce - Developer Edition";
+	public static final String ALL_TABS_PAGE_TITLE="All Tabs ~ Salesforce - Developer Edition";
+	public static final String CUSTOMIZE_MYTAB_PAGE_TITLE="Customize My Tabs ~ Salesforce - Developer Edition";
+	public static final String CALENDER_NEW_EVENT_PAGE_TITLE="Calendar: New Event ~ Salesforce - Developer Edition";
+	
 	
 }
