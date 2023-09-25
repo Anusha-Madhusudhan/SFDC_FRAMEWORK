@@ -7,7 +7,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -111,6 +115,20 @@ public class ContactsPage extends BasePage {
 	@FindBy(xpath ="//input[@value='Save & New']")
 	private WebElement saveAndNewBtn;
 	
+	
+	
+	@FindBy(xpath ="//input[@value='Delete']")
+	private WebElement deleteContactBtn;
+	
+	
+	@FindBy(xpath = "//input[@id='con4']")
+	private WebElement accountNameValue;
+	
+
+	public WebElement getAccountNameValue() {
+		return accountNameValue;
+	}
+
 
 	public void clickOnContactsTab() {
 		
@@ -154,7 +172,8 @@ public class ContactsPage extends BasePage {
 	}
 
 
-	public void clickAccountSearchImg(WebDriver driver) {
+	public String clickAccountSearchImg(WebDriver driver) {
+		String value=null;
 		if(accountName.isDisplayed()) {
 			accountName.click();
 			
@@ -188,29 +207,46 @@ public class ContactsPage extends BasePage {
 			
 			driver.switchTo().frame(iFrameResult);
 			
+			 value=accountList.get(0).getText();
+			 
+			 
+			
 			accountList.get(0).click();
+			 
+			 
 			
 			driver.switchTo().window(parentWindowHandle);
+			
+			
+			
+//			accountNameValue.sendKeys(Keys.TAB);   // this is for firefox
+			
+			System.out.println("Returning account name   "+value);
+			
 			
 		}else {
 			System.out.println("AccountSearchImg is not Dispalyed");
 		}
+		return value;
 	}
 
 
-	public void clickSaveBtn() {
-		if(saveBtn.isDisplayed()) {
+	public void clickSaveBtn(WebDriver driver) {
+		
+		if(CommonUtils.waitForNumOfWindowsToBe(driver, 1)) {
+		if(CommonUtils.waitForElementToVisible(driver, saveBtn)) {
 			saveBtn.click();
+			System.out.println("Save btn clicked");
 		}else {
 			System.out.println("saveBtn  is not Dispalyed");
 		}
-		
+		}
 	}
 
 
 	public boolean verifyNewCantactCreated(WebDriver driver, String sLastName) {
 		boolean isNewCantactCreated=false;
-		if(lastNameText.isDisplayed()) {
+		if(CommonUtils.waitForElementToVisible(driver, lastNameText)) {
 			if(CommonUtils.waitForText(driver, lastNameText, sLastName)) {
 				isNewCantactCreated=true;
 			}
@@ -300,7 +336,9 @@ public class ContactsPage extends BasePage {
 		if(viewSelect.isDisplayed()) {
 			
 			Select s=new Select(viewSelect);
+			if(!s.getFirstSelectedOption().getText().equals(sOption)) {
 			s.selectByVisibleText(sOption);
+			}
 		}else {
 			System.out.println("View drop down is not displayed");
 		}
@@ -466,6 +504,28 @@ public class ContactsPage extends BasePage {
 		}else {
 			System.out.println("saveAndNewBtn is not displayed");
 		}
+	}
+
+
+	public boolean deleteContact(WebDriver driver) {
+		boolean isContactDeleted=false;
+		
+		if(deleteContactBtn.isDisplayed()) {
+			JavascriptExecutor js=(JavascriptExecutor) driver;
+			js.executeScript("arguments[0].scrollIntoView(true);", deleteContactBtn);
+			deleteContactBtn.click();
+			try {
+				Alert alert=CommonUtils.waitForAlert(driver);
+				alert.accept();
+				isContactDeleted=true;
+			}catch(NoAlertPresentException e) {
+				System.out.println(e.getMessage());
+			}
+		}else {
+			System.out.println("Delete contact btn is not displayed");
+		}
+		
+		return isContactDeleted;
 	}
 	
 	

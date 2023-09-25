@@ -31,7 +31,7 @@ public class TC26_CreateNewViewInTheContactPage extends BaseTest {
 		cp.enterViewName(viewName);
 		cp.enterViewUniqueName(viewUniqueName);
 		
-		cp.clickSaveBtn();
+		cp.clickSaveBtn(getDriver());
 	    Assert.assertTrue(cp.verifyCreatedNewViewNameDisplayedOnCantactsPage(viewName));
 		
 		

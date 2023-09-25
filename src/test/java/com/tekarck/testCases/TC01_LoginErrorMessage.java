@@ -40,11 +40,11 @@ public class TC01_LoginErrorMessage extends BaseTest {
 		lp=new LoginPage(getDriver());
 		String userNme=ExcelUtils.readCellDataFromExcelFile("UserCreds", 2, 1);
 //		String password=ExcelUtils.readExcelFile("UserCreds", 2, 2);
-		lp.setUserName(userNme);
+		lp.setUserName(userNme,getDriver());
 		logger.info("Entered Username :"+userNme);
-		lp.setPassword("");
+		lp.setPassword("",getDriver());
 		logger.info("Entered blank password :"+" ");
-		lp.clickLoginBtn();
+		lp.clickLoginBtn(getDriver());
 		logger.info("Clicked on login button");
 		
 		String expectedErrorMsg="Please enter your password.";

@@ -17,12 +17,15 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import com.teckarck.constants.FileConstants;
+import com.teckarck.constants.TitleConstants;
+import com.tekarch.utils.CommonUtils;
 import com.tekarch.utils.FileUtils;
 import com.tekarck.pages.LoginPage;
 
@@ -62,6 +65,13 @@ public class BaseTest {
 		driver.get(FileUtils.readPropertiesFile(FileConstants.TEST_DATA_PROPERTIES_FILE_PATH,"URL"));
 		*/
 		
+		
+		String expectedPagetitle = TitleConstants.LOGIN_PAGE_TITLE;
+		boolean flag = CommonUtils.waitForTitleOfThePage(getDriver(), expectedPagetitle);
+		Assert.assertTrue(flag);
+		
+		logger.info("Login Page title :"+expectedPagetitle);
+		
     	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.manage().window().maximize();
 		
@@ -70,7 +80,7 @@ public class BaseTest {
 	@AfterClass
 	void tearDown() {
 		
-		getDriver().close();
+		getDriver().quit();
 		logger.info("Closing the browser :");
      	threadLocal.remove();
 	}
@@ -82,7 +92,7 @@ public class BaseTest {
 		
 		switch (brName) {
 		case "chrome":
-//			WebDriverManager.chromedriver().setup();
+			WebDriverManager.chromedriver().setup();
 			
 			ChromeOptions chOptions=new ChromeOptions();
 			if(isHeadless) {
@@ -93,7 +103,7 @@ public class BaseTest {
 		   driver=new ChromeDriver(chOptions);
 			break;
 		case "firefox":
-//			WebDriverManager.firefoxdriver().setup();
+			WebDriverManager.firefoxdriver().setup();
 			FirefoxOptions foxOptions=new FirefoxOptions();
 			if(isHeadless) {
 				foxOptions.addArguments("-headless");
@@ -106,7 +116,7 @@ public class BaseTest {
 			driver=  new SafariDriver();
 			break;
 		case "edge":
-//			WebDriverManager.edgedriver().setup();
+			WebDriverManager.edgedriver().setup();
 			EdgeOptions edgeOptions=new EdgeOptions();
 			if(isHeadless) {
 				edgeOptions.addArguments("headless");
@@ -139,12 +149,12 @@ public class BaseTest {
 	void loginToSalesForceApp() {
 		LoginPage lp=new LoginPage(getDriver());
 		try {
-		lp.setUserName(FileUtils.readPropertiesFile(FileConstants.LOGIN_TEST_DATA_PROPERTIES_FILE_PATH, "userName"));
-		lp.setPassword(FileUtils.readPropertiesFile(FileConstants.LOGIN_TEST_DATA_PROPERTIES_FILE_PATH, "password"));
+		lp.setUserName(FileUtils.readPropertiesFile(FileConstants.LOGIN_TEST_DATA_PROPERTIES_FILE_PATH, "userName"),getDriver());
+		lp.setPassword(FileUtils.readPropertiesFile(FileConstants.LOGIN_TEST_DATA_PROPERTIES_FILE_PATH, "password"),getDriver());
 		}catch (IOException e) {
 			System.out.println(e.getMessage());
 		}
-		lp.clickLoginBtn();
+		lp.clickLoginBtn(getDriver());
 	}
 	
 	

@@ -3,12 +3,15 @@
  */
 package com.tekarck.testCases;
 
-import org.openqa.selenium.By;
+import java.io.IOException;
+
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.teckarck.constants.FileConstants;
 import com.tekarch.utils.CommonUtils;
-
+import com.tekarch.utils.FileUtils;
 import com.tekarck.pages.MyProfilePage;
 import com.tekarck.pages.UserMenuPage;
 
@@ -34,7 +37,7 @@ public class TC06_MyProfile extends BaseTest {
 	 * Click on About tab and enter <Lastname> and click on save all button
 	 */
 	@Test
-	void editMyProfile() throws InterruptedException {
+	void verifyEditMyProfile() throws InterruptedException, IOException {
 		
 		hp=new UserMenuPage(getDriver());
 		
@@ -59,11 +62,14 @@ public class TC06_MyProfile extends BaseTest {
 		
 		myProfilePage.clickAboutTab();
 		
-		myProfilePage.setLastName("XXXX");
+//		myProfilePage.setLastName("XXXX");
+		String lastName=FileUtils.readPropertiesFile(FileConstants.USER_MENU_TEST_DATA, "lastName");
+		
+		myProfilePage.setLastName(lastName);
 		
 		myProfilePage.clickSaveAll(getDriver());
 		
-		Assert.assertTrue(myProfilePage.verifyEditedLastName("XXXX"));
+		Assert.assertTrue(myProfilePage.verifyEditedLastName(lastName));
 		
 		
 //		hp.clickUserMenu();
@@ -77,43 +83,57 @@ public class TC06_MyProfile extends BaseTest {
 	/*
 	 * Click on Post link, Enter the <text> to post in the post text area and click on share button
 	 */
-	@Test(dependsOnMethods = "editMyProfile")
-	void postText(){
+	@Test(dependsOnMethods = "verifyEditMyProfile")
+	void postText() throws IOException, InterruptedException{
+		CommonUtils.waitForTitleContais(getDriver(), FileUtils.readPropertiesFile(FileConstants.USER_MENU_TEST_DATA, "updatedUserName"));
+
 		
-		
-		myProfilePage.clickPost();
+		myProfilePage.clickPost(getDriver());
 		
 		myProfilePage.switchToPostFrame(getDriver());
 		
-		myProfilePage.setpostText("Hello welcome to java");
+		String postText=FileUtils.readPropertiesFile(FileConstants.USER_MENU_TEST_DATA, "postText");
+		
+		myProfilePage.setpostText(getDriver(),postText);
 		
 		getDriver().switchTo().defaultContent();
 		
 		myProfilePage.clickShare();
 		
 		
+		Assert.assertTrue(myProfilePage.verifyPostText(getDriver(),postText));
 		
-		Assert.assertTrue(myProfilePage.verifyPostText(getDriver(),"Hello welcome to java"));
-		
-		
-		
+		/*
+		 * Post Conditions Delete file after uploading
+		 */
+
+
+		Assert.assertTrue(myProfilePage.deleteFileUploaded(getDriver()));
+
 	}
 	
 
 	/*
 	 * Click on the  file link and click on "upload a file from computer" button. 
 	 * Click on choose file button and select a file to be uploaded and click open button.
+	 * (dependsOnMethods = "postText")
 	 */
 	@Test(dependsOnMethods = "postText")
-	void uploadFile(){
-		
-		myProfilePage.clickFile();
+	void uploadFile() throws InterruptedException{
+		Assert.assertTrue(myProfilePage.isMyProfilePageIsVisible());
+		myProfilePage.clickFile(getDriver());
 		myProfilePage.clickUpLoadFile(getDriver());
-		String filePath=System.getProperty("user.dir")+"\\src\\test\\resources\\testData\\LoginTestData.xlsx";
+		String filePath=FileConstants.UPLOAD_FILE_PATH;
 		myProfilePage.sendFile(filePath);
 		myProfilePage.clickShare();
+		Assert.assertTrue(myProfilePage.verifyUploadedFileName(getDriver(),"testData"));
 		
-		Assert.assertTrue(myProfilePage.verifyUploadedFileName(getDriver(),"LoginTestData"));
+		/*
+		 * Post Conditions Delete file after uploading
+		 */
+		
+		
+//		Assert.assertTrue(myProfilePage.deleteFileUploaded(getDriver()));
 		
 	}
 	
@@ -123,14 +143,16 @@ public class TC06_MyProfile extends BaseTest {
 	 */
 	@Test(dependsOnMethods = "uploadFile")
 	void addPhoto(){
-		
+		Assert.assertTrue(myProfilePage.isMyProfilePageIsVisible());
 		myProfilePage.clickUploadPhoto(getDriver());
 		myProfilePage.switchtoUploadPhotoIFrameID(getDriver());
-		myProfilePage.sendphoto("C:\\Users\\anush\\OneDrive\\Desktop\\TekArch\\Dummy files\\th.jpg");
+		myProfilePage.sendphoto(FileConstants.UPLOAD_PHOTO_PATH);
 		
 		myProfilePage.clickSaveBtn();
 		
-		getDriver().findElement(By.xpath("//input[@id='j_id0:j_id7:save']")).click();
+		myProfilePage.waitForSpinnerDisapear(getDriver());
+		
+		myProfilePage.clickCropSaveBtn(getDriver());
 		
 		getDriver().switchTo().defaultContent();
 		

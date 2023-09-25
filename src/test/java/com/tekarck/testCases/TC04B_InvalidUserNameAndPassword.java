@@ -42,14 +42,14 @@ public class TC04B_InvalidUserNameAndPassword extends BaseTest {
 		String userName=ExcelUtils.readCellDataFromExcelFile("UserCreds",4, 1);
 		String password=ExcelUtils.readCellDataFromExcelFile("UserCreds",4, 2);
 		
-		lp.setUserName(userName);
+		lp.setUserName(userName,getDriver());
 		logger.info("Inside the method :: "+ userName);
 		
-		lp.setPassword(password);
+		lp.setPassword(password,getDriver());
 		
 		logger.info("Inside the method :: "+ password);
 		
-		lp.clickLoginBtn();
+		lp.clickLoginBtn(getDriver());
 		
 		logger.info("Clicked loin Btn....");
 		

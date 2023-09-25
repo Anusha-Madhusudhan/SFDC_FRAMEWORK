@@ -144,8 +144,14 @@ public class HomePage extends BasePage {
 	@FindBy(xpath = "//a[@title='Month View']")
 	WebElement monthView;
 	
-	@FindBy(xpath = "//a[@title='Busy - Other']")
-	WebElement eventOther;
+	@FindBy(xpath = "//div[@id='p:f:j_id25:j_id69:20:hh']//a[@title='Busy - Other']")
+	WebElement eventOtherFor4PM;
+	
+	
+	@FindBy(xpath = "//div[@id='p:f:j_id25:j_id69:28:hh']//a[@title='Busy - Other']")
+	WebElement eventOtherFor8PM;
+	
+	
 	
 	@FindBy(xpath = "//input[@value='Delete']")
 	WebElement deleteEvent;
@@ -198,9 +204,9 @@ public class HomePage extends BasePage {
 		return isUserNameOnHomePageSameAsOnMyProfilePage;
 	}
 
-	public void clickOnPlusSign() {
+	public void clickOnPlusSign(WebDriver driver) {
 		
-		if(plusSignBtn.isDisplayed()) {
+		if(CommonUtils.waitForElementToVisible(driver, plusSignBtn)) {
 			plusSignBtn.click();
 		}else {
 			System.out.println("Plus sign btn not displayed");
@@ -211,7 +217,7 @@ public class HomePage extends BasePage {
 	public boolean verifyAllTabPageDisplayed(WebDriver driver) {
 		boolean isAllTabPageDisplayed=false;
 		
-		if(CommonUtils.waitForTitleOfThePage(driver, TitleConstants.ALL_TABS_PAGE_TITLE)) {
+		if(CommonUtils.waitForTitleOfThePage(driver, TitleConstants.ALL_TABS_PAGE_TITLE)|| driver.getPageSource().contains("All Tabs")) {
 			isAllTabPageDisplayed=true;
 		}
 		
@@ -540,7 +546,7 @@ public class HomePage extends BasePage {
 		jse2.executeScript("arguments[0].scrollIntoView()", _4PM); 
 
 		Actions act=new Actions(driver);
-		act.moveToElement(eventOther).build().perform();
+		act.moveToElement(eventOtherFor4PM).build().perform();
 			
 				if(eventDetailsSubject.getText().equals("Other")) {
 					if(eventDetailsStart.getText().contains("4:00 PM")) {
@@ -589,7 +595,7 @@ public class HomePage extends BasePage {
 		return isCalendarForFirstNameLastNameMonthViewDisplayed;
 	}
 
-	public boolean deleteEvent(WebDriver driver) {
+	public boolean deleteEventFor4PM(WebDriver driver) {
 		
 		boolean isOtherEventDeleted=false;
 		
@@ -597,7 +603,31 @@ public class HomePage extends BasePage {
 		jse2.executeScript("arguments[0].scrollIntoView()", _4PM); 
 
 		Actions act=new Actions(driver);
-		act.moveToElement(eventOther).build().perform();
+		act.moveToElement(eventOtherFor4PM).build().perform();
+			
+		
+			deleteEvent.click();
+			try {
+			driver.switchTo().alert().accept();
+			isOtherEventDeleted=true;
+			}catch (NoAlertPresentException e) {
+				System.out.println(e.getMessage());
+			}
+		
+		
+		return isOtherEventDeleted;
+		
+	}
+	
+     public boolean deleteEventFor8PM(WebDriver driver) {
+		
+		boolean isOtherEventDeleted=false;
+		
+		JavascriptExecutor jse2 = (JavascriptExecutor)driver;
+		jse2.executeScript("arguments[0].scrollIntoView()", _4PM); 
+
+		Actions act=new Actions(driver);
+		act.moveToElement(eventOtherFor8PM).build().perform();
 			
 		
 			deleteEvent.click();
@@ -643,18 +673,39 @@ public class HomePage extends BasePage {
 		jse2.executeScript("arguments[0].scrollIntoView()", _8PM); 
 
 		Actions act=new Actions(driver);
-		act.moveToElement(eventOther).build().perform();
+		act.moveToElement(eventOtherFor8PM).build().perform();
 			
 				if(eventDetailsSubject.getText().equals("Other")) {
 					if(eventDetailsStart.getText().contains("8:00 PM")) {
 						if(eventDetailsEnd.getText().contains("9:00 PM")) {
 							isOtherEventDispalyedBetweenTimeSlot8PMTo9PM=true;
+						}else {
+							System.out.println(eventDetailsEnd.getText());
 						}
 					}
 
 		}
 		
 		return isOtherEventDispalyedBetweenTimeSlot8PMTo9PM;
+	}
+
+	public boolean verifyTabToBeRemovedPresentInSelectedList(String tabToBeRemoved) {
+		boolean isTabToBeRemovedPresentInSelectedList=false;
+		
+		if(selectedTabs.isDisplayed()) {
+			Select s=new Select(selectedTabs);
+			List<WebElement> allOptions=s.getOptions();
+			for(WebElement ele:allOptions) {
+				if(ele.getText().equals(tabToBeRemoved)) {
+					isTabToBeRemovedPresentInSelectedList=true;
+					break;
+				}
+			}
+		}else {
+			System.out.println("selectedTabs not displayed");
+		}
+		
+		return isTabToBeRemovedPresentInSelectedList;
 	}
 	
 }

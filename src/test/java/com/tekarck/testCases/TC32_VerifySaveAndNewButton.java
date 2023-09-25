@@ -16,7 +16,7 @@ public class TC32_VerifySaveAndNewButton extends BaseTest {
 	 ContactsPage cp;
 		
 		@Test
-		void VerifyTheCancelButton() {
+		void VerifySaveAndNewButton() {
 			
 			loginToSalesForceApp();
 			

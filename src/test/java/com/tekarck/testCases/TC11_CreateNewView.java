@@ -26,13 +26,19 @@ public class TC11_CreateNewView extends BaseTest {
 	    Assert.assertTrue(ap.verifyAccountPageDisplayed(getDriver()));
 	    ap.clickCreateNewView(getDriver());
 	    Assert.assertTrue(ap.verifyCreateNewViewPageisDaisplayed(getDriver()));
-	    ap.enterViewName("ABCDEF");
-	    ap.enterViewUniqueName("ABCDEFQA");
+	    String viewName=BaseTest.generateRandomString();
+	    String viewUniqueName=BaseTest.generateRandomString();
+	    ap.enterViewName(viewName);
+	    ap.enterViewUniqueName(viewUniqueName);
 	    ap.clickSaveBtn(getDriver());
-	    Assert.assertTrue(ap.verifyNewViewCreatedAndDisplyed("ABCDEF"));
+	    Assert.assertTrue(ap.verifyNewViewCreatedAndDisplyed(viewName));
 	    
-	    
+	    /*
+	     * Post conditions Delete view
+	     */
 		
+	    Assert.assertTrue(ap.verifyDeleteViewCreated(viewName,getDriver()));
+	    
 	}
 	
 

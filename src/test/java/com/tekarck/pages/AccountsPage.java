@@ -7,9 +7,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -69,10 +71,10 @@ public class AccountsPage extends BasePage {
     @FindBy(xpath = "//div[@class='controls']//select")
     private WebElement viewList;
     
-    @FindBy(id = "fcf")
+    @FindBy(name = "fcf")
     WebElement viewDropDown;
     
-    @FindBy(xpath = "//div[@class='filterLinks']//a[1]")
+    @FindBy(xpath = "//div[@class='filterLinks']//a[text()='Edit']")
     private WebElement editView;
     
     @FindBy(css = "#fcol1")
@@ -142,6 +144,67 @@ public class AccountsPage extends BasePage {
     
     @FindBy(xpath = "//div[@class='content']//h1")
     private WebElement reportNameOnReportPage;
+    
+    @FindBy(xpath = "//table[@class='list']//tbody//tr//th[@class=' dataCell  ']//a")
+    private List<WebElement> accountNameList;
+    
+    @FindBy(xpath = "//input[@value='Delete']")
+    private WebElement deleteBtn;
+    
+    
+    @FindBy(xpath = "//div[@class='filterLinks']//a[2]")
+    private WebElement deleteView;
+    
+    @FindBy(xpath = "//div[@class='toolsContentRight']//ul//li//a[text()='Merge Accounts']")
+    private WebElement mergeLink;
+    
+    @FindBy(xpath = "//input[@value='Save & New']")
+    private WebElement saveAndNewBtn;
+    
+    @FindBy(id = "srch")
+    private WebElement textToMergeAcc;
+    
+    @FindBy(name = "srchbutton")
+    private WebElement findAccountsBtn;
+    
+
+    
+    @FindBy(xpath = "//table[@class='list']//th[@class=' dataCell  booleanColumn']//input")
+    private List<WebElement> accountsNameRadioBtnListToMerge;
+    
+    
+ 
+    
+    @FindBy(xpath = " //table[@class='list']//td[1]")
+    private List<WebElement> accountsNameListToMerge;
+    
+    @FindBy(xpath = "//input[@value=' Next ']")
+    private WebElement nextBtn;
+    
+    @FindBy(xpath = "//h1[@class='noSecondHeader pageType']")
+    private WebElement mergeAccountHeaderText;
+    
+    @FindBy(tagName = "label")
+    private List<WebElement> mergeAccountNamesOnMergeMyAccPage;
+    
+    @FindBy(xpath = "//input[@value=' Merge ']")
+    private WebElement mergeBtn;
+    
+    @FindBy(xpath = "//input[@value=' Go! ']")
+    private WebElement goBtn;
+    
+    
+  //span[@class='fFooter']//a
+  
+    
+    @FindBy(xpath = "//label//preceding-sibling::input")
+    private List<WebElement> mergeAccountRadioBtnsOnMergeMyAccPage;
+    
+    @FindBy(xpath = "//input[@value='Delete']")
+    private WebElement deleteAccReport;
+    
+    @FindBy(xpath = "//table//descendant::td[@id='bodyCell']")
+    private WebElement mergedAcctPage;
 
 	public void clickAccountTab() {
 		if(accountTab.isDisplayed()) {
@@ -292,11 +355,16 @@ public class AccountsPage extends BasePage {
 			
 			if(viewList.isDisplayed()) {
 				Select s=new Select(viewList);
-				List<WebElement> selectedOps=s.getAllSelectedOptions();
 				
-				if(selectedOps.get(0).getText().equals(sViewName)) {
+				if(s.getFirstSelectedOption().getText().equals(sViewName)) {
 					isNewViewCreated=true;
 				}
+				
+//				List<WebElement> selectedOps=s.getAllSelectedOptions();
+//				
+//				if(selectedOps.get(0).getText().equals(sViewName)) {
+//					isNewViewCreated=true;
+//				}
 			}
 			
 			return isNewViewCreated;
@@ -325,9 +393,9 @@ public class AccountsPage extends BasePage {
 			return options;
 		}
 
-		public void clickEdit() {
+		public void clickEdit(WebDriver driver) {
 			
-			if(editView.isDisplayed()) {
+			if(CommonUtils.waitForElementToVisible(driver, editView)) {
 				
 				editView.click();
 				
@@ -400,7 +468,7 @@ public class AccountsPage extends BasePage {
 				isOptionSelected=true;
 				}catch(Exception e){
 					
-					System.out.println("Element to be selected is not in the list");
+					System.out.println("Element to be selected is not in the availableFields");
 					
 					if(selectedFields.isDisplayed()){
 					
@@ -459,8 +527,11 @@ public class AccountsPage extends BasePage {
 			boolean isAccountNameContainsLetterADispalyed=false;
 			
 			for(WebElement ele:accNameList) {
-				
-		if(ele.getText().contains("letterShouldBeInTheAccountName")){
+				System.out.println(ele.getText());
+		if(ele.getText().contains(letterShouldBeInTheAccountName)||ele.getText().contains(letterShouldBeInTheAccountName.toUpperCase())){
+			
+			
+			
 				
 				isAccountNameContainsLetterADispalyed=true;
 					continue;
@@ -620,8 +691,294 @@ public class AccountsPage extends BasePage {
 			}
 			return isReportNamePresentOnTheReportPage;
 		}
-	
-	
-	
 
+		public void slectAccountFromList(String accountName2) {
+			
+			for(WebElement ele:accountNameList) {
+				if(ele.getText().equals(accountName2)) {
+					if(ele.isDisplayed()) {
+						ele.click();
+						break;
+					}
+					
+				}
+				
+			}
+			
+		}
+
+		public boolean deleteAccount(String accountName2,WebDriver driver) {
+			boolean isAccountDeleted=false;
+			
+			
+			
+			if(CommonUtils.waitForTitleContais(driver, accountName2)&&(CommonUtils.waitForElementToVisible(driver, mergedAcctPage))) {
+				
+				JavascriptExecutor js=(JavascriptExecutor) driver;
+				js.executeScript("arguments[0].scrollIntoView(true);", deleteBtn);
+				
+				if(CommonUtils.waitForElementToVisible(driver, deleteBtn)) {
+					deleteBtn.click();
+					try {
+						
+					Alert alert=CommonUtils.waitForAlert(driver);
+					alert.accept();
+					isAccountDeleted=true;
+					System.out.println("Account deleted  "+accountName2);
+					}catch(NoAlertPresentException e) {
+						System.out.println(e.getMessage());
+					}
+				}
+			}
+			return isAccountDeleted;
+			
+		}
+
+		public boolean verifyDeleteViewCreated(String sViewName,WebDriver driver) {
+			
+            boolean isNewViewDeleted=false;
+			
+			if(viewList.isDisplayed()) {
+				Select s=new Select(viewList);
+				
+				
+				
+				List<WebElement> selectedOps=s.getAllSelectedOptions();
+				
+				for(WebElement ele:selectedOps) {
+					if(ele.getText().equals(sViewName)) {
+						
+						s.selectByVisibleText(sViewName);
+						if(deleteView.isDisplayed()) {
+							deleteView.click();
+							driver.switchTo().alert().accept();
+							isNewViewDeleted=true;
+							
+							System.out.println("View created by test case has been deleted :: "+sViewName);
+						}
+						
+					}
+				}
+			}
+			
+			return isNewViewDeleted;
+			
+			
+			
+		}
+
+		public void clickSaveAndNewBtn(WebDriver driver) {
+
+			if(saveAndNewBtn.isDisplayed()) {
+				saveAndNewBtn.click();
+			}else {
+				System.out.println("Save and new btn is not displayed");
+			}
+		}
+
+		public boolean verifyAccountsAreCreatd(WebDriver driver, List<String> accounts) {
+			
+			boolean accountsAreCreated=true;
+			
+			
+			for(int i=0;i<accounts.size();i++) {
+			for(WebElement ele:accountNameList) {
+				
+
+				if(ele.getText().equals(accounts.get(i))){
+					
+					accountsAreCreated=true;
+					break;
+				}
+				
+			
+			}
+			
+			if(accountsAreCreated==false) {
+				break;
+			}
+			
+			}	
+			
+			
+			return accountsAreCreated;
+		}
+
+		public void clickMergeAccountsLink() {
+
+			if(mergeLink.isDisplayed()) {
+				mergeLink.click();
+			}else {
+				System.out.println("Merge account not displayed");
+			}
+		}
+
+		public boolean verifyMergeAccountPageDisplayed(WebDriver driver) {
+			
+			boolean isMergeAccountPageDisplayed=false;
+			
+			if(CommonUtils.waitForTitleOfThePage(driver, TitleConstants.MERGE_ACCOUNT_PAGE_TITLE)) {
+				isMergeAccountPageDisplayed=true;
+			}
+			return isMergeAccountPageDisplayed;
+		}
+
+		public void enterTextToFindAccountToMerge(String accountName) {
+			
+			if(textToMergeAcc.isDisplayed()) {
+				textToMergeAcc.clear();
+				textToMergeAcc.sendKeys(accountName);
+			}else {
+				System.out.println("Text is not present not displayed");
+			}
+		}
+
+		public void clickFindAccountBtn() {
+
+			if(findAccountsBtn.isDisplayed()) {
+				findAccountsBtn.click();
+			}else {
+				System.out.println("findAccountsBtn is not present not displayed");
+			}
+		}
+
+		
+		public List<String> mergeAccounts() {
+			
+			List<String> mergingAccounts=new ArrayList<String>();
+		
+			try {
+			int i=0;
+			int x=0;
+			for(WebElement ele:accountsNameRadioBtnListToMerge) {
+				mergingAccounts.add(accountsNameListToMerge.get(x).getText());
+				if(!ele.isSelected()) {
+					ele.click();
+				}
+				else {
+					System.out.println("Account name "+ele.getText()+" already selected");
+				}
+				
+				i++;
+				x++;
+				if(i==3) {
+					break;
+				}
+			}
+			
+			if(nextBtn.isDisplayed()) {
+				nextBtn.click();
+			}else {
+				System.err.println("Next btn is not displayed");
+			}
+			
+			
+		}catch(Exception e) {
+			
+			System.out.println(e.getMessage());
+			System.out.println("Accounts are not displayed to select");
+		}
+			return mergingAccounts;
+	
+	
+	
+		}
+
+		public boolean verifyMergeMyAccountsDisplayed(WebDriver driver, List<String> accountsToBeMerged) {
+			String expectedText="Merge My Accounts";
+		
+			boolean isMergeMyAccountsDisplayed=false;
+			
+			if(mergeAccountHeaderText.isDisplayed()) {
+				if(mergeAccountHeaderText.getText().equals(expectedText)) {
+			for(int i=0;i<accountsToBeMerged.size();i++) {
+				for(WebElement ele:mergeAccountNamesOnMergeMyAccPage) {
+					
+
+					if(ele.getText().equals(accountsToBeMerged.get(i))){
+						
+						isMergeMyAccountsDisplayed=true;
+						break;
+					}
+					
+				
+				}
+				
+				if(isMergeMyAccountsDisplayed==false) {
+					break;
+				}
+				
+				}	
+				}
+			}
+			
+
+			return isMergeMyAccountsDisplayed;
+		}
+
+		public void clickMergeBtn(WebDriver driver) {
+
+			if(mergeBtn.isDisplayed()) {
+				mergeBtn.click();
+				try {
+					Alert alert=CommonUtils.waitForAlert(driver);
+					alert.accept();
+					
+				}catch(NoAlertPresentException e) {
+					System.out.println(e.getMessage());
+				}
+			}else {
+				System.out.println("Merge Btn is not displyaed");
+			}
+		}
+
+		public String getMergedAccountName() {
+			String accountName = null;
+			
+			
+			int i=0;
+			for(WebElement ele:mergeAccountRadioBtnsOnMergeMyAccPage) {
+			String name=mergeAccountNamesOnMergeMyAccPage.get(i).getText();
+				if(ele.isSelected()) {
+					accountName=name;
+					break;
+				}
+				i++;
+			}
+			
+		
+			return accountName;
+		}
+
+		public void clickGoBtn(WebDriver driver) {
+			
+			
+			
+			if(CommonUtils.waitForTitleOfThePage(driver, TitleConstants.ACCOUNTS_PAGE_TITLE)){
+				if(goBtn.isDisplayed()) {
+					goBtn.click();
+				}else {
+					System.out.println("Go btn is not displayed");
+				}
+			}else {
+				System.out.println("Page is not on Accounts home page");
+			}
+			
+			
+		}
+
+		public void deleteReport(WebDriver driver) {
+			if(CommonUtils.waitForElementClickable(driver, deleteAccReport)) {
+				deleteAccReport.click();
+				try {
+				Alert alert=CommonUtils.waitForAlert(driver);
+				alert.accept();
+				}catch(NoAlertPresentException e) {
+					System.out.println("Alert not present");
+				}
+			}
+			else {
+				System.out.println("delete report btn is not displayed");
+			}
+		}
 }

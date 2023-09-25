@@ -78,8 +78,8 @@ public class LoginPage {
 	}
 	
 
-	public void setUserName(String userName) {
-		if(this.userName.isDisplayed()) {
+	public void setUserName(String userName,WebDriver driver) {
+		if(CommonUtils.waitForElementToVisible(driver, this.userName)) {
 			this.userName.clear();
 		this.userName.sendKeys(userName);
 		}
@@ -101,9 +101,9 @@ public class LoginPage {
 
 	
 
-	public void setPassword(String password) {
+	public void setPassword(String password,WebDriver driver) {
 		
-		if(this.password.isDisplayed()) {
+		if(CommonUtils.waitForElementToVisible(driver, this.password)) {
 			this.password.clear();
 			this.password.sendKeys(password);
 			}
@@ -115,9 +115,9 @@ public class LoginPage {
 
 	
 
-	public void clickLoginBtn() {
+	public void clickLoginBtn(WebDriver driver) {
 		
-		if(this.loginBtn.isDisplayed()) {
+		if(CommonUtils.waitForElementClickable(driver, this.loginBtn)) {
 			this.loginBtn.click();
 		}else {
 			System.out.println("Login btn is not displayed");

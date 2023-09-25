@@ -3,12 +3,15 @@
  */
 package com.tekarck.testCases;
 
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.teckarck.constants.FileConstants;
+import com.tekarch.utils.FileUtils;
 import com.tekarck.pages.HomePage;
 
 /**
@@ -17,7 +20,7 @@ import com.tekarck.pages.HomePage;
 public class TC36_BlockingAnEventInTheCalender extends BaseTest {
 	HomePage hp;
 	@Test
-	void verifyBlockingAnEventInTheCalender() {
+	void verifyBlockingAnEventInTheCalender() throws IOException {
 		
 		loginToSalesForceApp();
 		hp=new HomePage(getDriver());
@@ -30,7 +33,7 @@ public class TC36_BlockingAnEventInTheCalender extends BaseTest {
 	    
 	    hp.clickOnCurrentDateLink();
 	    
-	    String userName="Anusha XXXX";
+	    String userName=FileUtils.readPropertiesFile(FileConstants.USER_MENU_TEST_DATA, "username2");
 	    
 	    Assert.assertTrue(hp.verifyCalenderPageDisplaedForFirstNameAndLastName(userName));
 	    
@@ -54,8 +57,8 @@ public class TC36_BlockingAnEventInTheCalender extends BaseTest {
 	    
 		
 		
-		Assert.assertTrue(hp.deleteEvent(getDriver()));
-		
+		Assert.assertTrue(hp.deleteEventFor8PM(getDriver()));
+		System.out.println("Event got deleted");
 		
 		/*
 		 * POST Conditions Deleting the event created

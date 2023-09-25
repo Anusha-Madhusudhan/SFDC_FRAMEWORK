@@ -60,10 +60,7 @@ public class SFDC_Listener implements ITestListener{
 		
 		test=extent.createTest(result.getName());
 		
-		
 		test.info(BaseTest.getDriver().getClass().getName());
-		
-		
 		
 		test.log(Status.PASS, result.getName());
 		
@@ -86,6 +83,17 @@ public class SFDC_Listener implements ITestListener{
 			
 			System.out.println(e.getMessage());
 		}
+	}
+	
+	
+	public void onTestSkipped(ITestResult result) {
+        test=extent.createTest(result.getName());
+		
+		test.info(BaseTest.getDriver().getClass().getName());
+		
+		test.log(Status.SKIP, result.getName());
+		
+		test.pass(MarkupHelper.createLabel(result.getName()+"  Skipped", ExtentColor.YELLOW));
 	}
 	
 	

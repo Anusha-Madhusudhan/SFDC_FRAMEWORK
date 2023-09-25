@@ -10,6 +10,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -122,6 +124,9 @@ public class OpportunitiesPage extends BasePage {
     
     @FindBy(id = "scope")
     WebElement show;
+    
+    @FindBy(xpath = "//input[@value='Delete']")
+    private WebElement deleteOppty;
     
 	public void clickOnOppTab() {
 		
@@ -447,6 +452,23 @@ public class OpportunitiesPage extends BasePage {
 			isOpptyReportPageTitleDisplayed=true;
 		}
 		return isOpptyReportPageTitleDisplayed;
+	}
+
+	public void deleteOpp(WebDriver driver) {
+		
+		if(CommonUtils.waitForElementClickable(driver, deleteOppty)) {
+			deleteOppty.click();
+			try {
+			Alert alert=CommonUtils.waitForAlert(driver);
+			alert.accept();
+			}catch(NoAlertPresentException e) {
+				System.out.println("Alert not present");
+			}
+		}
+		else {
+			System.out.println("deleteOppty btn is not displayed");
+		}
+		
 	}
 	
 

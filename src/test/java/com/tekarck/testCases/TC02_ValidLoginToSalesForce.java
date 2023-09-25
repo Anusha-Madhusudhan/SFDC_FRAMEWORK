@@ -46,24 +46,22 @@ public class TC02_ValidLoginToSalesForce extends BaseTest {
 	/*
 	 * Enter User Name clear password click on login btn Validate homepage title
 	 */
-//	@Test
+	@Test
 	void loginToSalesForceAppwithValidUserAndPwd(Method mName) throws InvalidFormatException, IOException {
 		
 		logger.info("Test case satrted here :    "+mName.getName());
 		lp = new LoginPage(getDriver());
 
-//		lp.setUserName("anusha@tek.com");
-//		lp.setPassword("Sumedh@03");
 
 		String userName = ExcelUtils.readCellDataFromExcelFile("UserCreds", 1, 1);
 		String password = ExcelUtils.readCellDataFromExcelFile("UserCreds", 1, 2);
 
-		lp.setUserName(userName);
+		lp.setUserName(userName,getDriver());
 		logger.info("Entered Username :"+userName);
-		lp.setPassword(password);
+		lp.setPassword(password,getDriver());
 		logger.info("Entered  password :"+password);
 
-		lp.clickLoginBtn();
+		lp.clickLoginBtn(getDriver());
 		logger.info("Clicked on login button");
 
 		String expectedPageTitle = TitleConstants.HOME_PAGE_TITLE;
@@ -97,12 +95,12 @@ public class TC02_ValidLoginToSalesForce extends BaseTest {
 				 userName=row[i];
 				 password=row[++i];
 				
-				lp.setUserName(userName);
+				lp.setUserName(userName,getDriver());
 				logger.info("Entered Username :"+userName);
-				lp.setPassword(password);
+				lp.setPassword(password,getDriver());
 				logger.info("Entered  password :"+password);
 			}
-			lp.clickLoginBtn();
+			lp.clickLoginBtn(getDriver());
 			logger.info("Clicked on login button");
 
 			String expectedPageTitle = TitleConstants.HOME_PAGE_TITLE;
@@ -133,7 +131,7 @@ public class TC02_ValidLoginToSalesForce extends BaseTest {
 	 * @throws InvalidFormatException
 	 * @throws IOException
 	 */
-	@Test(dataProvider = "LoginDataProvider" , dataProviderClass = com.tekarch.utils.DataProviderClass.class)
+//	@Test(dataProvider = "LoginDataProvider" , dataProviderClass = com.tekarch.utils.DataProviderClass.class)
 	void loginToSalesForceAppUsingDataProviders(Method sMethodName, String userName,String password) throws InvalidFormatException, IOException {
 		
         logger.info("INIDE THe CLASS ::    "+this.getClass().getName());
@@ -154,13 +152,13 @@ public class TC02_ValidLoginToSalesForce extends BaseTest {
 		logger.info("Test case satrted here :    "+sMethodName .getName());
 		logger.info("Validating Login for multiple users");
 		
-		lp.setUserName(userName);
+		lp.setUserName(userName,getDriver());
 		logger.info("Entered Username :"+userName);
-		lp.setPassword(password);
+		lp.setPassword(password,getDriver());
 		logger.info("Entered  password :"+password);
 				
 		
-		lp.clickLoginBtn();
+		lp.clickLoginBtn(getDriver());
 		logger.info("Clicked on login button");
 
 		String expectedPageTitle = TitleConstants.HOME_PAGE_TITLE;

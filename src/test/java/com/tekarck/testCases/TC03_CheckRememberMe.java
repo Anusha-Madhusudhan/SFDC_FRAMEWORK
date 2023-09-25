@@ -41,11 +41,11 @@ public class TC03_CheckRememberMe extends BaseTest {
 		String userName=ExcelUtils.readCellDataFromExcelFile("UserCreds", 1, 1);
 		String password=ExcelUtils.readCellDataFromExcelFile("UserCreds", 1, 2);
 		
-		lp.setUserName(userName);
+		lp.setUserName(userName,getDriver());
 		
 		logger.info("Entered User name   :: "+userName);
 		
-		lp.setPassword(password);
+		lp.setPassword(password,getDriver());
 		
 		logger.info("Entered User name   :: "+password);
 		
@@ -53,7 +53,7 @@ public class TC03_CheckRememberMe extends BaseTest {
 		
 		logger.info("Clicked On Remember Me");
 		
-		lp.clickLoginBtn();
+		lp.clickLoginBtn(getDriver());
 		
 		logger.info("Clicked LOgin Btn");
 		

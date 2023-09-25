@@ -30,7 +30,7 @@ public class TC30_VerifyTheContactErrorMsg extends BaseTest {
 		String sViewUniqueName=BaseTest.generateRandomString();
 		cp.enterViewUniqueName(sViewUniqueName);
 		
-		cp.clickSaveBtn();
+		cp.clickSaveBtn(getDriver());
 		
 		Assert.assertTrue(cp.verifyErrorMsgDisplayed(getDriver()));
 		

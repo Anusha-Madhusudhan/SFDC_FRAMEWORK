@@ -4,10 +4,15 @@
 package com.tekarck.pages;
 
 
+import java.util.List;
+
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -51,10 +56,10 @@ public class MyProfilePage extends BasePage {
 	@FindBy(xpath="//input[@value='Save All']")
 	private WebElement saveAllBtn;
 	
-	@FindBy(css = ".publisherattachtext ")
+	@FindBy(xpath = "//a[@title='Post']")
 	WebElement post;
 	
-	@FindBy(css = ".cke_wysiwyg_frame.cke_reset")
+	@FindBy(xpath = "//iframe[@title='Rich Text Editor, publisherRichTextEditor']")
 	WebElement postiFrame;
 	
 	@FindBy(xpath = "/html/body")
@@ -63,7 +68,7 @@ public class MyProfilePage extends BasePage {
 	@FindBy(id = "publishersharebutton")
 	WebElement share;
 	
-	@FindBy(xpath = "//span[@class='publisherattachtext ' and text()='File']")
+	@FindBy(xpath = "//a[@title='File']")
 	WebElement file;
 	
 	@FindBy(xpath = "//a[@id='chatterUploadFileAction']")
@@ -94,9 +99,46 @@ public class MyProfilePage extends BasePage {
 	
 	
 	
-	@FindBy(xpath = "//span[@class='feeditemtext cxfeeditemtext']//p")
+	@FindBy(xpath = "//span[@class='feeditemtext cxfeeditemtext']//p[2]")
 	WebElement lastPost;
 	
+	@FindBy(xpath = "//a[contains(@id,'spillovermenu')]")
+	WebElement moreActionsBtnForPost;
+	
+	
+	
+	@FindBy(xpath = "//a[contains(@id,'spillovermenu')]")
+	WebElement moreActionsBtnForFile;
+	
+	
+	@FindBy(xpath = "//div//ul//li//a[text()='Delete']")
+	WebElement deletePost;
+	
+	//div[@id='0D5Hu00007lZKHo']//ul//li//a[text()='Delete']
+	
+	@FindBy(xpath = "//div//ul//li//a[text()='Delete']")
+	WebElement deleteFile;
+	
+	
+	//input[@id='simpleDialog6button0' and @value='OK']
+	
+	@FindBy(xpath = "//div[contains(@id,'simpleDialog')]//input[@value='OK']")
+	List<WebElement> deleteOK;
+	
+	
+	
+	
+//	@FindBy(xpath = "//div[contains(@id,'simpleDialog')]//input[@value='OK']")
+//	WebElement deleteOKForFile;
+	
+	@FindBy(xpath = "//span[text()='Uploading photo...']")
+	 WebElement uploadPhotoSpinner;
+	
+	@FindBy(xpath = "//input[@id='j_id0:j_id7:save']")
+	 WebElement cropSaveBtn;
+	
+	@FindBy(id = "uploadProgressDialog")
+	WebElement uploadProgressSpinner;
 	
 	
 	public void clickSaveBtn() {
@@ -137,9 +179,11 @@ public class MyProfilePage extends BasePage {
 	}
 	
 	
-	public void clickFile() {
-		if(file.isDisplayed()) {
-			file.click();
+	public void clickFile(WebDriver driver) {
+		if(CommonUtils.waitForElementClickable(driver, file)) {
+			JavascriptExecutor js=(JavascriptExecutor) driver;
+			js.executeScript("arguments[0].click();", file);
+//			file.click();
 		}else {
 			System.out.println("File is not displayed");
 		}
@@ -173,9 +217,12 @@ public class MyProfilePage extends BasePage {
 	}
 	
 	
-	public void clickPost() {
-		if(post.isDisplayed()) {
-			post.click();
+	public void clickPost(WebDriver driver) {
+		if(CommonUtils.waitForElementClickable(driver, post)) {
+			JavascriptExecutor js=(JavascriptExecutor) driver;
+			js.executeScript("arguments[0].click();", post);
+//			post.click();
+			System.out.println("Post link clicked");
 		}else {
 			System.out.println("post is not displayed");
 		}
@@ -183,7 +230,7 @@ public class MyProfilePage extends BasePage {
 	
 	public void switchToPostFrame(WebDriver driver) {
 		
-		if(postiFrame.isDisplayed()) {
+		if(CommonUtils.waitForElementToVisible(driver, postiFrame)) {
 			driver=CommonUtils.waitForFrameToBeAvailableToSwitch(driver, postiFrame);
 		}else {
 			System.out.println("postiFrame is not displayed");
@@ -192,9 +239,10 @@ public class MyProfilePage extends BasePage {
 		
 	}
 	
-	public void setpostText(String text) {
-		if(postText.isDisplayed()) {
-			postText.clear();
+	public void setpostText(WebDriver driver, String text) {
+		if(CommonUtils.waitForElementToVisible(driver, postText)) {
+//			postText.clear();
+			postText.sendKeys(Keys.ENTER);
 			postText.sendKeys(text);
 			
 		}else {
@@ -336,6 +384,8 @@ public class MyProfilePage extends BasePage {
 	public boolean verifyUploadedFileName(WebDriver driver, String sFileName) {
 		
      boolean isFileUploaded=false;
+     
+     if(CommonUtils.waitForElementToDisapear(driver, uploadPhotoSpinner)) {
 		
 		if(uploadedFileName.isDisplayed()) {
 			
@@ -352,7 +402,7 @@ public class MyProfilePage extends BasePage {
 		else {
 			System.out.println("Post is not displayed");
 		}
-		
+     }
 		return isFileUploaded;
 	}
 
@@ -369,6 +419,93 @@ public class MyProfilePage extends BasePage {
 		
 		return profilePage;
 	}
+
+	public boolean deleteFileUploaded(WebDriver driver) throws InterruptedException {
+		boolean isFileDeleted=false;
+		System.out.println("Inside delete uploaded post/file method");
+		if(CommonUtils.waitForElementClickable(driver, moreActionsBtnForFile)) {
+			moreActionsBtnForFile.click();
+			System.out.println("moreActionsBtnForFile clicked");
+			if(CommonUtils.waitForElementClickable(driver, deleteFile)) {
+			 
+				deleteFile.click();
+				System.out.println("deleteFile clicked");
+				for(WebElement ele:deleteOK) {
+					System.out.println("Number of ok web elements  "+deleteOK.size());
+					if(CommonUtils.waitForElementToVisible(driver, ele)) {
+						ele.click();
+						System.out.println("deleteOK clicked");
+						isFileDeleted=true;
+						break;
+					}else {
+						System.out.println("Element delete OK btn is not dispalyed");
+					}
+				}
+				
+				}
+				
+			
+		}
+		return isFileDeleted;
+		
+	}
+
+	public boolean waitForSpinnerDisapear(WebDriver driver) {
+		boolean isSpinnerDisapear=false;
+		
+		if(CommonUtils.waitForElementToDisapear(driver, uploadPhotoSpinner)) {
+			isSpinnerDisapear=true;
+		}else{
+			System.out.println("Photo upload spinner doesnot disapear");
+		}
+		return isSpinnerDisapear;
+		
+	}
+
+	public void clickCropSaveBtn(WebDriver driver) {
+		
+		if(CommonUtils.waitForElementClickable(driver, cropSaveBtn)) {
+			cropSaveBtn.click();
+		}else{
+			System.out.println("Crop save btn is not Clickable");
+		}
+	}
+
+	/*
+	 * public boolean deletePostUploaded(WebDriver driver) {
+	 * 
+	 * 
+	 * boolean isPostDeleted=false;
+	 * 
+	 * if(moreActionsBtnForPost.isDisplayed()) { moreActionsBtnForPost.click();
+	 * 
+	 * if(CommonUtils.waitForElementClickable(driver, deletePost)) {
+	 * 
+	 * 
+	 * 
+	 * deletePost.click();
+	 * 
+	 * System.out.println(driver.getWindowHandles().size());
+	 * 
+	 * CommonUtils.waitForElementToVisible(driver, deleteOKForPost);
+	 * 
+	 * if(deleteOKForPost.isDisplayed()){
+	 * if(CommonUtils.waitForElementClickable(driver, deleteOKForPost)) {
+	 * 
+	 * // JavascriptExecutor js=(JavascriptExecutor) driver; //
+	 * js.executeScript("arguments[0].click();", deleteOK); // // Actions action =
+	 * new Actions(driver); //
+	 * action.moveToElement(deleteOK).click().build().perform();
+	 * 
+	 * deleteOKForPost.click();
+	 * 
+	 * isPostDeleted=true; }
+	 * 
+	 * 
+	 * }else { System.out.println("Element delete OK btn is not dispalyed"); }
+	 * 
+	 * } } return isPostDeleted; }
+	 */
 
 	
 }

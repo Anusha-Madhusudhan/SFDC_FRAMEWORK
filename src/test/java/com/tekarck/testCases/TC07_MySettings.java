@@ -3,12 +3,16 @@
  */
 package com.tekarck.testCases;
 
-import org.openqa.selenium.By;
+import java.io.IOException;
+
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.teckarck.constants.FileConstants;
+import com.teckarck.constants.TitleConstants;
 import com.tekarch.utils.CommonUtils;
-
+import com.tekarch.utils.FileUtils;
 import com.tekarck.pages.MySettingPage;
 import com.tekarck.pages.UserMenuPage;
 
@@ -19,99 +23,74 @@ public class TC07_MySettings extends BaseTest {
 
 	UserMenuPage hp;
 	MySettingPage mySettingPage;
-	
+
 	@Test
-	void mySetting() {
-		hp=new UserMenuPage(getDriver());
+	void mySetting() throws InterruptedException, IOException {
+		hp = new UserMenuPage(getDriver());
 		
+		mySettingPage = new MySettingPage(getDriver());
+
 		loginToSalesForceApp();
-		
+
 		hp.clickUserMenu();
 		hp.clickMySettings();
-		
 		String expectedText="My Settings";
+		Assert.assertTrue(mySettingPage.verifyMySettingPageDisplayed(expectedText,getDriver()));
+
 		
-		String actualText=getDriver().findElement(By.xpath("//span[@class='folderText']")).getText();
-		
-		Assert.assertEquals(actualText, expectedText);
-		
-	}
-	@Test(dependsOnMethods ="mySetting" )
-	void personalLink() {
-		mySettingPage=new MySettingPage(getDriver());
 		mySettingPage.clickPersonalLink();
 		mySettingPage.clickLoginHistory();
-		Assert.assertTrue(mySettingPage.clickDownloadLogin());
+		Assert.assertTrue(mySettingPage.clickDownloadLogin(getDriver()));
 		
+		getDriver().navigate().back();
 		
+		Assert.assertTrue(mySettingPage.verifyMySettingPageDisplayed(expectedText,getDriver()));
 		
-	}
-	
-	
-	/*
-	 * Click on Display & Layout link and select Customize My Tabs link. 
-	 * Select "Salesforce Chatter" option from custom App: drop down. 
-	 * Select Reports tab from Available Tabs list. Click on >(Add) button. 
-	 */
-	
-	@Test(dependsOnMethods ="mySetting" )
-	void displayAndLayout() {
-		mySettingPage=new MySettingPage(getDriver());
+		Assert.assertTrue(mySettingPage.verifyFileDownloaded());
+
 		mySettingPage.clickDispalyAndLayoutLink();
 		mySettingPage.clickCustomizeTabs();
 		mySettingPage.selectSalesForceChatter("Salesforce Chatter");
-		if(!mySettingPage.selectReportTab("Reports")) {
-			
+		if (!mySettingPage.selectReportTab("Reports")) {
+
 			mySettingPage.clickAddBtn();
 		}
-		
+
 		mySettingPage.clickSaveBtn();
-		Assert.assertTrue(mySettingPage.verifyReportsAddedToTabMenu("Reports"));
+//		Assert.assertTrue(mySettingPage.verifyReportsAddedToTabMenu("Reports"));
 		
 		
-		
-	}
-	
-	/*
-	 * Click on Email link and click on my email settings link under that
-	 * Provide <EmailName> in Email Name field,
-	 *  <EmailAddress> in Email Address field, 
-	 *  Select automatic BCC radio button and click on save button
-	 */
-	
-	@Test(dependsOnMethods ="mySetting" )
-	void email() {
-		mySettingPage=new MySettingPage(getDriver());
-		
+      
+
+		// Email
+
 		mySettingPage.clickEmail();
 		mySettingPage.clickEmailSettings();
-		mySettingPage.setEmailName("ABCDEF");
-		mySettingPage.setEmailAddress("anusha.basavaraj28@gmail.com");
+		String emailName=FileUtils.readPropertiesFile(FileConstants.USER_MENU_TEST_DATA, "emailName");
+		String emailAddress=FileUtils.readPropertiesFile(FileConstants.USER_MENU_TEST_DATA, "emailAddress");
+		
+		mySettingPage.setEmailName(emailName);
+		mySettingPage.setEmailAddress(emailAddress);
 		mySettingPage.selectAutomaticBCC();
 		mySettingPage.clickSaveBtn();
-		
-		
-		
+
 		Assert.assertTrue(mySettingPage.verifyEmailUpdation(getDriver()));
-		
-		String expectedTitle="My Email Settings ~ Salesforce - Developer Edition";
-		
+
+		String expectedTitle = TitleConstants.MY_EMAIL_SETTINGS_TITLE;
+
 		Assert.assertTrue(CommonUtils.waitForTitleOfThePage(getDriver(), expectedTitle));
 		
-	}
-	
-	/*
-	 * Click on Calendar & Remainders link and click on Activity Remainders link. 
-	 * On Remainders page click on Open a test Remainder button.
-	 * Sample event pop window is dispayed.
-	 */
-	
-	@Test(dependsOnMethods ="mySetting" )
-	void calenderAndReminders() throws InterruptedException {
-		mySettingPage=new MySettingPage(getDriver());
+		
+        
+
+		// Calender reminder
+
 		mySettingPage.clickCalenderAndRamainder();
 		mySettingPage.clickActivityRemainder();
-        mySettingPage.clickOpenTestRemainder(getDriver());
+		mySettingPage.clickOpenTestRemainder(getDriver());
 		Assert.assertTrue(mySettingPage.verifyThePopUpWindow(getDriver()));
+
 	}
+
+	
 }

@@ -61,7 +61,7 @@ public class TC08_DelevolperConsole extends BaseTest {
 	 * 
 	 */
 	@Test
-	void developerConsole() throws InterruptedException {
+	void verifyDelevolperConsole() throws InterruptedException {
 		loginToSalesForceApp();
 		hp = new UserMenuPage(getDriver());
 		hp.clickUserMenu();

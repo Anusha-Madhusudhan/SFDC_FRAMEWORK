@@ -51,14 +51,14 @@ public class TC05_ValidateUserMenuDropDown extends BaseTest {
 		String userName=ExcelUtils.readCellDataFromExcelFile("UserCreds",1,1);
 		String password=ExcelUtils.readCellDataFromExcelFile("UserCreds",1,2);
 		
-		lp.setUserName(userName);
+		lp.setUserName(userName,getDriver());
 		logger.info("Entered UserName :: "+userName);
 		
-		lp.setPassword(password);
+		lp.setPassword(password,getDriver());
 		
 		logger.info("Entered password :: "+password);
 		
-		lp.clickLoginBtn();
+		lp.clickLoginBtn(getDriver());
 		
 		logger.info("Clicked on Login Button ");
 		

@@ -28,6 +28,6 @@ public class TitleConstants {
 	public static final String ALL_TABS_PAGE_TITLE="All Tabs ~ Salesforce - Developer Edition";
 	public static final String CUSTOMIZE_MYTAB_PAGE_TITLE="Customize My Tabs ~ Salesforce - Developer Edition";
 	public static final String CALENDER_NEW_EVENT_PAGE_TITLE="Calendar: New Event ~ Salesforce - Developer Edition";
-	
-	
+	public static final String MY_EMAIL_SETTINGS_TITLE = "My Email Settings ~ Salesforce - Developer Edition";
+	public static final String MERGE_ACCOUNT_PAGE_TITLE="Merge My Accounts ~ Salesforce - Developer Edition";
 }

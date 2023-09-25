@@ -146,8 +146,9 @@ public class LeadsPage extends BasePage {
 	public void selectTodaysLeads(String sOption) {
 		 if(leadsList.isDisplayed()) {
 		    	Select s=new Select(leadsList);
+		    	if(!s.getFirstSelectedOption().getText().equals(sOption)) {
 		    	s.selectByVisibleText(sOption);
-		    	
+		    	}
 		 }else {
 		    	System.out.println("List drop down is not present");
 		    }

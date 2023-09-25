@@ -56,13 +56,13 @@ public class TC14_CreateAccountReport extends BaseTest {
 		  
 		  ap.clickCreateDate();
 		  
-//		  Assert.assertTrue(ap.WaitforLoadToDisappear(getDriver()));
+		  Assert.assertTrue(ap.WaitforLoadToDisappear(getDriver()));
 		  ap.clickFromDateImg();
 		  ap.clickFromTodayBtn();
-//		  Assert.assertTrue(ap.WaitforLoadToDisappear(getDriver()));
+		  Assert.assertTrue(ap.WaitforLoadToDisappear(getDriver()));
 		  ap.clickToDateImg();
 		  ap.clickToTodayBtn();
-//		  Assert.assertTrue(ap.WaitforLoadToDisappear(getDriver()));
+		  Assert.assertTrue(ap.WaitforLoadToDisappear(getDriver()));
 		  ap.clickSaveReportBtn();
 		  
 		  String reportName=BaseTest.generateRandomString();
@@ -76,6 +76,13 @@ public class TC14_CreateAccountReport extends BaseTest {
 		  
 		  Assert.assertTrue(ap.verifyReportPageIsDispalyedWithReportName(getDriver(), reportName));
 		  
+		  
+		  /*
+		   * 
+		   * Post conditions delete Report
+		   */
+		  
+		  ap.deleteReport(getDriver());
 	}
 
 }

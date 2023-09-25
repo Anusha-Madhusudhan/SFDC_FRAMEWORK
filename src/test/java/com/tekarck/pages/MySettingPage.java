@@ -3,6 +3,8 @@
  */
 package com.tekarck.pages;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -15,7 +17,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import com.teckarck.constants.FileConstants;
 import com.tekarch.utils.CommonUtils;
+import com.tekarch.utils.FileUtils;
 
 /**
  * 
@@ -90,7 +94,8 @@ public class MySettingPage extends BasePage {
 	@FindBy(xpath = "(//div[@class='subject'])[1]")
 	private WebElement sampleEvent;
 	
-	
+	@FindBy(xpath = "//span[@class='folderText']")
+	private WebElement mySettingText;
 	
 	
 	
@@ -114,12 +119,15 @@ public class MySettingPage extends BasePage {
 		}
 	}
 	
-	public boolean clickDownloadLogin() {
+	public boolean clickDownloadLogin(WebDriver driver) {
 		
 		boolean isDownloadLinkPresent=false;
-		if(downloadLoginHistory.isDisplayed()) {
+		if(CommonUtils.waitForElementClickable(driver, downloadLoginHistory)) {
 			
 			downloadLoginHistory.click();
+			
+			
+			
 			isDownloadLinkPresent=true;
 		}
 		else {
@@ -162,6 +170,8 @@ public class MySettingPage extends BasePage {
 		
 		boolean isOptionPresentInSelectedTab=false;
 		Select s;
+		
+		
 		
 		if(selectedTabs.isDisplayed()) {
 			
@@ -325,7 +335,9 @@ public class MySettingPage extends BasePage {
 			if(CommonUtils.waitForElementClickable(driver, tsetReminderBtn)) {
 //				JavascriptExecutor js=(JavascriptExecutor) driver;
 //				js.executeScript("arguments[0].click();", tsetReminderBtn);
-				tsetReminderBtn.sendKeys(Keys.ENTER);
+//				tsetReminderBtn.sendKeys(Keys.ENTER);
+				
+				tsetReminderBtn.click();
 				
 				
 			}
@@ -353,6 +365,8 @@ public class MySettingPage extends BasePage {
 				
 				if(sampleEvent.getText().equals("  Sample Event.")) {
 					isSampleEventPopUpOpened=true;
+					
+					driver.close();
 				}
 				
 			}else {
@@ -365,6 +379,46 @@ public class MySettingPage extends BasePage {
 		
 		
 		return isSampleEventPopUpOpened;
+	}
+
+	public boolean verifyMySettingPageDisplayed(String expectedText, WebDriver driver) throws IOException {
+		boolean isMySettingPageDisplayed=false;
+		
+		
+		
+		CommonUtils.waitForTitleContais(driver, FileUtils.readPropertiesFile(FileConstants.USER_MENU_TEST_DATA, "updatedUserName"));
+		
+		if(mySettingText.isDisplayed()) {
+			if(mySettingText.getText().equals(expectedText)) {
+				isMySettingPageDisplayed=true;
+			}
+		}
+		return isMySettingPageDisplayed;
+	}
+
+	public boolean verifyFileDownloaded() {
+		
+		System.out.println("verifyFileDownloaded");
+		boolean isFileDownloaded=false;
+		
+		File dir = new File("C:\\Users\\anush\\Downloads");
+		  File[] dirContents = dir.listFiles();
+		  
+		  System.err.println("Size of the dir "+dirContents.length);
+
+		  for (int i = 0; i < dirContents.length; i++) {
+//			 if(dirContents[i].exists()){
+		      if (dirContents[i].getName().contains("LoginHistory")) {
+		    	  
+		    	  System.out.println("File downloaded with name "+dirContents[i].getName());
+		          // File has been found, it can now be deleted:
+		          dirContents[i].delete();
+		          isFileDownloaded=true;
+		      }
+//			 }
+		          }
+		      return isFileDownloaded;
+		
 	}
 	
 	

@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -151,6 +152,36 @@ public class CommonUtils {
 		}
 		return isTitleContainsText;
 	}
+
+
+	public static Alert waitForAlert(WebDriver driver) {
+		Alert isAlertPresent = null;
+		WebDriverWait wait = new WebDriverWait(driver, WaitCostants.WAIT_FOR_ELEMENT);
+		try {
+			isAlertPresent =wait.until(ExpectedConditions.alertIsPresent());
+			 
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return isAlertPresent;
+	}
+
+
+	public static void waitForAttributeValue(WebDriver driver, WebElement accountNameValue, String attribute ,String value) {
+		
+		
+		WebDriverWait wait = new WebDriverWait(driver, WaitCostants.WAIT_FOR_ELEMENT);
+		try {
+			wait.until(ExpectedConditions.attributeContains(accountNameValue, attribute, value));
+			 
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+
+	
 	
 //	public static boolean waitForSelectedOption(WebDriver driver, String sText) {
 //		boolean isSelctedOptionPresent = false;

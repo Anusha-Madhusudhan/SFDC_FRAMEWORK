@@ -43,10 +43,13 @@ public class TC16_CreateANewOpty extends BaseTest {
 		
 		
 		
+		/*
+		 * Post conditions to delete oppty
+		 */
 		
 		
-		
-		
+		op.deleteOpp(getDriver());
+		 Assert.assertTrue(op.verifyOppPageIsDisplayed(getDriver()));
 	}
 
 }

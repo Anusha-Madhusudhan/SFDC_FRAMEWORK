@@ -27,9 +27,7 @@ ContactsPage cp;
 		String contactName1=cp.selectContact(getDriver());
 		
 		System.out.println(contactName1);
-		
-//		System.out.println(cp.verifySelectedCotactPageDisplayed(getDriver(),"L1AhW"));
-		
+
 		Assert.assertTrue(cp.verifySelectedCotactPageDisplayed(getDriver(), contactName1));
 	}
 }
