@@ -7,6 +7,8 @@ import java.lang.reflect.Method;
 
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.teckarck.constants.TitleConstants;
@@ -20,9 +22,8 @@ public class TC14_CreateAccountReport extends BaseTest {
 	AccountsPage ap;
 	
 	
-	@Test
-	void verifyCreateAccountReport(Method sMathodName)  {
-		
+	@BeforeMethod
+	void preConditions() {
 		/*
 		 * Preconditions for the test starts here
 		 */
@@ -39,6 +40,13 @@ public class TC14_CreateAccountReport extends BaseTest {
 		/*
 		 * Preconditions for the test ends here
 		 */
+		
+	}
+	
+	
+	@Test
+	void verifyCreateAccountReport(Method sMathodName)  {
+		
 		
 		
 		ap.clickAccountTab();
@@ -77,7 +85,13 @@ public class TC14_CreateAccountReport extends BaseTest {
 		  Assert.assertTrue(ap.verifyReportPageIsDispalyedWithReportName(getDriver(), reportName));
 		  
 		  
-		  /*
+		 
+	}
+	
+	@AfterMethod
+	void postConditions() {
+		
+		 /*
 		   * 
 		   * Post conditions delete Report
 		   */

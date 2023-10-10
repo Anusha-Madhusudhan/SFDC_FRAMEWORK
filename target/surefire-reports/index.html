@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-Regression__Suite" class="navigator-link">
+              <span class="suite-name border-passed">Regression  Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-Regression__Suite" class="navigator-link ">
+                    <span>C:\Users\anush\TekArch-workspace\SDFC_Framework\regressionTest.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-Regression__Suite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-Regression__Suite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-Regression__Suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-Regression__Suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-Regression__Suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-Regression__Suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">8 methods,   8 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Regression__Suite" class="hide-methods passed suite-Regression__Suite"> (hide)</a> <!-- hide-methods passed suite-Regression__Suite -->
+                      <a href="#" panel-name="suite-Regression__Suite" class="show-methods passed suite-Regression__Suite"> (show)</a> <!-- show-methods passed suite-Regression__Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Regression__Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Regression__Suite" title="com.tekarck.testCases.TC04A_TestForgotPassword" class="method navigator-link" hash-for-method="forgotPwdLinkValidation(void com.tekarck.testCases.TC04A_TestForgotPassword.forgotPwdLinkValidation(java.lang.reflect.Method...)">forgotPwdLinkValidation(void com.tekarck.testCases.TC04A_TestForgotPassword.forgotPwdLinkValidation(java.lang.reflect.Method...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Regression__Suite" title="com.tekarck.testCases.TC03_CheckRememberMe" class="method navigator-link" hash-for-method="loginAndCheckRememberMe(void com.tekarck.testCases.TC03_CheckRememberMe.loginAndCheckRememberMe(java.lang.reflect.Method) th...)">loginAndCheckRememberMe(void com.tekarck.testCases.TC03_CheckRememberMe.loginAndCheckRememberMe(java.lang.reflect.Method) th...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Regression__Suite" title="com.tekarck.testCases.TC04B_InvalidUserNameAndPassword" class="method navigator-link" hash-for-method="loginToAppWithInvalidCreds(void com.tekarck.testCases.TC04B_InvalidUserNameAndPassword.loginToAppWithInvalidCreds(java.lang.ref...)">loginToAppWithInvalidCreds(void com.tekarck.testCases.TC04B_InvalidUserNameAndPassword.loginToAppWithInvalidCreds(java.lang.ref...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Regression__Suite" title="com.tekarck.testCases.TC02_ValidLoginToSalesForce" class="method navigator-link" hash-for-method="loginToSalesForceAppwithValidUserAndPwd(void com.tekarck.testCases.TC02_ValidLoginToSalesForce.loginToSalesForceAppwithValidUserAndPwd(java....)">loginToSalesForceAppwithValidUserAndPwd(void com.tekarck.testCases.TC02_ValidLoginToSalesForce.loginToSalesForceAppwithValidUserAndPwd(java....)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Regression__Suite" title="com.tekarck.testCases.TC01_LoginErrorMessage" class="method navigator-link" hash-for-method="validateLoginToTheApplnWithBlankPassword(void com.tekarck.testCases.TC01_LoginErrorMessage.validateLoginToTheApplnWithBlankPassword(java.lang...)">validateLoginToTheApplnWithBlankPassword(void com.tekarck.testCases.TC01_LoginErrorMessage.validateLoginToTheApplnWithBlankPassword(java.lang...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Regression__Suite" title="com.tekarck.testCases.TC05_ValidateUserMenuDropDown" class="method navigator-link" hash-for-method="validateUserMenuDropDown(void com.tekarck.testCases.TC05_ValidateUserMenuDropDown.validateUserMenuDropDown(java.lang.reflect....)">validateUserMenuDropDown(void com.tekarck.testCases.TC05_ValidateUserMenuDropDown.validateUserMenuDropDown(java.lang.reflect....)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Regression__Suite" title="com.tekarck.testCases.TC08_DelevolperConsole" class="method navigator-link" hash-for-method="verifyDelevolperConsole">verifyDelevolperConsole</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Regression__Suite" title="com.tekarck.testCases.TC09_Logout" class="method navigator-link" hash-for-method="verifyLogout">verifyLogout</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Regression__Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Regression__Suite" class="panel Regression__Suite">
+          <div class="suite-Regression__Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.tekarck.testCases.TC01_LoginErrorMessage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateLoginToTheApplnWithBlankPassword(void com.tekarck.testCases.TC01_LoginErrorMessage.validateLoginToTheApplnWithBlankPassword(java.lang...)">
+                  </a> <!-- validateLoginToTheApplnWithBlankPassword(void com.tekarck.testCases.TC01_LoginErrorMessage.validateLoginToTheApplnWithBlankPassword(java.lang...) -->
+                  <span class="method-name">validateLoginToTheApplnWithBlankPassword</span>
+                  <span class="parameters">(void com.tekarck.testCases.TC01_LoginErrorMessage.validateLoginToTheApplnWithBlankPassword(java.lang.reflect.Method) throws java.io.IOException,org.apache.poi.openxml4j.exceptions.InvalidFormatException)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Regression__Suite-class-passed -->
+          <div class="suite-Regression__Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.tekarck.testCases.TC02_ValidLoginToSalesForce</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginToSalesForceAppwithValidUserAndPwd(void com.tekarck.testCases.TC02_ValidLoginToSalesForce.loginToSalesForceAppwithValidUserAndPwd(java....)">
+                  </a> <!-- loginToSalesForceAppwithValidUserAndPwd(void com.tekarck.testCases.TC02_ValidLoginToSalesForce.loginToSalesForceAppwithValidUserAndPwd(java....) -->
+                  <span class="method-name">loginToSalesForceAppwithValidUserAndPwd</span>
+                  <span class="parameters">(void com.tekarck.testCases.TC02_ValidLoginToSalesForce.loginToSalesForceAppwithValidUserAndPwd(java.lang.reflect.Method) throws org.apache.poi.openxml4j.exceptions.InvalidFormatException,java.io.IOException)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Regression__Suite-class-passed -->
+          <div class="suite-Regression__Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.tekarck.testCases.TC08_DelevolperConsole</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyDelevolperConsole">
+                  </a> <!-- verifyDelevolperConsole -->
+                  <span class="method-name">verifyDelevolperConsole</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Regression__Suite-class-passed -->
+          <div class="suite-Regression__Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.tekarck.testCases.TC03_CheckRememberMe</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginAndCheckRememberMe(void com.tekarck.testCases.TC03_CheckRememberMe.loginAndCheckRememberMe(java.lang.reflect.Method) th...)">
+                  </a> <!-- loginAndCheckRememberMe(void com.tekarck.testCases.TC03_CheckRememberMe.loginAndCheckRememberMe(java.lang.reflect.Method) th...) -->
+                  <span class="method-name">loginAndCheckRememberMe</span>
+                  <span class="parameters">(void com.tekarck.testCases.TC03_CheckRememberMe.loginAndCheckRememberMe(java.lang.reflect.Method) throws org.apache.poi.openxml4j.exceptions.InvalidFormatException,java.io.IOException)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Regression__Suite-class-passed -->
+          <div class="suite-Regression__Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.tekarck.testCases.TC09_Logout</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLogout">
+                  </a> <!-- verifyLogout -->
+                  <span class="method-name">verifyLogout</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Regression__Suite-class-passed -->
+          <div class="suite-Regression__Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.tekarck.testCases.TC04B_InvalidUserNameAndPassword</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginToAppWithInvalidCreds(void com.tekarck.testCases.TC04B_InvalidUserNameAndPassword.loginToAppWithInvalidCreds(java.lang.ref...)">
+                  </a> <!-- loginToAppWithInvalidCreds(void com.tekarck.testCases.TC04B_InvalidUserNameAndPassword.loginToAppWithInvalidCreds(java.lang.ref...) -->
+                  <span class="method-name">loginToAppWithInvalidCreds</span>
+                  <span class="parameters">(void com.tekarck.testCases.TC04B_InvalidUserNameAndPassword.loginToAppWithInvalidCreds(java.lang.reflect.Method) throws org.apache.poi.openxml4j.exceptions.InvalidFormatException,java.io.IOException)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Regression__Suite-class-passed -->
+          <div class="suite-Regression__Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.tekarck.testCases.TC05_ValidateUserMenuDropDown</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateUserMenuDropDown(void com.tekarck.testCases.TC05_ValidateUserMenuDropDown.validateUserMenuDropDown(java.lang.reflect....)">
+                  </a> <!-- validateUserMenuDropDown(void com.tekarck.testCases.TC05_ValidateUserMenuDropDown.validateUserMenuDropDown(java.lang.reflect....) -->
+                  <span class="method-name">validateUserMenuDropDown</span>
+                  <span class="parameters">(void com.tekarck.testCases.TC05_ValidateUserMenuDropDown.validateUserMenuDropDown(java.lang.reflect.Method) throws org.apache.poi.openxml4j.exceptions.InvalidFormatException,java.io.IOException)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Regression__Suite-class-passed -->
+          <div class="suite-Regression__Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.tekarck.testCases.TC04A_TestForgotPassword</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="forgotPwdLinkValidation(void com.tekarck.testCases.TC04A_TestForgotPassword.forgotPwdLinkValidation(java.lang.reflect.Method...)">
+                  </a> <!-- forgotPwdLinkValidation(void com.tekarck.testCases.TC04A_TestForgotPassword.forgotPwdLinkValidation(java.lang.reflect.Method...) -->
+                  <span class="method-name">forgotPwdLinkValidation</span>
+                  <span class="parameters">(void com.tekarck.testCases.TC04A_TestForgotPassword.forgotPwdLinkValidation(java.lang.reflect.Method) throws org.apache.poi.openxml4j.exceptions.InvalidFormatException,java.io.IOException)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Regression__Suite-class-passed -->
+        </div> <!-- panel Regression__Suite -->
+        <div panel-name="test-xml-Regression__Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\anush\TekArch-workspace\SDFC_Framework\regressionTest.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Regression  Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.tekarch.listeners.SFDC_Listener&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;classes&quot; name=&quot;Regression  Test&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;isHeadless&quot; value=&quot;true&quot;/&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+    &lt;parameter name=&quot;URL&quot; value=&quot;https://login.salesforce.com/&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.tekarck.testCases.TC08_DelevolperConsole&quot;/&gt;
+      &lt;class name=&quot;com.tekarck.testCases.TC03_CheckRememberMe&quot;/&gt;
+      &lt;class name=&quot;com.tekarck.testCases.TC04B_InvalidUserNameAndPassword&quot;/&gt;
+      &lt;class name=&quot;com.tekarck.testCases.TC09_Logout&quot;/&gt;
+      &lt;class name=&quot;com.tekarck.testCases.TC02_ValidLoginToSalesForce&quot;/&gt;
+      &lt;class name=&quot;com.tekarck.testCases.TC01_LoginErrorMessage&quot;/&gt;
+      &lt;class name=&quot;com.tekarck.testCases.TC04A_TestForgotPassword&quot;/&gt;
+      &lt;class name=&quot;com.tekarck.testCases.TC05_ValidateUserMenuDropDown&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Regression  Test --&gt;
+&lt;/suite&gt; &lt;!-- Regression  Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Regression__Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Regression  Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Regression  Test (8 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Regression__Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Regression  Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Regression__Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Regression  Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Regression__Suite');
+function tableData_Regression__Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(8);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'loginToAppWithInvalidCreds')
+data.setCell(0, 2, 'com.tekarck.testCases.TC04B_InvalidUserNameAndPassword')
+data.setCell(0, 3, 11250);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'verifyLogout')
+data.setCell(1, 2, 'com.tekarck.testCases.TC09_Logout')
+data.setCell(1, 3, 6996);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'verifyDelevolperConsole')
+data.setCell(2, 2, 'com.tekarck.testCases.TC08_DelevolperConsole')
+data.setCell(2, 3, 6768);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'loginAndCheckRememberMe')
+data.setCell(3, 2, 'com.tekarck.testCases.TC03_CheckRememberMe')
+data.setCell(3, 3, 6532);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'validateUserMenuDropDown')
+data.setCell(4, 2, 'com.tekarck.testCases.TC05_ValidateUserMenuDropDown')
+data.setCell(4, 3, 6528);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'loginToSalesForceAppwithValidUserAndPwd')
+data.setCell(5, 2, 'com.tekarck.testCases.TC02_ValidLoginToSalesForce')
+data.setCell(5, 3, 2970);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'validateLoginToTheApplnWithBlankPassword')
+data.setCell(6, 2, 'com.tekarck.testCases.TC01_LoginErrorMessage')
+data.setCell(6, 3, 1699);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'forgotPwdLinkValidation')
+data.setCell(7, 2, 'com.tekarck.testCases.TC04A_TestForgotPassword')
+data.setCell(7, 3, 1049);
+window.suiteTableData['Regression__Suite']= { tableData: data, tableDiv: 'times-div-Regression__Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 43 seconds</span>
+              <div id="times-div-Regression__Suite">
+              </div> <!-- times-div-Regression__Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Regression__Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Regression  Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Regression__Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Regression__Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.tekarck.testCases.TC03_CheckRememberMe</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp(chrome, https://login.salesforce.com/, true)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.tekarck.testCases.TC09_Logout</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp(chrome, https://login.salesforce.com/, true)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.tekarck.testCases.TC04B_InvalidUserNameAndPassword</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp(chrome, https://login.salesforce.com/, true)</span>
+                <span class="method-start">1 ms</span>
+              </div> <!-- configuration-class before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.tekarck.testCases.TC08_DelevolperConsole</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp(chrome, https://login.salesforce.com/, true)</span>
+                <span class="method-start">1 ms</span>
+              </div> <!-- configuration-class before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.tekarck.testCases.TC02_ValidLoginToSalesForce</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp(chrome, https://login.salesforce.com/, true)</span>
+                <span class="method-start">1 ms</span>
+              </div> <!-- configuration-class before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.tekarck.testCases.TC03_CheckRememberMe</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">loginAndCheckRememberMe(void com.tekarck.testCases.TC03_CheckRememberMe.loginAndCheckRememberMe(java.lang.reflect.Method) th...)</span>
+                <span class="method-start">6775 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.tekarck.testCases.TC08_DelevolperConsole</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">verifyDelevolperConsole</span>
+                <span class="method-start">7261 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.tekarck.testCases.TC09_Logout</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">verifyLogout</span>
+                <span class="method-start">9139 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.tekarck.testCases.TC02_ValidLoginToSalesForce</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">loginToSalesForceAppwithValidUserAndPwd(void com.tekarck.testCases.TC02_ValidLoginToSalesForce.loginToSalesForceAppwithValidUserAndPwd(java....)</span>
+                <span class="method-start">9188 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.tekarck.testCases.TC04B_InvalidUserNameAndPassword</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">loginToAppWithInvalidCreds(void com.tekarck.testCases.TC04B_InvalidUserNameAndPassword.loginToAppWithInvalidCreds(java.lang.ref...)</span>
+                <span class="method-start">9247 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.tekarck.testCases.TC02_ValidLoginToSalesForce</div> <!-- chronological-class-name -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">12195 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.tekarck.testCases.TC01_LoginErrorMessage</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp(chrome, https://login.salesforce.com/, true)</span>
+                <span class="method-start">12348 ms</span>
+              </div> <!-- configuration-class before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.tekarck.testCases.TC03_CheckRememberMe</div> <!-- chronological-class-name -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">13308 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.tekarck.testCases.TC04A_TestForgotPassword</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp(chrome, https://login.salesforce.com/, true)</span>
+                <span class="method-start">13437 ms</span>
+              </div> <!-- configuration-class before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.tekarck.testCases.TC08_DelevolperConsole</div> <!-- chronological-class-name -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">14030 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.tekarck.testCases.TC05_ValidateUserMenuDropDown</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp(chrome, https://login.salesforce.com/, true)</span>
+                <span class="method-start">14210 ms</span>
+              </div> <!-- configuration-class before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.tekarck.testCases.TC01_LoginErrorMessage</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">validateLoginToTheApplnWithBlankPassword(void com.tekarck.testCases.TC01_LoginErrorMessage.validateLoginToTheApplnWithBlankPassword(java.lang...)</span>
+                <span class="method-start">15000 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.tekarck.testCases.TC09_Logout</div> <!-- chronological-class-name -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">16136 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.tekarck.testCases.TC01_LoginErrorMessage</div> <!-- chronological-class-name -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">16700 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.tekarck.testCases.TC05_ValidateUserMenuDropDown</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">validateUserMenuDropDown(void com.tekarck.testCases.TC05_ValidateUserMenuDropDown.validateUserMenuDropDown(java.lang.reflect....)</span>
+                <span class="method-start">17118 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.tekarck.testCases.TC04A_TestForgotPassword</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">forgotPwdLinkValidation(void com.tekarck.testCases.TC04A_TestForgotPassword.forgotPwdLinkValidation(java.lang.reflect.Method...)</span>
+                <span class="method-start">17344 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">18394 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.tekarck.testCases.TC04B_InvalidUserNameAndPassword</div> <!-- chronological-class-name -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">20499 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.tekarck.testCases.TC05_ValidateUserMenuDropDown</div> <!-- chronological-class-name -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">23647 ms</span>
+              </div> <!-- configuration-class after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>

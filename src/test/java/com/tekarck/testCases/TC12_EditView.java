@@ -8,7 +8,8 @@ import java.util.List;
 
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.teckarck.constants.FileConstants;
@@ -26,9 +27,8 @@ public class TC12_EditView extends BaseTest {
 	String viewNameToBeEdited;
 	String newViewName;
 
-	@Test()
-	void editView() throws IOException {
-
+	@BeforeMethod
+	void preConditions() {
 		loginToSalesForceApp();
 		Assert.assertTrue(CommonUtils.waitForTitleOfThePage(getDriver(), TitleConstants.HOME_PAGE_TITLE));
 		ap = new AccountsPage(getDriver());
@@ -71,6 +71,13 @@ public class TC12_EditView extends BaseTest {
 		 * PreConditions For the test case Edit View Ends here
 		 * 
 		 */
+	}
+	
+	
+	@Test()
+	void editView() throws IOException {
+
+		
 		ap.selectViewNameToEdit(viewNameToBeEdited);// Need to change the view name before running the test.
 		ap.clickGoBtn(getDriver());
 		ap.clickEdit(getDriver());
@@ -91,12 +98,20 @@ public class TC12_EditView extends BaseTest {
 		Assert.assertTrue(ap.verifyTheColumnAddedToViewTable(FileUtils.readPropertiesFile(FileConstants.ACCOUNTS_TEST_DATA_FILE_PATH, "fieldToDispaly")));
 		Assert.assertTrue(ap.verifyAccountNameContainsLetterADispalyed("a"));
 
+		
+	}
+	
+	@AfterMethod
+	void postConditions() {
+		
+		
 		/*
 		 * Post conditions Delete view
 		 */
 
 		
 		 Assert.assertTrue(ap.verifyDeleteViewCreated(newViewName,getDriver()));
+		
 	}
 
 }

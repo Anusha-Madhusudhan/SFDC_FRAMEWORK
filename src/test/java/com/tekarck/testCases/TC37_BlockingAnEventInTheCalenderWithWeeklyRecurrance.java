@@ -8,6 +8,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 import com.teckarck.constants.FileConstants;
@@ -81,6 +82,12 @@ public class TC37_BlockingAnEventInTheCalenderWithWeeklyRecurrance extends BaseT
 		Assert.assertTrue(hp.verifyCalendarForFirstNameLastNameMonthViewDisplayed(userName,"Month View"));
 		}
 		
+		
+		
+	}
+	
+	@AfterMethod
+	void postConditions() {
 		/*
 		 * POST Conditions Deleting the event created
 		 * 
@@ -95,7 +102,6 @@ public class TC37_BlockingAnEventInTheCalenderWithWeeklyRecurrance extends BaseT
 		 * POST Conditions Deleting the event created
 		 * 
 		 */
-		
 	}
 
 }

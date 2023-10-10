@@ -7,6 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 import com.tekarck.pages.OpportunitiesPage;
@@ -43,6 +44,11 @@ public class TC16_CreateANewOpty extends BaseTest {
 		
 		
 		
+		
+	}
+	
+	@AfterMethod
+	void postConditions() {
 		/*
 		 * Post conditions to delete oppty
 		 */

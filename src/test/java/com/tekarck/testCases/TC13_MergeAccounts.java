@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 
@@ -20,10 +22,10 @@ import com.tekarck.pages.AccountsPage;
 public class TC13_MergeAccounts extends BaseTest {
 	
 	AccountsPage ap;
-
-	@Test
-	void verifyMergeAccounts() throws InterruptedException {
-		
+	String mergedAccountName;
+	
+	@BeforeMethod
+	void preConditions() {
 		loginToSalesForceApp();
 		ap=new AccountsPage(getDriver());
 		ap.clickAccountTab();
@@ -58,17 +60,31 @@ public class TC13_MergeAccounts extends BaseTest {
 	     * Pre requisites end here
 	     */
 	    
+	}
+
+	@Test
+	void verifyMergeAccounts() throws InterruptedException {
+		
+		
 	    ap.clickMergeAccountsLink();
 		Assert.assertTrue(ap.verifyMergeAccountPageDisplayed(getDriver()));
 		ap.enterTextToFindAccountToMerge("abc");
 		ap.clickFindAccountBtn();
 		List<String> accountsToBeMerged=ap.mergeAccounts();
 		Assert.assertTrue(ap.verifyMergeMyAccountsDisplayed(getDriver(),accountsToBeMerged));
-		String mergedAccountName=ap.getMergedAccountName();
+		mergedAccountName=ap.getMergedAccountName();
 		ap.clickMergeBtn(getDriver());
 		Assert.assertTrue(ap.verifyAccountPageDisplayed(getDriver()));
 		
 		
+		
+		
+		
+		
+	}
+	
+	@AfterMethod
+	void postConditions() {
 		/*
 		 * Post Conditions to delete acoounts
 		 */
@@ -78,8 +94,5 @@ public class TC13_MergeAccounts extends BaseTest {
 		   
 			Assert.assertTrue(ap.deleteAccount(mergedAccountName,getDriver()));
 		  
-		
-		
-		
 	}
 }

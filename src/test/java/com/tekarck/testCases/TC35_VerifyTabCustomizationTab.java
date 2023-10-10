@@ -4,6 +4,8 @@
 package com.tekarck.testCases;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.teckarck.constants.TitleConstants;
@@ -15,31 +17,30 @@ import com.tekarck.pages.UserMenuPage;
  * 
  */
 public class TC35_VerifyTabCustomizationTab extends BaseTest {
-	
+
 	HomePage hp;
 	UserMenuPage ump;
-	
-	
-	@Test
-	void VerifyTabCustomizationTab() {
-		
+	String tabToBeRemoved;
+
+	@BeforeMethod
+	void preConditions() {
 		loginToSalesForceApp();
-		
+
 		hp=new HomePage(getDriver());
 		ump=new UserMenuPage(getDriver());
-		
+
 		hp.clickOnPlusSign(getDriver());
 		Assert.assertTrue(hp.verifyAllTabPageDisplayed(getDriver()));
 		hp.clickCustomizeTabBtn();
-		String tabToBeRemoved="Chatter";
+		tabToBeRemoved="Chatter";
 		Assert.assertTrue(hp.verifyCustomizeTabPageDisplayed(getDriver()));
-		
+
 		/*
 		 * Pre condition check weather Tab to be removed present in the selected tab list
 		 */
-		
+
 		boolean isTabPresentInSelectedTabList=hp.verifyTabToBeRemovedPresentInSelectedList(tabToBeRemoved);
-		
+
 		if(isTabPresentInSelectedTabList==false) {
 			hp.selectTabFromAvailableTabList(tabToBeRemoved);
 			hp.clickAddBtn();
@@ -49,8 +50,14 @@ public class TC35_VerifyTabCustomizationTab extends BaseTest {
 			Assert.assertTrue(hp.verifyAllTabPageDisplayed(getDriver()));
 			hp.clickCustomizeTabBtn();
 			Assert.assertTrue(hp.verifyCustomizeTabPageDisplayed(getDriver()));
-		
+
 		}
+	}
+
+	@Test
+	void VerifyTabCustomizationTab() {
+
+
 		hp.selectTabFromSelectedTabList(tabToBeRemoved);
 		hp.clickOnRemoveBtn();
 		Assert.assertTrue(hp.verifyRemovedTabAvailableInAvailableTab(tabToBeRemoved));
@@ -59,12 +66,17 @@ public class TC35_VerifyTabCustomizationTab extends BaseTest {
 		Assert.assertTrue(hp.vrifyRemovedTabPresentOnTheTabBar(tabToBeRemoved));
 		ump.clickUserMenu();
 		ump.clickLogOut();
-		
-		
+
+
 		loginToSalesForceApp();
-		
+
 		Assert.assertTrue(hp.vrifyRemovedTabPresentOnTheTabBar(tabToBeRemoved));
-		
+
+
+	}
+
+	@AfterMethod
+	void postConditions() {
 		/*
 		 * POST CONDITIONS code starts here
 		 * 
@@ -79,11 +91,11 @@ public class TC35_VerifyTabCustomizationTab extends BaseTest {
 		hp.clickSaveBtn();
 		Assert.assertTrue(hp.verifyAllTabPageDisplayed(getDriver()));
 		Assert.assertFalse(hp.vrifyRemovedTabPresentOnTheTabBar(tabTobeAdded));
-		
+
 		/*
 		 * POST CONDITIONS code ends here
 		 */
-		
+
 	}
 
 }

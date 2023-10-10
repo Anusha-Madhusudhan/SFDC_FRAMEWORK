@@ -8,6 +8,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 import com.teckarck.constants.FileConstants;
@@ -50,7 +51,14 @@ public class TC36_BlockingAnEventInTheCalender extends BaseTest {
 	    
 	    Assert.assertTrue(hp.verifyOtherEventDispalyedBetweenTimeSlot8PMTo9PM(getDriver()));
 	    
-	    /*
+	    
+		
+	    
+	}
+	
+	@AfterMethod
+	void postConditions() {
+		/*
 		 * POST Conditions Deleting the event created
 		 * 
 		 */
@@ -64,8 +72,6 @@ public class TC36_BlockingAnEventInTheCalender extends BaseTest {
 		 * POST Conditions Deleting the event created
 		 * 
 		 */
-		
-	    
 	}
 
 }
