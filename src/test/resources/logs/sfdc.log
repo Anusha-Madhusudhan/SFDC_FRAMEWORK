@@ -329,3 +329,938 @@
 2023-10-09 22:04:51,728 [TestNG-test=Regression  Test-1] INFO : All User menu items are present.... 
 2023-10-09 22:04:51,729 [TestNG-test=Regression  Test-1] INFO : My Profile ,My Settings ,Developer Console , Switch to Lightning Experience, Logout
 2023-10-09 22:04:51,858 [TestNG-test=Regression  Test-1] INFO : Closing the browser :
+2023-10-25 10:43:01,104 [TestNG-test=Regression  Test-1] INFO : Set driver : chrome
+2023-10-25 10:43:07,347 [TestNG-test=Regression  Test-4] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:43:07,364 [TestNG-test=Regression  Test-4] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:43:07,382 [TestNG-test=Regression  Test-1] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:43:07,393 [TestNG-test=Regression  Test-1] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:43:07,393 [TestNG-test=Regression  Test-5] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:43:07,400 [TestNG-test=Regression  Test-5] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:43:07,521 [TestNG-test=Regression  Test-5] INFO : Test case satrted here :    loginToSalesForceAppwithValidUserAndPwd
+2023-10-25 10:43:07,636 [TestNG-test=Regression  Test-2] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:43:07,659 [TestNG-test=Regression  Test-2] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:43:07,816 [TestNG-test=Regression  Test-2] INFO : Inside the Class   :: com.tekarck.testCases.TC03_CheckRememberMe
+2023-10-25 10:43:07,816 [TestNG-test=Regression  Test-2] INFO : Inside the method   :: loginAndCheckRememberMe
+2023-10-25 10:43:07,918 [TestNG-test=Regression  Test-3] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:43:07,934 [TestNG-test=Regression  Test-3] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:43:08,086 [TestNG-test=Regression  Test-3] INFO : Inside the Class ::com.tekarck.testCases.TC04B_InvalidUserNameAndPassword
+2023-10-25 10:43:08,088 [TestNG-test=Regression  Test-3] INFO : Inside the method ::loginToAppWithInvalidCreds
+2023-10-25 10:43:09,273 [TestNG-test=Regression  Test-5] INFO : Entered Username :anusha@tek.com
+2023-10-25 10:43:09,304 [TestNG-test=Regression  Test-2] INFO : Closing the browser :
+2023-10-25 10:43:09,306 [TestNG-test=Regression  Test-2] INFO : Set driver : chrome
+2023-10-25 10:43:09,318 [TestNG-test=Regression  Test-3] INFO : Closing the browser :
+2023-10-25 10:43:09,320 [TestNG-test=Regression  Test-3] INFO : Set driver : chrome
+2023-10-25 10:43:09,380 [TestNG-test=Regression  Test-5] INFO : Entered  password :Sumedh@03
+2023-10-25 10:43:10,399 [TestNG-test=Regression  Test-5] INFO : Clicked on login button
+2023-10-25 10:43:10,962 [TestNG-test=Regression  Test-2] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:43:10,986 [TestNG-test=Regression  Test-2] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:43:10,993 [TestNG-test=Regression  Test-3] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:43:11,003 [TestNG-test=Regression  Test-3] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:43:11,115 [TestNG-test=Regression  Test-2] INFO : Inside the Class ::com.tekarck.testCases.TC01_LoginErrorMessage
+2023-10-25 10:43:11,115 [TestNG-test=Regression  Test-3] INFO : Inside the Class ::com.tekarck.testCases.TC04A_TestForgotPassword
+2023-10-25 10:43:11,115 [TestNG-test=Regression  Test-3] INFO : Inside the method ::forgotPwdLinkValidation
+2023-10-25 10:43:11,115 [TestNG-test=Regression  Test-2] INFO : Inside the method ::validateLoginToTheApplnWithBlankPassword
+2023-10-25 10:43:11,121 [TestNG-test=Regression  Test-2] INFO : application launched with title :Login | Salesforce
+2023-10-25 10:43:11,575 [TestNG-test=Regression  Test-3] INFO : Clicked on forgot password
+2023-10-25 10:43:11,595 [TestNG-test=Regression  Test-2] INFO : Entered Username :anusha@tek.com
+2023-10-25 10:43:11,765 [TestNG-test=Regression  Test-2] INFO : Entered blank password : 
+2023-10-25 10:43:11,766 [TestNG-test=Regression  Test-3] INFO : Entered User Name : : anusha@tek.com
+2023-10-25 10:43:12,015 [TestNG-test=Regression  Test-5] INFO : After successfull login Home page title should be :Home Page ~ Salesforce - Developer Edition
+2023-10-25 10:43:12,124 [TestNG-test=Regression  Test-5] INFO : Closing the browser :
+2023-10-25 10:43:12,125 [TestNG-test=Regression  Test-5] INFO : Set driver : chrome
+2023-10-25 10:43:12,132 [TestNG-test=Regression  Test-3] INFO : Clicked on Continue Btn
+2023-10-25 10:43:12,139 [TestNG-test=Regression  Test-3] INFO : Checking for Forgot password page title : : Check Your Email | Salesforce
+2023-10-25 10:43:12,140 [TestNG-test=Regression  Test-3] INFO : Navigated to forgot password page with title  : : Check Your Email | Salesforce
+2023-10-25 10:43:12,231 [TestNG-test=Regression  Test-3] INFO : Closing the browser :
+2023-10-25 10:43:12,482 [TestNG-test=Regression  Test-2] INFO : Clicked on login button
+2023-10-25 10:43:12,541 [TestNG-test=Regression  Test-2] INFO : Got the error message  :Please enter your password.
+2023-10-25 10:43:12,541 [TestNG-test=Regression  Test-2] INFO : Login sholud not happen with blank password
+2023-10-25 10:43:12,659 [TestNG-test=Regression  Test-2] INFO : Closing the browser :
+2023-10-25 10:43:13,062 [TestNG-test=Regression  Test-1] INFO : Closing the browser :
+2023-10-25 10:43:13,952 [TestNG-test=Regression  Test-4] INFO : Closing the browser :
+2023-10-25 10:43:13,980 [TestNG-test=Regression  Test-5] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:43:13,986 [TestNG-test=Regression  Test-5] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:43:14,100 [TestNG-test=Regression  Test-5] INFO : Inside the Class ::com.tekarck.testCases.TC05_ValidateUserMenuDropDown
+2023-10-25 10:43:14,101 [TestNG-test=Regression  Test-5] INFO : Inside the method ::validateUserMenuDropDown
+2023-10-25 10:43:14,463 [TestNG-test=Regression  Test-5] INFO : Entered UserName :: anusha@tek.com
+2023-10-25 10:43:14,564 [TestNG-test=Regression  Test-5] INFO : Entered password :: Sumedh@03
+2023-10-25 10:43:17,410 [TestNG-test=Regression  Test-5] INFO : Clicked on Login Button 
+2023-10-25 10:43:17,458 [TestNG-test=Regression  Test-5] INFO : Clicked on UserMenu  
+2023-10-25 10:43:17,546 [TestNG-test=Regression  Test-5] INFO : Validation for User Menu Items Started.... 
+2023-10-25 10:43:17,546 [TestNG-test=Regression  Test-5] INFO : All User menu items are present.... 
+2023-10-25 10:43:17,546 [TestNG-test=Regression  Test-5] INFO : My Profile ,My Settings ,Developer Console , Switch to Lightning Experience, Logout
+2023-10-25 10:43:17,620 [TestNG-test=Regression  Test-5] INFO : Closing the browser :
+2023-10-25 10:45:34,707 [TestNG-test=Regression  Test-4] INFO : Set driver : chrome
+2023-10-25 10:45:37,230 [TestNG-test=Regression  Test-5] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:45:37,251 [TestNG-test=Regression  Test-5] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:45:37,267 [TestNG-test=Regression  Test-1] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:45:37,273 [TestNG-test=Regression  Test-1] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:45:37,387 [TestNG-test=Regression  Test-5] INFO : Test case satrted here :    loginToSalesForceAppwithValidUserAndPwd
+2023-10-25 10:45:37,421 [TestNG-test=Regression  Test-4] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:45:37,447 [TestNG-test=Regression  Test-4] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:45:37,720 [TestNG-test=Regression  Test-3] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:45:37,738 [TestNG-test=Regression  Test-3] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:45:37,754 [TestNG-test=Regression  Test-2] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:45:37,764 [TestNG-test=Regression  Test-2] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:45:37,856 [TestNG-test=Regression  Test-3] INFO : Inside the Class ::com.tekarck.testCases.TC04B_InvalidUserNameAndPassword
+2023-10-25 10:45:37,857 [TestNG-test=Regression  Test-3] INFO : Inside the method ::loginToAppWithInvalidCreds
+2023-10-25 10:45:37,887 [TestNG-test=Regression  Test-2] INFO : Inside the Class   :: com.tekarck.testCases.TC03_CheckRememberMe
+2023-10-25 10:45:37,887 [TestNG-test=Regression  Test-2] INFO : Inside the method   :: loginAndCheckRememberMe
+2023-10-25 10:45:38,891 [TestNG-test=Regression  Test-5] INFO : Closing the browser :
+2023-10-25 10:45:38,892 [TestNG-test=Regression  Test-3] INFO : Closing the browser :
+2023-10-25 10:45:38,892 [TestNG-test=Regression  Test-2] INFO : Closing the browser :
+2023-10-25 10:45:38,893 [TestNG-test=Regression  Test-2] INFO : Set driver : chrome
+2023-10-25 10:45:38,893 [TestNG-test=Regression  Test-5] INFO : Set driver : chrome
+2023-10-25 10:45:38,893 [TestNG-test=Regression  Test-3] INFO : Set driver : chrome
+2023-10-25 10:45:40,500 [TestNG-test=Regression  Test-3] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:45:40,513 [TestNG-test=Regression  Test-3] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:45:40,632 [TestNG-test=Regression  Test-3] INFO : Inside the Class ::com.tekarck.testCases.TC05_ValidateUserMenuDropDown
+2023-10-25 10:45:40,632 [TestNG-test=Regression  Test-3] INFO : Inside the method ::validateUserMenuDropDown
+2023-10-25 10:45:40,722 [TestNG-test=Regression  Test-2] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:45:40,729 [TestNG-test=Regression  Test-2] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:45:40,846 [TestNG-test=Regression  Test-2] INFO : Inside the Class ::com.tekarck.testCases.TC04A_TestForgotPassword
+2023-10-25 10:45:40,846 [TestNG-test=Regression  Test-2] INFO : Inside the method ::forgotPwdLinkValidation
+2023-10-25 10:45:40,937 [TestNG-test=Regression  Test-5] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:45:40,946 [TestNG-test=Regression  Test-5] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:45:41,062 [TestNG-test=Regression  Test-5] INFO : Inside the Class ::com.tekarck.testCases.TC01_LoginErrorMessage
+2023-10-25 10:45:41,062 [TestNG-test=Regression  Test-5] INFO : Inside the method ::validateLoginToTheApplnWithBlankPassword
+2023-10-25 10:45:41,072 [TestNG-test=Regression  Test-5] INFO : application launched with title :Login | Salesforce
+2023-10-25 10:45:41,106 [TestNG-test=Regression  Test-3] INFO : Entered UserName :: anusha@tek.com
+2023-10-25 10:45:41,107 [TestNG-test=Regression  Test-2] INFO : Clicked on forgot password
+2023-10-25 10:45:41,325 [TestNG-test=Regression  Test-2] INFO : Entered User Name : : anusha@tek.com
+2023-10-25 10:45:41,388 [TestNG-test=Regression  Test-3] INFO : Entered password :: Sumedh@03
+2023-10-25 10:45:41,500 [TestNG-test=Regression  Test-5] INFO : Entered Username :anusha@tek.com
+2023-10-25 10:45:41,670 [TestNG-test=Regression  Test-5] INFO : Entered blank password : 
+2023-10-25 10:45:42,103 [TestNG-test=Regression  Test-5] INFO : Clicked on login button
+2023-10-25 10:45:42,142 [TestNG-test=Regression  Test-5] INFO : Got the error message  :Please enter your password.
+2023-10-25 10:45:42,142 [TestNG-test=Regression  Test-5] INFO : Login sholud not happen with blank password
+2023-10-25 10:45:42,237 [TestNG-test=Regression  Test-5] INFO : Closing the browser :
+2023-10-25 10:45:42,551 [TestNG-test=Regression  Test-3] INFO : Clicked on Login Button 
+2023-10-25 10:45:42,702 [TestNG-test=Regression  Test-2] INFO : Clicked on Continue Btn
+2023-10-25 10:45:42,708 [TestNG-test=Regression  Test-2] INFO : Checking for Forgot password page title : : Check Your Email | Salesforce
+2023-10-25 10:45:42,708 [TestNG-test=Regression  Test-2] INFO : Navigated to forgot password page with title  : : Check Your Email | Salesforce
+2023-10-25 10:45:42,791 [TestNG-test=Regression  Test-2] INFO : Closing the browser :
+2023-10-25 10:45:42,995 [TestNG-test=Regression  Test-4] INFO : Closing the browser :
+2023-10-25 10:45:43,568 [TestNG-test=Regression  Test-1] INFO : Closing the browser :
+2023-10-25 10:45:44,270 [TestNG-test=Regression  Test-3] INFO : Clicked on UserMenu  
+2023-10-25 10:45:44,365 [TestNG-test=Regression  Test-3] INFO : Validation for User Menu Items Started.... 
+2023-10-25 10:45:44,366 [TestNG-test=Regression  Test-3] INFO : All User menu items are present.... 
+2023-10-25 10:45:44,366 [TestNG-test=Regression  Test-3] INFO : My Profile ,My Settings ,Developer Console , Switch to Lightning Experience, Logout
+2023-10-25 10:45:44,465 [TestNG-test=Regression  Test-3] INFO : Closing the browser :
+2023-10-25 10:51:59,098 [TestNG-test=Regression  Test-2] INFO : Set driver : chrome
+2023-10-25 10:52:04,262 [TestNG-test=Regression  Test-5] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:52:04,279 [TestNG-test=Regression  Test-5] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:52:04,286 [TestNG-test=Regression  Test-4] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:52:04,292 [TestNG-test=Regression  Test-4] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:52:04,323 [TestNG-test=Regression  Test-2] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:52:04,329 [TestNG-test=Regression  Test-2] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:52:04,362 [TestNG-test=Regression  Test-3] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:52:04,372 [TestNG-test=Regression  Test-3] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:52:04,400 [TestNG-test=Regression  Test-5] INFO : Test case satrted here :    loginToSalesForceAppwithValidUserAndPwd
+2023-10-25 10:52:04,461 [TestNG-test=Regression  Test-2] INFO : Inside the Class   :: com.tekarck.testCases.TC03_CheckRememberMe
+2023-10-25 10:52:04,461 [TestNG-test=Regression  Test-2] INFO : Inside the method   :: loginAndCheckRememberMe
+2023-10-25 10:52:04,488 [TestNG-test=Regression  Test-3] INFO : Inside the Class ::com.tekarck.testCases.TC04B_InvalidUserNameAndPassword
+2023-10-25 10:52:04,489 [TestNG-test=Regression  Test-3] INFO : Inside the method ::loginToAppWithInvalidCreds
+2023-10-25 10:52:04,766 [TestNG-test=Regression  Test-1] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:52:04,775 [TestNG-test=Regression  Test-1] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:52:05,928 [TestNG-test=Regression  Test-5] INFO : Closing the browser :
+2023-10-25 10:52:05,930 [TestNG-test=Regression  Test-5] INFO : Set driver : chrome
+2023-10-25 10:52:05,961 [TestNG-test=Regression  Test-3] INFO : Closing the browser :
+2023-10-25 10:52:05,964 [TestNG-test=Regression  Test-3] INFO : Set driver : chrome
+2023-10-25 10:52:05,992 [TestNG-test=Regression  Test-2] INFO : Closing the browser :
+2023-10-25 10:52:05,994 [TestNG-test=Regression  Test-2] INFO : Set driver : chrome
+2023-10-25 10:52:07,468 [TestNG-test=Regression  Test-5] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:52:07,473 [TestNG-test=Regression  Test-5] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:52:07,590 [TestNG-test=Regression  Test-5] INFO : Inside the Class ::com.tekarck.testCases.TC01_LoginErrorMessage
+2023-10-25 10:52:07,591 [TestNG-test=Regression  Test-5] INFO : Inside the method ::validateLoginToTheApplnWithBlankPassword
+2023-10-25 10:52:07,597 [TestNG-test=Regression  Test-5] INFO : application launched with title :Login | Salesforce
+2023-10-25 10:52:07,787 [TestNG-test=Regression  Test-2] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:52:07,798 [TestNG-test=Regression  Test-2] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:52:07,896 [TestNG-test=Regression  Test-3] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:52:07,903 [TestNG-test=Regression  Test-3] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:52:07,911 [TestNG-test=Regression  Test-2] INFO : Inside the Class ::com.tekarck.testCases.TC05_ValidateUserMenuDropDown
+2023-10-25 10:52:07,912 [TestNG-test=Regression  Test-2] INFO : Inside the method ::validateUserMenuDropDown
+2023-10-25 10:52:07,990 [TestNG-test=Regression  Test-5] INFO : Entered Username :anusha@tek.com
+2023-10-25 10:52:08,024 [TestNG-test=Regression  Test-3] INFO : Inside the Class ::com.tekarck.testCases.TC04A_TestForgotPassword
+2023-10-25 10:52:08,024 [TestNG-test=Regression  Test-3] INFO : Inside the method ::forgotPwdLinkValidation
+2023-10-25 10:52:08,167 [TestNG-test=Regression  Test-5] INFO : Entered blank password : 
+2023-10-25 10:52:08,323 [TestNG-test=Regression  Test-3] INFO : Clicked on forgot password
+2023-10-25 10:52:08,496 [TestNG-test=Regression  Test-2] INFO : Entered UserName :: anusha@tek.com
+2023-10-25 10:52:08,565 [TestNG-test=Regression  Test-3] INFO : Entered User Name : : anusha@tek.com
+2023-10-25 10:52:08,622 [TestNG-test=Regression  Test-5] INFO : Clicked on login button
+2023-10-25 10:52:08,683 [TestNG-test=Regression  Test-2] INFO : Entered password :: Sumedh@03
+2023-10-25 10:52:08,691 [TestNG-test=Regression  Test-5] INFO : Got the error message  :Please enter your password.
+2023-10-25 10:52:08,691 [TestNG-test=Regression  Test-5] INFO : Login sholud not happen with blank password
+2023-10-25 10:52:08,830 [TestNG-test=Regression  Test-5] INFO : Closing the browser :
+2023-10-25 10:52:08,918 [TestNG-test=Regression  Test-3] INFO : Clicked on Continue Btn
+2023-10-25 10:52:08,931 [TestNG-test=Regression  Test-3] INFO : Checking for Forgot password page title : : Check Your Email | Salesforce
+2023-10-25 10:52:08,931 [TestNG-test=Regression  Test-3] INFO : Navigated to forgot password page with title  : : Check Your Email | Salesforce
+2023-10-25 10:52:09,059 [TestNG-test=Regression  Test-3] INFO : Closing the browser :
+2023-10-25 10:52:09,721 [TestNG-test=Regression  Test-1] INFO : Closing the browser :
+2023-10-25 10:52:10,220 [TestNG-test=Regression  Test-4] INFO : Closing the browser :
+2023-10-25 10:52:11,420 [TestNG-test=Regression  Test-2] INFO : Clicked on Login Button 
+2023-10-25 10:52:11,467 [TestNG-test=Regression  Test-2] INFO : Clicked on UserMenu  
+2023-10-25 10:52:11,551 [TestNG-test=Regression  Test-2] INFO : Validation for User Menu Items Started.... 
+2023-10-25 10:52:11,552 [TestNG-test=Regression  Test-2] INFO : All User menu items are present.... 
+2023-10-25 10:52:11,552 [TestNG-test=Regression  Test-2] INFO : My Profile ,My Settings ,Developer Console , Switch to Lightning Experience, Logout
+2023-10-25 10:52:11,646 [TestNG-test=Regression  Test-2] INFO : Closing the browser :
+2023-10-25 10:56:18,314 [TestNG-test=Regression  Test-2] INFO : Set driver : chrome
+2023-10-25 10:56:20,756 [TestNG-test=Regression  Test-4] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:56:20,781 [TestNG-test=Regression  Test-4] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:56:20,937 [TestNG-test=Regression  Test-2] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:56:20,941 [TestNG-test=Regression  Test-1] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:56:20,950 [TestNG-test=Regression  Test-2] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:56:20,954 [TestNG-test=Regression  Test-1] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:56:21,062 [TestNG-test=Regression  Test-3] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:56:21,077 [TestNG-test=Regression  Test-2] INFO : Inside the Class   :: com.tekarck.testCases.TC03_CheckRememberMe
+2023-10-25 10:56:21,078 [TestNG-test=Regression  Test-2] INFO : Inside the method   :: loginAndCheckRememberMe
+2023-10-25 10:56:21,214 [TestNG-test=Regression  Test-5] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:56:21,230 [TestNG-test=Regression  Test-5] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:56:21,353 [TestNG-test=Regression  Test-5] INFO : Test case satrted here :    loginToSalesForceAppwithValidUserAndPwd
+2023-10-25 10:56:21,466 [TestNG-test=Regression  Test-3] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:56:21,586 [TestNG-test=Regression  Test-3] INFO : Inside the Class ::com.tekarck.testCases.TC04B_InvalidUserNameAndPassword
+2023-10-25 10:56:21,587 [TestNG-test=Regression  Test-3] INFO : Inside the method ::loginToAppWithInvalidCreds
+2023-10-25 10:56:22,406 [TestNG-test=Regression  Test-5] INFO : Closing the browser :
+2023-10-25 10:56:22,407 [TestNG-test=Regression  Test-5] INFO : Set driver : chrome
+2023-10-25 10:56:22,423 [TestNG-test=Regression  Test-3] INFO : Closing the browser :
+2023-10-25 10:56:22,424 [TestNG-test=Regression  Test-3] INFO : Set driver : chrome
+2023-10-25 10:56:22,437 [TestNG-test=Regression  Test-2] INFO : Closing the browser :
+2023-10-25 10:56:22,438 [TestNG-test=Regression  Test-2] INFO : Set driver : chrome
+2023-10-25 10:56:23,868 [TestNG-test=Regression  Test-5] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:56:23,875 [TestNG-test=Regression  Test-5] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:56:23,991 [TestNG-test=Regression  Test-5] INFO : Inside the Class ::com.tekarck.testCases.TC01_LoginErrorMessage
+2023-10-25 10:56:23,991 [TestNG-test=Regression  Test-5] INFO : Inside the method ::validateLoginToTheApplnWithBlankPassword
+2023-10-25 10:56:23,995 [TestNG-test=Regression  Test-5] INFO : application launched with title :Login | Salesforce
+2023-10-25 10:56:24,197 [TestNG-test=Regression  Test-2] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:56:24,207 [TestNG-test=Regression  Test-2] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:56:24,331 [TestNG-test=Regression  Test-2] INFO : Inside the Class ::com.tekarck.testCases.TC05_ValidateUserMenuDropDown
+2023-10-25 10:56:24,331 [TestNG-test=Regression  Test-2] INFO : Inside the method ::validateUserMenuDropDown
+2023-10-25 10:56:24,379 [TestNG-test=Regression  Test-3] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:56:24,389 [TestNG-test=Regression  Test-3] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:56:24,399 [TestNG-test=Regression  Test-5] INFO : Entered Username :anusha@tek.com
+2023-10-25 10:56:24,514 [TestNG-test=Regression  Test-3] INFO : Inside the Class ::com.tekarck.testCases.TC04A_TestForgotPassword
+2023-10-25 10:56:24,514 [TestNG-test=Regression  Test-3] INFO : Inside the method ::forgotPwdLinkValidation
+2023-10-25 10:56:24,582 [TestNG-test=Regression  Test-5] INFO : Entered blank password : 
+2023-10-25 10:56:24,816 [TestNG-test=Regression  Test-2] INFO : Entered UserName :: anusha@tek.com
+2023-10-25 10:56:25,063 [TestNG-test=Regression  Test-3] INFO : Clicked on forgot password
+2023-10-25 10:56:25,080 [TestNG-test=Regression  Test-5] INFO : Clicked on login button
+2023-10-25 10:56:25,082 [TestNG-test=Regression  Test-2] INFO : Entered password :: Sumedh@03
+2023-10-25 10:56:25,161 [TestNG-test=Regression  Test-5] INFO : Got the error message  :Please enter your password.
+2023-10-25 10:56:25,161 [TestNG-test=Regression  Test-5] INFO : Login sholud not happen with blank password
+2023-10-25 10:56:25,296 [TestNG-test=Regression  Test-5] INFO : Closing the browser :
+2023-10-25 10:56:25,304 [TestNG-test=Regression  Test-3] INFO : Entered User Name : : anusha@tek.com
+2023-10-25 10:56:25,734 [TestNG-test=Regression  Test-3] INFO : Clicked on Continue Btn
+2023-10-25 10:56:25,738 [TestNG-test=Regression  Test-3] INFO : Checking for Forgot password page title : : Check Your Email | Salesforce
+2023-10-25 10:56:25,739 [TestNG-test=Regression  Test-3] INFO : Navigated to forgot password page with title  : : Check Your Email | Salesforce
+2023-10-25 10:56:25,833 [TestNG-test=Regression  Test-3] INFO : Closing the browser :
+2023-10-25 10:56:26,252 [TestNG-test=Regression  Test-2] INFO : Clicked on Login Button 
+2023-10-25 10:56:26,832 [TestNG-test=Regression  Test-1] INFO : Closing the browser :
+2023-10-25 10:56:26,925 [TestNG-test=Regression  Test-4] INFO : Closing the browser :
+2023-10-25 10:56:28,015 [TestNG-test=Regression  Test-2] INFO : Clicked on UserMenu  
+2023-10-25 10:56:28,100 [TestNG-test=Regression  Test-2] INFO : Validation for User Menu Items Started.... 
+2023-10-25 10:56:28,100 [TestNG-test=Regression  Test-2] INFO : All User menu items are present.... 
+2023-10-25 10:56:28,101 [TestNG-test=Regression  Test-2] INFO : My Profile ,My Settings ,Developer Console , Switch to Lightning Experience, Logout
+2023-10-25 10:56:28,196 [TestNG-test=Regression  Test-2] INFO : Closing the browser :
+2023-10-25 10:58:37,816 [main] INFO : Set driver : chrome
+2023-10-25 10:58:40,360 [main] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:58:40,380 [main] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:58:40,530 [main] INFO : Inside the Class ::com.tekarck.testCases.TC04B_InvalidUserNameAndPassword
+2023-10-25 10:58:40,530 [main] INFO : Inside the method ::loginToAppWithInvalidCreds
+2023-10-25 10:58:41,359 [main] INFO : Inside the method :: anusha@t.com
+2023-10-25 10:58:41,545 [main] INFO : Inside the method :: Anusha
+2023-10-25 10:58:51,483 [main] INFO : Clicked loin Btn....
+2023-10-25 10:58:51,942 [main] INFO : Got The error message.... :: Please check your username and password. If you still can't log in, contact your Salesforce administrator.
+2023-10-25 10:58:52,096 [main] INFO : Closing the browser :
+2023-10-25 10:59:38,090 [TestNG-test=Regression  Test-4] INFO : Set driver : chrome
+2023-10-25 10:59:40,198 [TestNG-test=Regression  Test-1] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:59:40,523 [TestNG-test=Regression  Test-5] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:59:40,529 [TestNG-test=Regression  Test-1] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:59:40,534 [TestNG-test=Regression  Test-5] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:59:40,672 [TestNG-test=Regression  Test-5] INFO : Test case satrted here :    loginToSalesForceAppwithValidUserAndPwd
+2023-10-25 10:59:40,736 [TestNG-test=Regression  Test-3] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:59:40,759 [TestNG-test=Regression  Test-3] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:59:40,806 [TestNG-test=Regression  Test-4] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:59:40,823 [TestNG-test=Regression  Test-4] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:59:40,904 [TestNG-test=Regression  Test-3] INFO : Inside the Class ::com.tekarck.testCases.TC04B_InvalidUserNameAndPassword
+2023-10-25 10:59:40,905 [TestNG-test=Regression  Test-3] INFO : Inside the method ::loginToAppWithInvalidCreds
+2023-10-25 10:59:41,100 [TestNG-test=Regression  Test-2] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:59:41,114 [TestNG-test=Regression  Test-2] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:59:41,248 [TestNG-test=Regression  Test-2] INFO : Inside the Class   :: com.tekarck.testCases.TC03_CheckRememberMe
+2023-10-25 10:59:41,248 [TestNG-test=Regression  Test-2] INFO : Inside the method   :: loginAndCheckRememberMe
+2023-10-25 10:59:42,160 [TestNG-test=Regression  Test-2] INFO : Closing the browser :
+2023-10-25 10:59:42,160 [TestNG-test=Regression  Test-3] INFO : Closing the browser :
+2023-10-25 10:59:42,162 [TestNG-test=Regression  Test-2] INFO : Set driver : chrome
+2023-10-25 10:59:42,162 [TestNG-test=Regression  Test-3] INFO : Set driver : chrome
+2023-10-25 10:59:42,210 [TestNG-test=Regression  Test-5] INFO : Entered Username :anusha@tek.com
+2023-10-25 10:59:42,369 [TestNG-test=Regression  Test-5] INFO : Entered  password :Sumedh@03
+2023-10-25 10:59:43,507 [TestNG-test=Regression  Test-5] INFO : Clicked on login button
+2023-10-25 10:59:43,708 [TestNG-test=Regression  Test-2] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:59:43,723 [TestNG-test=Regression  Test-2] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:59:43,836 [TestNG-test=Regression  Test-2] INFO : Inside the Class ::com.tekarck.testCases.TC01_LoginErrorMessage
+2023-10-25 10:59:43,836 [TestNG-test=Regression  Test-2] INFO : Inside the method ::validateLoginToTheApplnWithBlankPassword
+2023-10-25 10:59:43,850 [TestNG-test=Regression  Test-2] INFO : application launched with title :Login | Salesforce
+2023-10-25 10:59:43,899 [TestNG-test=Regression  Test-3] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:59:43,910 [TestNG-test=Regression  Test-3] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:59:44,032 [TestNG-test=Regression  Test-3] INFO : Inside the Class ::com.tekarck.testCases.TC04A_TestForgotPassword
+2023-10-25 10:59:44,033 [TestNG-test=Regression  Test-3] INFO : Inside the method ::forgotPwdLinkValidation
+2023-10-25 10:59:44,241 [TestNG-test=Regression  Test-2] INFO : Entered Username :anusha@tek.com
+2023-10-25 10:59:44,453 [TestNG-test=Regression  Test-3] INFO : Clicked on forgot password
+2023-10-25 10:59:44,646 [TestNG-test=Regression  Test-2] INFO : Entered blank password : 
+2023-10-25 10:59:44,735 [TestNG-test=Regression  Test-3] INFO : Entered User Name : : anusha@tek.com
+2023-10-25 10:59:45,059 [TestNG-test=Regression  Test-2] INFO : Clicked on login button
+2023-10-25 10:59:45,117 [TestNG-test=Regression  Test-2] INFO : Got the error message  :Please enter your password.
+2023-10-25 10:59:45,117 [TestNG-test=Regression  Test-2] INFO : Login sholud not happen with blank password
+2023-10-25 10:59:45,203 [TestNG-test=Regression  Test-2] INFO : Closing the browser :
+2023-10-25 10:59:45,205 [TestNG-test=Regression  Test-2] INFO : Set driver : chrome
+2023-10-25 10:59:45,312 [TestNG-test=Regression  Test-3] INFO : Clicked on Continue Btn
+2023-10-25 10:59:45,323 [TestNG-test=Regression  Test-3] INFO : Checking for Forgot password page title : : Check Your Email | Salesforce
+2023-10-25 10:59:45,324 [TestNG-test=Regression  Test-3] INFO : Navigated to forgot password page with title  : : Check Your Email | Salesforce
+2023-10-25 10:59:45,325 [TestNG-test=Regression  Test-5] INFO : After successfull login Home page title should be :Home Page ~ Salesforce - Developer Edition
+2023-10-25 10:59:45,434 [TestNG-test=Regression  Test-5] INFO : Closing the browser :
+2023-10-25 10:59:45,434 [TestNG-test=Regression  Test-3] INFO : Closing the browser :
+2023-10-25 10:59:45,913 [TestNG-test=Regression  Test-1] INFO : Closing the browser :
+2023-10-25 10:59:46,587 [TestNG-test=Regression  Test-4] INFO : Closing the browser :
+2023-10-25 10:59:47,553 [TestNG-test=Regression  Test-2] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 10:59:47,558 [TestNG-test=Regression  Test-2] INFO : Login Page title :Login | Salesforce
+2023-10-25 10:59:47,686 [TestNG-test=Regression  Test-2] INFO : Inside the Class ::com.tekarck.testCases.TC05_ValidateUserMenuDropDown
+2023-10-25 10:59:47,687 [TestNG-test=Regression  Test-2] INFO : Inside the method ::validateUserMenuDropDown
+2023-10-25 10:59:47,885 [TestNG-test=Regression  Test-2] INFO : Entered UserName :: anusha@tek.com
+2023-10-25 10:59:48,188 [TestNG-test=Regression  Test-2] INFO : Entered password :: Sumedh@03
+2023-10-25 10:59:52,416 [TestNG-test=Regression  Test-2] INFO : Clicked on Login Button 
+2023-10-25 10:59:52,464 [TestNG-test=Regression  Test-2] INFO : Clicked on UserMenu  
+2023-10-25 10:59:52,546 [TestNG-test=Regression  Test-2] INFO : Validation for User Menu Items Started.... 
+2023-10-25 10:59:52,546 [TestNG-test=Regression  Test-2] INFO : All User menu items are present.... 
+2023-10-25 10:59:52,546 [TestNG-test=Regression  Test-2] INFO : My Profile ,My Settings ,Developer Console , Switch to Lightning Experience, Logout
+2023-10-25 10:59:52,616 [TestNG-test=Regression  Test-2] INFO : Closing the browser :
+2023-10-25 11:00:44,162 [TestNG-test=Regression  Test(failed)-2] INFO : Set driver : chrome
+2023-10-25 11:00:46,293 [TestNG-test=Regression  Test(failed)-1] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:00:46,308 [TestNG-test=Regression  Test(failed)-1] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:00:46,435 [TestNG-test=Regression  Test(failed)-1] INFO : Inside the Class   :: com.tekarck.testCases.TC03_CheckRememberMe
+2023-10-25 11:00:46,435 [TestNG-test=Regression  Test(failed)-1] INFO : Inside the method   :: loginAndCheckRememberMe
+2023-10-25 11:00:46,500 [TestNG-test=Regression  Test(failed)-2] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:00:46,516 [TestNG-test=Regression  Test(failed)-2] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:00:46,635 [TestNG-test=Regression  Test(failed)-2] INFO : Inside the Class ::com.tekarck.testCases.TC04B_InvalidUserNameAndPassword
+2023-10-25 11:00:46,635 [TestNG-test=Regression  Test(failed)-2] INFO : Inside the method ::loginToAppWithInvalidCreds
+2023-10-25 11:00:47,272 [TestNG-test=Regression  Test(failed)-2] INFO : Closing the browser :
+2023-10-25 11:00:47,272 [TestNG-test=Regression  Test(failed)-1] INFO : Closing the browser :
+2023-10-25 11:06:25,706 [TestNG-test=Regression  Test-5] INFO : Set driver : chrome
+2023-10-25 11:06:28,146 [TestNG-test=Regression  Test-5] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:06:28,162 [TestNG-test=Regression  Test-5] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:06:28,224 [TestNG-test=Regression  Test-4] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:06:28,237 [TestNG-test=Regression  Test-4] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:06:28,240 [TestNG-test=Regression  Test-2] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:06:28,258 [TestNG-test=Regression  Test-2] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:06:28,298 [TestNG-test=Regression  Test-5] INFO : Test case satrted here :    loginToSalesForceAppwithValidUserAndPwd
+2023-10-25 11:06:28,386 [TestNG-test=Regression  Test-2] INFO : Inside the Class   :: com.tekarck.testCases.TC03_CheckRememberMe
+2023-10-25 11:06:28,387 [TestNG-test=Regression  Test-2] INFO : Inside the method   :: loginAndCheckRememberMe
+2023-10-25 11:06:28,809 [TestNG-test=Regression  Test-3] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:06:28,840 [TestNG-test=Regression  Test-3] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:06:28,863 [TestNG-test=Regression  Test-1] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:06:28,875 [TestNG-test=Regression  Test-1] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:06:28,967 [TestNG-test=Regression  Test-3] INFO : Inside the Class ::com.tekarck.testCases.TC04B_InvalidUserNameAndPassword
+2023-10-25 11:06:28,968 [TestNG-test=Regression  Test-3] INFO : Inside the method ::loginToAppWithInvalidCreds
+2023-10-25 11:06:29,665 [TestNG-test=Regression  Test-2] INFO : Closing the browser :
+2023-10-25 11:06:29,669 [TestNG-test=Regression  Test-2] INFO : Set driver : chrome
+2023-10-25 11:06:29,680 [TestNG-test=Regression  Test-3] INFO : Closing the browser :
+2023-10-25 11:06:29,683 [TestNG-test=Regression  Test-3] INFO : Set driver : chrome
+2023-10-25 11:06:29,774 [TestNG-test=Regression  Test-5] INFO : Closing the browser :
+2023-10-25 11:06:29,775 [TestNG-test=Regression  Test-5] INFO : Set driver : chrome
+2023-10-25 11:06:31,360 [TestNG-test=Regression  Test-2] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:06:31,367 [TestNG-test=Regression  Test-2] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:06:31,484 [TestNG-test=Regression  Test-2] INFO : Inside the Class ::com.tekarck.testCases.TC01_LoginErrorMessage
+2023-10-25 11:06:31,484 [TestNG-test=Regression  Test-2] INFO : Inside the method ::validateLoginToTheApplnWithBlankPassword
+2023-10-25 11:06:31,490 [TestNG-test=Regression  Test-2] INFO : application launched with title :Login | Salesforce
+2023-10-25 11:06:31,559 [TestNG-test=Regression  Test-5] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:06:31,567 [TestNG-test=Regression  Test-5] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:06:31,681 [TestNG-test=Regression  Test-5] INFO : Inside the Class ::com.tekarck.testCases.TC05_ValidateUserMenuDropDown
+2023-10-25 11:06:31,681 [TestNG-test=Regression  Test-5] INFO : Inside the method ::validateUserMenuDropDown
+2023-10-25 11:06:31,718 [TestNG-test=Regression  Test-3] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:06:31,726 [TestNG-test=Regression  Test-3] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:06:31,836 [TestNG-test=Regression  Test-3] INFO : Inside the Class ::com.tekarck.testCases.TC04A_TestForgotPassword
+2023-10-25 11:06:31,836 [TestNG-test=Regression  Test-3] INFO : Inside the method ::forgotPwdLinkValidation
+2023-10-25 11:06:31,925 [TestNG-test=Regression  Test-2] INFO : Entered Username :anusha@tek.com
+2023-10-25 11:06:32,057 [TestNG-test=Regression  Test-2] INFO : Entered blank password : 
+2023-10-25 11:06:32,147 [TestNG-test=Regression  Test-5] INFO : Entered UserName :: anusha@tek.com
+2023-10-25 11:06:32,280 [TestNG-test=Regression  Test-5] INFO : Entered password :: Sumedh@03
+2023-10-25 11:06:32,436 [TestNG-test=Regression  Test-2] INFO : Clicked on login button
+2023-10-25 11:06:32,484 [TestNG-test=Regression  Test-2] INFO : Got the error message  :Please enter your password.
+2023-10-25 11:06:32,484 [TestNG-test=Regression  Test-2] INFO : Login sholud not happen with blank password
+2023-10-25 11:06:32,502 [TestNG-test=Regression  Test-3] INFO : Clicked on forgot password
+2023-10-25 11:06:32,599 [TestNG-test=Regression  Test-2] INFO : Closing the browser :
+2023-10-25 11:06:32,660 [TestNG-test=Regression  Test-3] INFO : Entered User Name : : anusha@tek.com
+2023-10-25 11:06:33,163 [TestNG-test=Regression  Test-3] INFO : Clicked on Continue Btn
+2023-10-25 11:06:33,167 [TestNG-test=Regression  Test-3] INFO : Checking for Forgot password page title : : Check Your Email | Salesforce
+2023-10-25 11:06:33,167 [TestNG-test=Regression  Test-3] INFO : Navigated to forgot password page with title  : : Check Your Email | Salesforce
+2023-10-25 11:06:33,247 [TestNG-test=Regression  Test-3] INFO : Closing the browser :
+2023-10-25 11:06:34,855 [TestNG-test=Regression  Test-4] INFO : Closing the browser :
+2023-10-25 11:06:35,920 [TestNG-test=Regression  Test-5] INFO : Clicked on Login Button 
+2023-10-25 11:06:35,980 [TestNG-test=Regression  Test-5] INFO : Clicked on UserMenu  
+2023-10-25 11:06:36,079 [TestNG-test=Regression  Test-5] INFO : Validation for User Menu Items Started.... 
+2023-10-25 11:06:36,079 [TestNG-test=Regression  Test-5] INFO : All User menu items are present.... 
+2023-10-25 11:06:36,079 [TestNG-test=Regression  Test-5] INFO : My Profile ,My Settings ,Developer Console , Switch to Lightning Experience, Logout
+2023-10-25 11:06:36,182 [TestNG-test=Regression  Test-5] INFO : Closing the browser :
+2023-10-25 11:06:36,353 [TestNG-test=Regression  Test-1] INFO : Closing the browser :
+2023-10-25 11:11:12,939 [TestNG-test=Regression  Test-4] INFO : Set driver : chrome
+2023-10-25 11:11:15,533 [TestNG-test=Regression  Test-2] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:11:15,544 [TestNG-test=Regression  Test-3] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:11:15,557 [TestNG-test=Regression  Test-2] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:11:15,560 [TestNG-test=Regression  Test-3] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:11:15,592 [TestNG-test=Regression  Test-1] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:11:15,605 [TestNG-test=Regression  Test-1] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:11:15,710 [TestNG-test=Regression  Test-2] INFO : Inside the Class   :: com.tekarck.testCases.TC03_CheckRememberMe
+2023-10-25 11:11:15,711 [TestNG-test=Regression  Test-2] INFO : Inside the method   :: loginAndCheckRememberMe
+2023-10-25 11:11:15,714 [TestNG-test=Regression  Test-3] INFO : Inside the Class ::com.tekarck.testCases.TC04B_InvalidUserNameAndPassword
+2023-10-25 11:11:15,716 [TestNG-test=Regression  Test-3] INFO : Inside the method ::loginToAppWithInvalidCreds
+2023-10-25 11:11:16,329 [TestNG-test=Regression  Test-4] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:11:16,359 [TestNG-test=Regression  Test-4] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:11:16,764 [TestNG-test=Regression  Test-5] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:11:16,784 [TestNG-test=Regression  Test-6] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:11:16,792 [TestNG-test=Regression  Test-5] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:11:16,804 [TestNG-test=Regression  Test-7] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:11:16,830 [TestNG-test=Regression  Test-6] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:11:16,853 [TestNG-test=Regression  Test-7] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:11:16,912 [TestNG-test=Regression  Test-8] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:11:16,963 [TestNG-test=Regression  Test-6] INFO : Inside the Class ::com.tekarck.testCases.TC01_LoginErrorMessage
+2023-10-25 11:11:16,966 [TestNG-test=Regression  Test-6] INFO : Inside the method ::validateLoginToTheApplnWithBlankPassword
+2023-10-25 11:11:16,993 [TestNG-test=Regression  Test-5] INFO : Test case satrted here :    loginToSalesForceAppwithValidUserAndPwd
+2023-10-25 11:11:17,119 [TestNG-test=Regression  Test-7] INFO : Inside the Class ::com.tekarck.testCases.TC04A_TestForgotPassword
+2023-10-25 11:11:17,120 [TestNG-test=Regression  Test-7] INFO : Inside the method ::forgotPwdLinkValidation
+2023-10-25 11:11:17,178 [TestNG-test=Regression  Test-3] ERROR: Cannot write: /xl/sharedStrings.xml: in ZIP
+java.nio.channels.ClosedChannelException
+	at java.base/sun.nio.ch.FileChannelImpl.ensureOpen(FileChannelImpl.java:150)
+	at java.base/sun.nio.ch.FileChannelImpl.read(FileChannelImpl.java:790)
+	at org.apache.commons.compress.archivers.zip.ZipFile$BoundedFileChannelInputStream.read(ZipFile.java:101)
+	at org.apache.commons.compress.utils.BoundedArchiveInputStream.read(BoundedArchiveInputStream.java:81)
+	at java.base/java.io.BufferedInputStream.fill(BufferedInputStream.java:252)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:292)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:351)
+	at java.base/java.io.SequenceInputStream.read(SequenceInputStream.java:199)
+	at java.base/java.util.zip.InflaterInputStream.fill(InflaterInputStream.java:243)
+	at org.apache.commons.compress.archivers.zip.InflaterInputStreamWithStatistics.fill(InflaterInputStreamWithStatistics.java:51)
+	at java.base/java.util.zip.InflaterInputStream.read(InflaterInputStream.java:159)
+	at org.apache.commons.compress.archivers.zip.InflaterInputStreamWithStatistics.read(InflaterInputStreamWithStatistics.java:76)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:133)
+	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.read(ZipArchiveThresholdInputStream.java:78)
+	at org.apache.poi.util.IOUtils.copy(IOUtils.java:413)
+	at org.apache.poi.util.IOUtils.copy(IOUtils.java:392)
+	at org.apache.poi.openxml4j.opc.internal.marshallers.ZipPartMarshaller.marshall(ZipPartMarshaller.java:89)
+	at org.apache.poi.openxml4j.opc.ZipPackagePart.save(ZipPackagePart.java:127)
+	at org.apache.poi.openxml4j.opc.internal.marshallers.DefaultMarshaller.marshall(DefaultMarshaller.java:46)
+	at org.apache.poi.openxml4j.opc.ZipPackage.saveImpl(ZipPackage.java:594)
+	at org.apache.poi.openxml4j.opc.OPCPackage.save(OPCPackage.java:1500)
+	at org.apache.poi.openxml4j.opc.OPCPackage.save(OPCPackage.java:1487)
+	at org.apache.poi.openxml4j.opc.ZipPackage.closeImpl(ZipPackage.java:480)
+	at org.apache.poi.openxml4j.opc.OPCPackage.close(OPCPackage.java:470)
+	at org.apache.poi.ooxml.POIXMLDocument.close(POIXMLDocument.java:189)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.close(XSSFWorkbook.java:617)
+	at com.tekarch.utils.ExcelUtils.readCellDataFromExcelFile(ExcelUtils.java:54)
+	at com.tekarck.testCases.TC04B_InvalidUserNameAndPassword.loginToAppWithInvalidCreds(TC04B_InvalidUserNameAndPassword.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-10-25 11:11:17,239 [TestNG-test=Regression  Test-6] INFO : application launched with title :Login | Salesforce
+2023-10-25 11:11:17,508 [TestNG-test=Regression  Test-8] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:11:17,636 [TestNG-test=Regression  Test-8] INFO : Inside the Class ::com.tekarck.testCases.TC05_ValidateUserMenuDropDown
+2023-10-25 11:11:17,636 [TestNG-test=Regression  Test-8] INFO : Inside the method ::validateUserMenuDropDown
+2023-10-25 11:11:17,641 [TestNG-test=Regression  Test-3] INFO : Closing the browser :
+2023-10-25 11:11:17,675 [TestNG-test=Regression  Test-2] INFO : Closing the browser :
+2023-10-25 11:11:18,075 [TestNG-test=Regression  Test-5] INFO : Entered Username :anusha@tek.com
+2023-10-25 11:11:18,133 [TestNG-test=Regression  Test-7] INFO : Clicked on forgot password
+2023-10-25 11:11:18,151 [TestNG-test=Regression  Test-6] INFO : Entered Username :anusha@tek.com
+2023-10-25 11:11:18,275 [TestNG-test=Regression  Test-8] INFO : Entered UserName :: anusha@tek.com
+2023-10-25 11:11:18,358 [TestNG-test=Regression  Test-7] INFO : Entered User Name : : anusha@tek.com
+2023-10-25 11:11:18,400 [TestNG-test=Regression  Test-5] INFO : Entered  password :Sumedh@03
+2023-10-25 11:11:18,431 [TestNG-test=Regression  Test-6] INFO : Entered blank password : 
+2023-10-25 11:11:18,513 [TestNG-test=Regression  Test-8] INFO : Entered password :: Sumedh@03
+2023-10-25 11:11:18,757 [TestNG-test=Regression  Test-7] INFO : Clicked on Continue Btn
+2023-10-25 11:11:18,763 [TestNG-test=Regression  Test-7] INFO : Checking for Forgot password page title : : Check Your Email | Salesforce
+2023-10-25 11:11:18,764 [TestNG-test=Regression  Test-7] INFO : Navigated to forgot password page with title  : : Check Your Email | Salesforce
+2023-10-25 11:11:18,771 [TestNG-test=Regression  Test-6] INFO : Clicked on login button
+2023-10-25 11:11:18,825 [TestNG-test=Regression  Test-6] INFO : Got the error message  :Please enter your password.
+2023-10-25 11:11:18,825 [TestNG-test=Regression  Test-6] INFO : Login sholud not happen with blank password
+2023-10-25 11:11:18,834 [TestNG-test=Regression  Test-7] INFO : Closing the browser :
+2023-10-25 11:11:18,896 [TestNG-test=Regression  Test-6] INFO : Closing the browser :
+2023-10-25 11:11:19,430 [TestNG-test=Regression  Test-5] INFO : Clicked on login button
+2023-10-25 11:11:19,652 [TestNG-test=Regression  Test-8] INFO : Clicked on Login Button 
+2023-10-25 11:11:20,766 [TestNG-test=Regression  Test-8] INFO : Clicked on UserMenu  
+2023-10-25 11:11:20,908 [TestNG-test=Regression  Test-8] INFO : Validation for User Menu Items Started.... 
+2023-10-25 11:11:20,908 [TestNG-test=Regression  Test-8] INFO : All User menu items are present.... 
+2023-10-25 11:11:20,909 [TestNG-test=Regression  Test-8] INFO : My Profile ,My Settings ,Developer Console , Switch to Lightning Experience, Logout
+2023-10-25 11:11:21,007 [TestNG-test=Regression  Test-8] INFO : Closing the browser :
+2023-10-25 11:11:21,285 [TestNG-test=Regression  Test-5] INFO : After successfull login Home page title should be :Home Page ~ Salesforce - Developer Edition
+2023-10-25 11:11:21,353 [TestNG-test=Regression  Test-5] INFO : Closing the browser :
+2023-10-25 11:11:21,970 [TestNG-test=Regression  Test-4] INFO : Closing the browser :
+2023-10-25 11:11:22,651 [TestNG-test=Regression  Test-1] INFO : Closing the browser :
+2023-10-25 11:13:31,077 [TestNG-test=Regression  Test-2] INFO : Set driver : chrome
+2023-10-25 11:13:33,655 [TestNG-test=Regression  Test-8] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:13:33,672 [TestNG-test=Regression  Test-8] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:13:33,693 [TestNG-test=Regression  Test-7] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:13:33,708 [TestNG-test=Regression  Test-7] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:13:33,811 [TestNG-test=Regression  Test-1] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:13:33,850 [TestNG-test=Regression  Test-3] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:13:33,876 [TestNG-test=Regression  Test-3] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:13:34,033 [TestNG-test=Regression  Test-3] INFO : Inside the Class   :: com.tekarck.testCases.TC03_CheckRememberMe
+2023-10-25 11:13:34,033 [TestNG-test=Regression  Test-3] INFO : Inside the method   :: loginAndCheckRememberMe
+2023-10-25 11:13:34,131 [TestNG-test=Regression  Test-2] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:13:34,148 [TestNG-test=Regression  Test-2] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:13:34,257 [TestNG-test=Regression  Test-1] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:13:34,275 [TestNG-test=Regression  Test-2] INFO : Test case satrted here :    loginToSalesForceAppwithValidUserAndPwd
+2023-10-25 11:13:34,415 [TestNG-test=Regression  Test-1] INFO : Inside the Class ::com.tekarck.testCases.TC01_LoginErrorMessage
+2023-10-25 11:13:34,416 [TestNG-test=Regression  Test-1] INFO : Inside the method ::validateLoginToTheApplnWithBlankPassword
+2023-10-25 11:13:34,456 [TestNG-test=Regression  Test-1] INFO : application launched with title :Login | Salesforce
+2023-10-25 11:13:34,622 [TestNG-test=Regression  Test-5] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:13:34,651 [TestNG-test=Regression  Test-5] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:13:34,810 [TestNG-test=Regression  Test-5] INFO : Inside the Class ::com.tekarck.testCases.TC04B_InvalidUserNameAndPassword
+2023-10-25 11:13:34,810 [TestNG-test=Regression  Test-5] INFO : Inside the method ::loginToAppWithInvalidCreds
+2023-10-25 11:13:35,497 [TestNG-test=Regression  Test-4] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:13:35,627 [TestNG-test=Regression  Test-6] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:13:35,647 [TestNG-test=Regression  Test-6] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:13:35,781 [TestNG-test=Regression  Test-6] INFO : Inside the Class ::com.tekarck.testCases.TC05_ValidateUserMenuDropDown
+2023-10-25 11:13:35,782 [TestNG-test=Regression  Test-6] INFO : Inside the method ::validateUserMenuDropDown
+2023-10-25 11:13:36,019 [TestNG-test=Regression  Test-4] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:13:36,024 [TestNG-test=Regression  Test-2] INFO : Closing the browser :
+2023-10-25 11:13:36,024 [TestNG-test=Regression  Test-3] INFO : Closing the browser :
+2023-10-25 11:13:36,083 [TestNG-test=Regression  Test-1] INFO : Closing the browser :
+2023-10-25 11:13:36,098 [TestNG-test=Regression  Test-5] INFO : Closing the browser :
+2023-10-25 11:13:36,153 [TestNG-test=Regression  Test-4] INFO : Inside the Class ::com.tekarck.testCases.TC04A_TestForgotPassword
+2023-10-25 11:13:36,154 [TestNG-test=Regression  Test-4] INFO : Inside the method ::forgotPwdLinkValidation
+2023-10-25 11:13:36,272 [TestNG-test=Regression  Test-6] INFO : Entered UserName :: anusha@tek.com
+2023-10-25 11:13:36,442 [TestNG-test=Regression  Test-4] INFO : Clicked on forgot password
+2023-10-25 11:13:36,472 [TestNG-test=Regression  Test-6] INFO : Entered password :: Sumedh@03
+2023-10-25 11:13:36,586 [TestNG-test=Regression  Test-4] INFO : Entered User Name : : anusha@tek.com
+2023-10-25 11:13:36,918 [TestNG-test=Regression  Test-4] INFO : Clicked on Continue Btn
+2023-10-25 11:13:36,924 [TestNG-test=Regression  Test-4] INFO : Checking for Forgot password page title : : Check Your Email | Salesforce
+2023-10-25 11:13:36,924 [TestNG-test=Regression  Test-4] INFO : Navigated to forgot password page with title  : : Check Your Email | Salesforce
+2023-10-25 11:13:36,993 [TestNG-test=Regression  Test-4] INFO : Closing the browser :
+2023-10-25 11:13:39,473 [TestNG-test=Regression  Test-7] INFO : Closing the browser :
+2023-10-25 11:13:39,718 [TestNG-test=Regression  Test-8] INFO : Closing the browser :
+2023-10-25 11:13:40,813 [TestNG-test=Regression  Test-6] INFO : Clicked on Login Button 
+2023-10-25 11:13:40,863 [TestNG-test=Regression  Test-6] INFO : Clicked on UserMenu  
+2023-10-25 11:13:40,954 [TestNG-test=Regression  Test-6] INFO : Validation for User Menu Items Started.... 
+2023-10-25 11:13:40,954 [TestNG-test=Regression  Test-6] INFO : All User menu items are present.... 
+2023-10-25 11:13:40,954 [TestNG-test=Regression  Test-6] INFO : My Profile ,My Settings ,Developer Console , Switch to Lightning Experience, Logout
+2023-10-25 11:13:41,034 [TestNG-test=Regression  Test-6] INFO : Closing the browser :
+2023-10-25 11:14:25,645 [TestNG-test=Regression  Test-3] INFO : Set driver : chrome
+2023-10-25 11:14:27,861 [TestNG-test=Regression  Test-3] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:14:27,875 [TestNG-test=Regression  Test-3] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:14:27,910 [TestNG-test=Regression  Test-2] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:14:27,919 [TestNG-test=Regression  Test-2] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:14:27,979 [TestNG-test=Regression  Test-1] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:14:27,992 [TestNG-test=Regression  Test-1] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:14:28,005 [TestNG-test=Regression  Test-3] INFO : Inside the Class   :: com.tekarck.testCases.TC03_CheckRememberMe
+2023-10-25 11:14:28,005 [TestNG-test=Regression  Test-3] INFO : Inside the method   :: loginAndCheckRememberMe
+2023-10-25 11:14:28,038 [TestNG-test=Regression  Test-2] INFO : Test case satrted here :    loginToSalesForceAppwithValidUserAndPwd
+2023-10-25 11:14:28,116 [TestNG-test=Regression  Test-1] INFO : Inside the Class ::com.tekarck.testCases.TC01_LoginErrorMessage
+2023-10-25 11:14:28,117 [TestNG-test=Regression  Test-1] INFO : Inside the method ::validateLoginToTheApplnWithBlankPassword
+2023-10-25 11:14:28,136 [TestNG-test=Regression  Test-1] INFO : application launched with title :Login | Salesforce
+2023-10-25 11:14:28,932 [TestNG-test=Regression  Test-1] INFO : Closing the browser :
+2023-10-25 11:14:28,931 [TestNG-test=Regression  Test-2] INFO : Closing the browser :
+2023-10-25 11:14:28,933 [TestNG-test=Regression  Test-1] INFO : Set driver : chrome
+2023-10-25 11:14:28,933 [TestNG-test=Regression  Test-2] INFO : Set driver : chrome
+2023-10-25 11:14:28,970 [TestNG-test=Regression  Test-3] INFO : Entered User name   :: anusha@tek.com
+2023-10-25 11:14:29,162 [TestNG-test=Regression  Test-3] INFO : Entered User name   :: Sumedh@03
+2023-10-25 11:14:29,238 [TestNG-test=Regression  Test-3] INFO : Clicked On Remember Me
+2023-10-25 11:14:30,385 [TestNG-test=Regression  Test-2] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:14:30,396 [TestNG-test=Regression  Test-2] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:14:30,404 [TestNG-test=Regression  Test-3] INFO : Clicked LOgin Btn
+2023-10-25 11:14:30,510 [TestNG-test=Regression  Test-2] INFO : Inside the Class ::com.tekarck.testCases.TC04A_TestForgotPassword
+2023-10-25 11:14:30,511 [TestNG-test=Regression  Test-2] INFO : Inside the method ::forgotPwdLinkValidation
+2023-10-25 11:14:30,645 [TestNG-test=Regression  Test-1] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:14:30,655 [TestNG-test=Regression  Test-1] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:14:30,729 [TestNG-test=Regression  Test-2] INFO : Clicked on forgot password
+2023-10-25 11:14:30,771 [TestNG-test=Regression  Test-1] INFO : Inside the Class ::com.tekarck.testCases.TC04B_InvalidUserNameAndPassword
+2023-10-25 11:14:30,771 [TestNG-test=Regression  Test-1] INFO : Inside the method ::loginToAppWithInvalidCreds
+2023-10-25 11:14:30,916 [TestNG-test=Regression  Test-2] INFO : Entered User Name : : anusha@tek.com
+2023-10-25 11:14:31,154 [TestNG-test=Regression  Test-2] INFO : Clicked on Continue Btn
+2023-10-25 11:14:31,160 [TestNG-test=Regression  Test-2] INFO : Checking for Forgot password page title : : Check Your Email | Salesforce
+2023-10-25 11:14:31,160 [TestNG-test=Regression  Test-2] INFO : Navigated to forgot password page with title  : : Check Your Email | Salesforce
+2023-10-25 11:14:31,232 [TestNG-test=Regression  Test-2] INFO : Closing the browser :
+2023-10-25 11:14:31,233 [TestNG-test=Regression  Test-2] INFO : Set driver : chrome
+2023-10-25 11:14:31,262 [TestNG-test=Regression  Test-1] INFO : Inside the method :: anusha@t.com
+2023-10-25 11:14:31,361 [TestNG-test=Regression  Test-1] INFO : Inside the method :: Anusha
+2023-10-25 11:14:31,922 [TestNG-test=Regression  Test-3] INFO : Clicked Logout Btn
+2023-10-25 11:14:32,779 [TestNG-test=Regression  Test-3] INFO : Entered User name present in the Uaser Name Text Box :: anusha@tek.com
+2023-10-25 11:14:32,855 [TestNG-test=Regression  Test-3] INFO : Closing the browser :
+2023-10-25 11:14:32,857 [TestNG-test=Regression  Test-3] INFO : Set driver : chrome
+2023-10-25 11:14:32,880 [TestNG-test=Regression  Test-2] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:14:32,892 [TestNG-test=Regression  Test-2] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:14:33,017 [TestNG-test=Regression  Test-2] INFO : Inside the Class ::com.tekarck.testCases.TC05_ValidateUserMenuDropDown
+2023-10-25 11:14:33,017 [TestNG-test=Regression  Test-2] INFO : Inside the method ::validateUserMenuDropDown
+2023-10-25 11:14:33,578 [TestNG-test=Regression  Test-2] INFO : Entered UserName :: anusha@tek.com
+2023-10-25 11:14:33,678 [TestNG-test=Regression  Test-2] INFO : Entered password :: Sumedh@03
+2023-10-25 11:14:34,659 [TestNG-test=Regression  Test-3] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:14:34,665 [TestNG-test=Regression  Test-3] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:14:36,306 [TestNG-test=Regression  Test-2] INFO : Clicked on Login Button 
+2023-10-25 11:14:36,352 [TestNG-test=Regression  Test-2] INFO : Clicked on UserMenu  
+2023-10-25 11:14:36,448 [TestNG-test=Regression  Test-2] INFO : Validation for User Menu Items Started.... 
+2023-10-25 11:14:36,448 [TestNG-test=Regression  Test-2] INFO : All User menu items are present.... 
+2023-10-25 11:14:36,448 [TestNG-test=Regression  Test-2] INFO : My Profile ,My Settings ,Developer Console , Switch to Lightning Experience, Logout
+2023-10-25 11:14:36,515 [TestNG-test=Regression  Test-2] INFO : Closing the browser :
+2023-10-25 11:14:36,517 [TestNG-test=Regression  Test-2] INFO : Set driver : chrome
+2023-10-25 11:14:37,938 [TestNG-test=Regression  Test-2] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:14:37,948 [TestNG-test=Regression  Test-2] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:14:40,160 [TestNG-test=Regression  Test-3] INFO : Closing the browser :
+2023-10-25 11:14:41,015 [TestNG-test=Regression  Test-1] INFO : Clicked loin Btn....
+2023-10-25 11:14:41,051 [TestNG-test=Regression  Test-1] INFO : Got The error message.... :: Please check your username and password. If you still can't log in, contact your Salesforce administrator.
+2023-10-25 11:14:41,152 [TestNG-test=Regression  Test-1] INFO : Closing the browser :
+2023-10-25 11:14:42,847 [TestNG-test=Regression  Test-2] INFO : Closing the browser :
+2023-10-25 11:15:23,058 [main] INFO : Set driver : chrome
+2023-10-25 11:15:25,122 [main] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:15:25,134 [main] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:15:25,267 [main] INFO : Inside the Class ::com.tekarck.testCases.TC01_LoginErrorMessage
+2023-10-25 11:15:25,267 [main] INFO : Inside the method ::validateLoginToTheApplnWithBlankPassword
+2023-10-25 11:15:25,275 [main] INFO : application launched with title :Login | Salesforce
+2023-10-25 11:15:26,027 [main] INFO : Entered Username :anusha@tek.com
+2023-10-25 11:15:26,133 [main] INFO : Entered blank password : 
+2023-10-25 11:15:26,451 [main] INFO : Clicked on login button
+2023-10-25 11:15:26,489 [main] INFO : Got the error message  :Please enter your password.
+2023-10-25 11:15:26,489 [main] INFO : Login sholud not happen with blank password
+2023-10-25 11:15:26,604 [main] INFO : Closing the browser :
+2023-10-25 11:15:26,606 [main] INFO : Set driver : chrome
+2023-10-25 11:15:28,559 [main] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:15:28,574 [main] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:15:28,689 [main] INFO : Test case satrted here :    loginToSalesForceAppwithValidUserAndPwd
+2023-10-25 11:15:29,042 [main] INFO : Entered Username :anusha@tek.com
+2023-10-25 11:15:29,161 [main] INFO : Entered  password :Sumedh@03
+2023-10-25 11:15:30,203 [main] INFO : Clicked on login button
+2023-10-25 11:15:31,935 [main] INFO : After successfull login Home page title should be :Home Page ~ Salesforce - Developer Edition
+2023-10-25 11:15:32,021 [main] INFO : Closing the browser :
+2023-10-25 11:15:32,023 [main] INFO : Set driver : chrome
+2023-10-25 11:15:33,389 [main] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:15:33,398 [main] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:15:33,512 [main] INFO : Inside the Class   :: com.tekarck.testCases.TC03_CheckRememberMe
+2023-10-25 11:15:33,513 [main] INFO : Inside the method   :: loginAndCheckRememberMe
+2023-10-25 11:15:33,880 [main] INFO : Entered User name   :: anusha@tek.com
+2023-10-25 11:15:34,014 [main] INFO : Entered User name   :: Sumedh@03
+2023-10-25 11:15:34,079 [main] INFO : Clicked On Remember Me
+2023-10-25 11:15:35,003 [main] INFO : Clicked LOgin Btn
+2023-10-25 11:15:37,607 [main] INFO : Clicked Logout Btn
+2023-10-25 11:15:39,657 [main] INFO : Entered User name present in the Uaser Name Text Box :: anusha@tek.com
+2023-10-25 11:15:39,729 [main] INFO : Closing the browser :
+2023-10-25 11:15:39,730 [main] INFO : Set driver : chrome
+2023-10-25 11:15:41,151 [main] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:15:41,161 [main] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:15:41,270 [main] INFO : Inside the Class ::com.tekarck.testCases.TC04A_TestForgotPassword
+2023-10-25 11:15:41,271 [main] INFO : Inside the method ::forgotPwdLinkValidation
+2023-10-25 11:15:41,520 [main] INFO : Clicked on forgot password
+2023-10-25 11:15:41,626 [main] INFO : Entered User Name : : anusha@tek.com
+2023-10-25 11:15:41,825 [main] INFO : Clicked on Continue Btn
+2023-10-25 11:15:41,833 [main] INFO : Checking for Forgot password page title : : Check Your Email | Salesforce
+2023-10-25 11:15:41,833 [main] INFO : Navigated to forgot password page with title  : : Check Your Email | Salesforce
+2023-10-25 11:15:41,907 [main] INFO : Closing the browser :
+2023-10-25 11:15:41,908 [main] INFO : Set driver : chrome
+2023-10-25 11:15:43,247 [main] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:15:43,253 [main] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:15:43,365 [main] INFO : Inside the Class ::com.tekarck.testCases.TC04B_InvalidUserNameAndPassword
+2023-10-25 11:15:43,365 [main] INFO : Inside the method ::loginToAppWithInvalidCreds
+2023-10-25 11:15:43,696 [main] INFO : Inside the method :: anusha@t.com
+2023-10-25 11:15:43,793 [main] INFO : Inside the method :: Anusha
+2023-10-25 11:15:56,235 [main] INFO : Clicked loin Btn....
+2023-10-25 11:15:56,276 [main] INFO : Got The error message.... :: Please check your username and password. If you still can't log in, contact your Salesforce administrator.
+2023-10-25 11:15:56,354 [main] INFO : Closing the browser :
+2023-10-25 11:15:56,356 [main] INFO : Set driver : chrome
+2023-10-25 11:15:57,747 [main] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:15:57,754 [main] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:15:57,875 [main] INFO : Inside the Class ::com.tekarck.testCases.TC05_ValidateUserMenuDropDown
+2023-10-25 11:15:57,876 [main] INFO : Inside the method ::validateUserMenuDropDown
+2023-10-25 11:15:58,079 [main] INFO : Entered UserName :: anusha@tek.com
+2023-10-25 11:15:58,394 [main] INFO : Entered password :: Sumedh@03
+2023-10-25 11:15:59,445 [main] INFO : Clicked on Login Button 
+2023-10-25 11:16:01,633 [main] INFO : Clicked on UserMenu  
+2023-10-25 11:16:01,735 [main] INFO : Validation for User Menu Items Started.... 
+2023-10-25 11:16:01,737 [main] INFO : All User menu items are present.... 
+2023-10-25 11:16:01,737 [main] INFO : My Profile ,My Settings ,Developer Console , Switch to Lightning Experience, Logout
+2023-10-25 11:16:01,813 [main] INFO : Closing the browser :
+2023-10-25 11:16:01,815 [main] INFO : Set driver : chrome
+2023-10-25 11:16:03,154 [main] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:16:03,162 [main] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:16:07,677 [main] INFO : Closing the browser :
+2023-10-25 11:16:07,679 [main] INFO : Set driver : chrome
+2023-10-25 11:16:09,206 [main] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:16:09,211 [main] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:16:13,280 [main] INFO : Closing the browser :
+2023-10-25 11:16:31,039 [TestNG-test=Regression  Test-2] INFO : Set driver : chrome
+2023-10-25 11:16:33,378 [TestNG-test=Regression  Test-1] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:16:33,393 [TestNG-test=Regression  Test-3] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:16:33,401 [TestNG-test=Regression  Test-1] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:16:33,406 [TestNG-test=Regression  Test-3] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:16:33,545 [TestNG-test=Regression  Test-3] INFO : Inside the Class   :: com.tekarck.testCases.TC03_CheckRememberMe
+2023-10-25 11:16:33,545 [TestNG-test=Regression  Test-3] INFO : Inside the method   :: loginAndCheckRememberMe
+2023-10-25 11:16:33,547 [TestNG-test=Regression  Test-1] INFO : Inside the Class ::com.tekarck.testCases.TC01_LoginErrorMessage
+2023-10-25 11:16:33,547 [TestNG-test=Regression  Test-1] INFO : Inside the method ::validateLoginToTheApplnWithBlankPassword
+2023-10-25 11:16:33,568 [TestNG-test=Regression  Test-1] INFO : application launched with title :Login | Salesforce
+2023-10-25 11:16:33,678 [TestNG-test=Regression  Test-2] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:16:33,688 [TestNG-test=Regression  Test-2] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:16:33,803 [TestNG-test=Regression  Test-2] INFO : Test case satrted here :    loginToSalesForceAppwithValidUserAndPwd
+2023-10-25 11:16:34,550 [TestNG-test=Regression  Test-1] INFO : Closing the browser :
+2023-10-25 11:16:34,550 [TestNG-test=Regression  Test-2] INFO : Closing the browser :
+2023-10-25 11:16:34,553 [TestNG-test=Regression  Test-2] INFO : Set driver : chrome
+2023-10-25 11:16:34,553 [TestNG-test=Regression  Test-1] INFO : Set driver : chrome
+2023-10-25 11:16:34,645 [TestNG-test=Regression  Test-3] INFO : Entered User name   :: anusha@tek.com
+2023-10-25 11:16:34,837 [TestNG-test=Regression  Test-3] INFO : Entered User name   :: Sumedh@03
+2023-10-25 11:16:34,917 [TestNG-test=Regression  Test-3] INFO : Clicked On Remember Me
+2023-10-25 11:16:36,062 [TestNG-test=Regression  Test-2] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:16:36,072 [TestNG-test=Regression  Test-2] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:16:36,098 [TestNG-test=Regression  Test-3] INFO : Clicked LOgin Btn
+2023-10-25 11:16:36,189 [TestNG-test=Regression  Test-2] INFO : Inside the Class ::com.tekarck.testCases.TC04A_TestForgotPassword
+2023-10-25 11:16:36,190 [TestNG-test=Regression  Test-2] INFO : Inside the method ::forgotPwdLinkValidation
+2023-10-25 11:16:36,411 [TestNG-test=Regression  Test-1] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:16:36,419 [TestNG-test=Regression  Test-1] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:16:36,542 [TestNG-test=Regression  Test-1] INFO : Inside the Class ::com.tekarck.testCases.TC04B_InvalidUserNameAndPassword
+2023-10-25 11:16:36,542 [TestNG-test=Regression  Test-1] INFO : Inside the method ::loginToAppWithInvalidCreds
+2023-10-25 11:16:36,630 [TestNG-test=Regression  Test-2] INFO : Clicked on forgot password
+2023-10-25 11:16:36,788 [TestNG-test=Regression  Test-2] INFO : Entered User Name : : anusha@tek.com
+2023-10-25 11:16:36,933 [TestNG-test=Regression  Test-1] INFO : Inside the method :: anusha@t.com
+2023-10-25 11:16:36,987 [TestNG-test=Regression  Test-2] INFO : Clicked on Continue Btn
+2023-10-25 11:16:36,996 [TestNG-test=Regression  Test-2] INFO : Checking for Forgot password page title : : Check Your Email | Salesforce
+2023-10-25 11:16:36,997 [TestNG-test=Regression  Test-2] INFO : Navigated to forgot password page with title  : : Check Your Email | Salesforce
+2023-10-25 11:16:37,064 [TestNG-test=Regression  Test-2] INFO : Closing the browser :
+2023-10-25 11:16:37,065 [TestNG-test=Regression  Test-2] INFO : Set driver : chrome
+2023-10-25 11:16:37,093 [TestNG-test=Regression  Test-1] INFO : Inside the method :: Anusha
+2023-10-25 11:16:38,216 [TestNG-test=Regression  Test-3] INFO : Clicked Logout Btn
+2023-10-25 11:16:38,605 [TestNG-test=Regression  Test-2] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:16:38,614 [TestNG-test=Regression  Test-2] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:16:38,738 [TestNG-test=Regression  Test-2] INFO : Inside the Class ::com.tekarck.testCases.TC05_ValidateUserMenuDropDown
+2023-10-25 11:16:38,738 [TestNG-test=Regression  Test-2] INFO : Inside the method ::validateUserMenuDropDown
+2023-10-25 11:16:39,001 [TestNG-test=Regression  Test-3] INFO : Entered User name present in the Uaser Name Text Box :: anusha@tek.com
+2023-10-25 11:16:39,073 [TestNG-test=Regression  Test-3] INFO : Closing the browser :
+2023-10-25 11:16:39,074 [TestNG-test=Regression  Test-3] INFO : Set driver : chrome
+2023-10-25 11:16:39,995 [TestNG-test=Regression  Test-2] INFO : Entered UserName :: anusha@tek.com
+2023-10-25 11:16:40,116 [TestNG-test=Regression  Test-2] INFO : Entered password :: Sumedh@03
+2023-10-25 11:16:40,499 [TestNG-test=Regression  Test-3] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:16:40,509 [TestNG-test=Regression  Test-3] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:16:41,364 [TestNG-test=Regression  Test-2] INFO : Clicked on Login Button 
+2023-10-25 11:16:44,186 [TestNG-test=Regression  Test-2] INFO : Clicked on UserMenu  
+2023-10-25 11:16:44,274 [TestNG-test=Regression  Test-2] INFO : Validation for User Menu Items Started.... 
+2023-10-25 11:16:44,274 [TestNG-test=Regression  Test-2] INFO : All User menu items are present.... 
+2023-10-25 11:16:44,274 [TestNG-test=Regression  Test-2] INFO : My Profile ,My Settings ,Developer Console , Switch to Lightning Experience, Logout
+2023-10-25 11:16:44,348 [TestNG-test=Regression  Test-2] INFO : Closing the browser :
+2023-10-25 11:16:44,350 [TestNG-test=Regression  Test-2] INFO : Set driver : chrome
+2023-10-25 11:16:45,528 [TestNG-test=Regression  Test-2] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:16:46,144 [TestNG-test=Regression  Test-2] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:16:46,960 [TestNG-test=Regression  Test-3] INFO : Closing the browser :
+2023-10-25 11:16:48,750 [TestNG-test=Regression  Test-1] INFO : Clicked loin Btn....
+2023-10-25 11:16:48,790 [TestNG-test=Regression  Test-1] INFO : Got The error message.... :: Please check your username and password. If you still can't log in, contact your Salesforce administrator.
+2023-10-25 11:16:48,871 [TestNG-test=Regression  Test-1] INFO : Closing the browser :
+2023-10-25 11:16:50,488 [TestNG-test=Regression  Test-2] INFO : Closing the browser :
+2023-10-25 11:28:07,445 [TestNG-test=Regression  Test-3] INFO : Set driver : chrome
+2023-10-25 11:28:12,674 [TestNG-test=Regression  Test-2] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:28:12,675 [TestNG-test=Regression  Test-3] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:28:12,692 [TestNG-test=Regression  Test-3] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:28:12,692 [TestNG-test=Regression  Test-2] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:28:12,833 [TestNG-test=Regression  Test-2] INFO : Test case satrted here :    loginToSalesForceAppwithValidUserAndPwd
+2023-10-25 11:28:12,834 [TestNG-test=Regression  Test-3] INFO : Inside the Class   :: com.tekarck.testCases.TC03_CheckRememberMe
+2023-10-25 11:28:12,834 [TestNG-test=Regression  Test-3] INFO : Inside the method   :: loginAndCheckRememberMe
+2023-10-25 11:28:13,422 [TestNG-test=Regression  Test-1] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:28:13,438 [TestNG-test=Regression  Test-1] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:28:13,564 [TestNG-test=Regression  Test-1] INFO : Inside the Class ::com.tekarck.testCases.TC01_LoginErrorMessage
+2023-10-25 11:28:13,565 [TestNG-test=Regression  Test-1] INFO : Inside the method ::validateLoginToTheApplnWithBlankPassword
+2023-10-25 11:28:13,582 [TestNG-test=Regression  Test-1] INFO : application launched with title :Login | Salesforce
+2023-10-25 11:28:13,788 [TestNG-test=Regression  Test-2] INFO : Closing the browser :
+2023-10-25 11:28:13,788 [TestNG-test=Regression  Test-3] INFO : Closing the browser :
+2023-10-25 11:28:13,790 [TestNG-test=Regression  Test-2] INFO : Set driver : chrome
+2023-10-25 11:28:13,790 [TestNG-test=Regression  Test-3] INFO : Set driver : chrome
+2023-10-25 11:28:14,001 [TestNG-test=Regression  Test-1] INFO : Entered Username :anusha@tek.com
+2023-10-25 11:28:14,108 [TestNG-test=Regression  Test-1] INFO : Entered blank password : 
+2023-10-25 11:28:14,459 [TestNG-test=Regression  Test-1] INFO : Clicked on login button
+2023-10-25 11:28:14,516 [TestNG-test=Regression  Test-1] INFO : Got the error message  :Please enter your password.
+2023-10-25 11:28:14,516 [TestNG-test=Regression  Test-1] INFO : Login sholud not happen with blank password
+2023-10-25 11:28:14,573 [TestNG-test=Regression  Test-1] INFO : Closing the browser :
+2023-10-25 11:28:14,574 [TestNG-test=Regression  Test-1] INFO : Set driver : chrome
+2023-10-25 11:28:15,431 [TestNG-test=Regression  Test-2] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:28:15,442 [TestNG-test=Regression  Test-2] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:28:15,563 [TestNG-test=Regression  Test-2] INFO : Inside the Class ::com.tekarck.testCases.TC04B_InvalidUserNameAndPassword
+2023-10-25 11:28:15,563 [TestNG-test=Regression  Test-2] INFO : Inside the method ::loginToAppWithInvalidCreds
+2023-10-25 11:28:15,598 [TestNG-test=Regression  Test-3] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:28:15,613 [TestNG-test=Regression  Test-3] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:28:15,732 [TestNG-test=Regression  Test-3] INFO : Inside the Class ::com.tekarck.testCases.TC04A_TestForgotPassword
+2023-10-25 11:28:15,733 [TestNG-test=Regression  Test-3] INFO : Inside the method ::forgotPwdLinkValidation
+2023-10-25 11:28:15,998 [TestNG-test=Regression  Test-2] INFO : Inside the method :: anusha@t.com
+2023-10-25 11:28:16,045 [TestNG-test=Regression  Test-3] INFO : Clicked on forgot password
+2023-10-25 11:28:16,155 [TestNG-test=Regression  Test-2] INFO : Inside the method :: Anusha
+2023-10-25 11:28:16,215 [TestNG-test=Regression  Test-3] INFO : Entered User Name : : anusha@tek.com
+2023-10-25 11:28:16,219 [TestNG-test=Regression  Test-1] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:28:16,231 [TestNG-test=Regression  Test-1] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:28:16,343 [TestNG-test=Regression  Test-1] INFO : Inside the Class ::com.tekarck.testCases.TC05_ValidateUserMenuDropDown
+2023-10-25 11:28:16,343 [TestNG-test=Regression  Test-1] INFO : Inside the method ::validateUserMenuDropDown
+2023-10-25 11:28:16,715 [TestNG-test=Regression  Test-1] INFO : Entered UserName :: anusha@tek.com
+2023-10-25 11:28:16,830 [TestNG-test=Regression  Test-1] INFO : Entered password :: Sumedh@03
+2023-10-25 11:28:17,006 [TestNG-test=Regression  Test-3] INFO : Clicked on Continue Btn
+2023-10-25 11:28:17,015 [TestNG-test=Regression  Test-3] INFO : Checking for Forgot password page title : : Check Your Email | Salesforce
+2023-10-25 11:28:17,015 [TestNG-test=Regression  Test-3] INFO : Navigated to forgot password page with title  : : Check Your Email | Salesforce
+2023-10-25 11:28:17,096 [TestNG-test=Regression  Test-3] INFO : Closing the browser :
+2023-10-25 11:28:17,096 [TestNG-test=Regression  Test-3] INFO : Set driver : chrome
+2023-10-25 11:28:18,179 [TestNG-test=Regression  Test-1] INFO : Clicked on Login Button 
+2023-10-25 11:28:18,583 [TestNG-test=Regression  Test-3] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:28:18,591 [TestNG-test=Regression  Test-3] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:28:19,441 [TestNG-test=Regression  Test-1] INFO : Clicked on UserMenu  
+2023-10-25 11:28:19,547 [TestNG-test=Regression  Test-1] INFO : Validation for User Menu Items Started.... 
+2023-10-25 11:28:19,547 [TestNG-test=Regression  Test-1] INFO : All User menu items are present.... 
+2023-10-25 11:28:19,547 [TestNG-test=Regression  Test-1] INFO : My Profile ,My Settings ,Developer Console , Switch to Lightning Experience, Logout
+2023-10-25 11:28:19,620 [TestNG-test=Regression  Test-1] INFO : Closing the browser :
+2023-10-25 11:28:19,622 [TestNG-test=Regression  Test-1] INFO : Set driver : chrome
+2023-10-25 11:28:21,391 [TestNG-test=Regression  Test-1] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:28:21,406 [TestNG-test=Regression  Test-1] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:28:23,217 [TestNG-test=Regression  Test-3] INFO : Closing the browser :
+2023-10-25 11:28:26,386 [TestNG-test=Regression  Test-1] INFO : Closing the browser :
+2023-10-25 11:28:26,968 [TestNG-test=Regression  Test-2] INFO : Clicked loin Btn....
+2023-10-25 11:28:27,000 [TestNG-test=Regression  Test-2] INFO : Got The error message.... :: Please check your username and password. If you still can't log in, contact your Salesforce administrator.
+2023-10-25 11:28:27,089 [TestNG-test=Regression  Test-2] INFO : Closing the browser :
+2023-10-25 11:34:13,532 [TestNG-test=Regression  Test-3] INFO : Set driver : chrome
+2023-10-25 11:34:15,930 [TestNG-test=Regression  Test-3] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:34:15,942 [TestNG-test=Regression  Test-3] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:34:16,034 [TestNG-test=Regression  Test-2] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:34:16,044 [TestNG-test=Regression  Test-2] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:34:16,071 [TestNG-test=Regression  Test-3] INFO : Inside the Class   :: com.tekarck.testCases.TC03_CheckRememberMe
+2023-10-25 11:34:16,071 [TestNG-test=Regression  Test-3] INFO : Inside the method   :: loginAndCheckRememberMe
+2023-10-25 11:34:16,167 [TestNG-test=Regression  Test-2] INFO : Test case satrted here :    loginToSalesForceAppwithValidUserAndPwd
+2023-10-25 11:34:16,811 [TestNG-test=Regression  Test-1] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:34:16,824 [TestNG-test=Regression  Test-1] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:34:16,863 [TestNG-test=Regression  Test-3] INFO : Entered User name   :: anusha@tek.com
+2023-10-25 11:34:16,875 [TestNG-test=Regression  Test-2] INFO : Entered Username :anusha@tek.com
+2023-10-25 11:34:16,941 [TestNG-test=Regression  Test-1] INFO : Inside the Class ::com.tekarck.testCases.TC01_LoginErrorMessage
+2023-10-25 11:34:16,941 [TestNG-test=Regression  Test-1] INFO : Inside the method ::validateLoginToTheApplnWithBlankPassword
+2023-10-25 11:34:16,948 [TestNG-test=Regression  Test-1] INFO : application launched with title :Login | Salesforce
+2023-10-25 11:34:17,074 [TestNG-test=Regression  Test-3] INFO : Entered User name   :: Sumedh@03
+2023-10-25 11:34:17,121 [TestNG-test=Regression  Test-2] INFO : Entered  password :Sumedh@03
+2023-10-25 11:34:17,226 [TestNG-test=Regression  Test-3] INFO : Clicked On Remember Me
+2023-10-25 11:34:17,364 [TestNG-test=Regression  Test-1] INFO : Entered Username :anusha@tek.com
+2023-10-25 11:34:17,496 [TestNG-test=Regression  Test-1] INFO : Entered blank password : 
+2023-10-25 11:34:17,790 [TestNG-test=Regression  Test-1] INFO : Clicked on login button
+2023-10-25 11:34:17,849 [TestNG-test=Regression  Test-1] INFO : Got the error message  :Please enter your password.
+2023-10-25 11:34:17,849 [TestNG-test=Regression  Test-1] INFO : Login sholud not happen with blank password
+2023-10-25 11:34:17,941 [TestNG-test=Regression  Test-1] INFO : Closing the browser :
+2023-10-25 11:34:17,943 [TestNG-test=Regression  Test-1] INFO : Set driver : chrome
+2023-10-25 11:34:18,277 [TestNG-test=Regression  Test-2] INFO : Clicked on login button
+2023-10-25 11:34:18,457 [TestNG-test=Regression  Test-3] INFO : Clicked LOgin Btn
+2023-10-25 11:34:18,576 [TestNG-test=Regression  Test-2] INFO : After successfull login Home page title should be :Home Page ~ Salesforce - Developer Edition
+2023-10-25 11:34:18,641 [TestNG-test=Regression  Test-2] INFO : Closing the browser :
+2023-10-25 11:34:18,642 [TestNG-test=Regression  Test-2] INFO : Set driver : chrome
+2023-10-25 11:34:19,542 [TestNG-test=Regression  Test-1] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:34:19,553 [TestNG-test=Regression  Test-1] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:34:19,670 [TestNG-test=Regression  Test-1] INFO : Inside the Class ::com.tekarck.testCases.TC04A_TestForgotPassword
+2023-10-25 11:34:19,671 [TestNG-test=Regression  Test-1] INFO : Inside the method ::forgotPwdLinkValidation
+2023-10-25 11:34:19,954 [TestNG-test=Regression  Test-1] INFO : Clicked on forgot password
+2023-10-25 11:34:20,091 [TestNG-test=Regression  Test-1] INFO : Entered User Name : : anusha@tek.com
+2023-10-25 11:34:20,210 [TestNG-test=Regression  Test-2] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:34:20,221 [TestNG-test=Regression  Test-2] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:34:20,290 [TestNG-test=Regression  Test-1] INFO : Clicked on Continue Btn
+2023-10-25 11:34:20,296 [TestNG-test=Regression  Test-1] INFO : Checking for Forgot password page title : : Check Your Email | Salesforce
+2023-10-25 11:34:20,296 [TestNG-test=Regression  Test-1] INFO : Navigated to forgot password page with title  : : Check Your Email | Salesforce
+2023-10-25 11:34:20,343 [TestNG-test=Regression  Test-2] INFO : Inside the Class ::com.tekarck.testCases.TC04B_InvalidUserNameAndPassword
+2023-10-25 11:34:20,343 [TestNG-test=Regression  Test-2] INFO : Inside the method ::loginToAppWithInvalidCreds
+2023-10-25 11:34:20,373 [TestNG-test=Regression  Test-1] INFO : Closing the browser :
+2023-10-25 11:34:20,375 [TestNG-test=Regression  Test-1] INFO : Set driver : chrome
+2023-10-25 11:34:20,669 [TestNG-test=Regression  Test-3] INFO : Clicked Logout Btn
+2023-10-25 11:34:20,784 [TestNG-test=Regression  Test-2] INFO : Inside the method :: anusha@t.com
+2023-10-25 11:34:20,900 [TestNG-test=Regression  Test-2] INFO : Inside the method :: Anusha
+2023-10-25 11:34:21,464 [TestNG-test=Regression  Test-3] INFO : Entered User name present in the Uaser Name Text Box :: anusha@tek.com
+2023-10-25 11:34:21,538 [TestNG-test=Regression  Test-3] INFO : Closing the browser :
+2023-10-25 11:34:21,539 [TestNG-test=Regression  Test-3] INFO : Set driver : chrome
+2023-10-25 11:34:21,937 [TestNG-test=Regression  Test-1] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:34:21,944 [TestNG-test=Regression  Test-1] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:34:22,067 [TestNG-test=Regression  Test-1] INFO : Inside the Class ::com.tekarck.testCases.TC05_ValidateUserMenuDropDown
+2023-10-25 11:34:22,067 [TestNG-test=Regression  Test-1] INFO : Inside the method ::validateUserMenuDropDown
+2023-10-25 11:34:22,464 [TestNG-test=Regression  Test-1] INFO : Entered UserName :: anusha@tek.com
+2023-10-25 11:34:22,606 [TestNG-test=Regression  Test-1] INFO : Entered password :: Sumedh@03
+2023-10-25 11:34:23,437 [TestNG-test=Regression  Test-1] INFO : Clicked on Login Button 
+2023-10-25 11:34:23,763 [TestNG-test=Regression  Test-3] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:34:23,775 [TestNG-test=Regression  Test-3] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:34:25,308 [TestNG-test=Regression  Test-1] INFO : Clicked on UserMenu  
+2023-10-25 11:34:25,387 [TestNG-test=Regression  Test-1] INFO : Validation for User Menu Items Started.... 
+2023-10-25 11:34:25,387 [TestNG-test=Regression  Test-1] INFO : All User menu items are present.... 
+2023-10-25 11:34:25,387 [TestNG-test=Regression  Test-1] INFO : My Profile ,My Settings ,Developer Console , Switch to Lightning Experience, Logout
+2023-10-25 11:34:25,468 [TestNG-test=Regression  Test-1] INFO : Closing the browser :
+2023-10-25 11:34:25,469 [TestNG-test=Regression  Test-1] INFO : Set driver : chrome
+2023-10-25 11:34:26,981 [TestNG-test=Regression  Test-2] INFO : Clicked loin Btn....
+2023-10-25 11:34:27,022 [TestNG-test=Regression  Test-2] INFO : Got The error message.... :: Please check your username and password. If you still can't log in, contact your Salesforce administrator.
+2023-10-25 11:34:27,093 [TestNG-test=Regression  Test-2] INFO : Closing the browser :
+2023-10-25 11:34:27,279 [TestNG-test=Regression  Test-1] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:34:27,289 [TestNG-test=Regression  Test-1] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:34:29,142 [TestNG-test=Regression  Test-3] INFO : Closing the browser :
+2023-10-25 11:34:30,934 [TestNG-test=Regression  Test-1] INFO : Closing the browser :
+2023-10-25 11:36:04,978 [TestNG-test=Regression  Test-1] INFO : Set driver : chrome
+2023-10-25 11:36:07,297 [TestNG-test=Regression  Test-3] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:36:07,316 [TestNG-test=Regression  Test-3] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:36:07,330 [TestNG-test=Regression  Test-2] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:36:07,337 [TestNG-test=Regression  Test-2] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:36:07,438 [TestNG-test=Regression  Test-3] INFO : Inside the Class   :: com.tekarck.testCases.TC03_CheckRememberMe
+2023-10-25 11:36:07,438 [TestNG-test=Regression  Test-3] INFO : Inside the method   :: loginAndCheckRememberMe
+2023-10-25 11:36:07,464 [TestNG-test=Regression  Test-2] INFO : Test case satrted here :    loginToSalesForceAppwithValidUserAndPwd
+2023-10-25 11:36:07,768 [TestNG-test=Regression  Test-1] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:36:07,778 [TestNG-test=Regression  Test-1] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:36:07,891 [TestNG-test=Regression  Test-1] INFO : Inside the Class ::com.tekarck.testCases.TC01_LoginErrorMessage
+2023-10-25 11:36:07,891 [TestNG-test=Regression  Test-1] INFO : Inside the method ::validateLoginToTheApplnWithBlankPassword
+2023-10-25 11:36:07,898 [TestNG-test=Regression  Test-1] INFO : application launched with title :Login | Salesforce
+2023-10-25 11:36:08,405 [TestNG-test=Regression  Test-1] INFO : Entered Username :anusha@tek.com
+2023-10-25 11:36:08,464 [TestNG-test=Regression  Test-2] INFO : Entered Username :anusha@tek.com
+2023-10-25 11:36:08,569 [TestNG-test=Regression  Test-3] INFO : Entered User name   :: anusha@tek.com
+2023-10-25 11:36:08,682 [TestNG-test=Regression  Test-1] INFO : Entered blank password : 
+2023-10-25 11:36:08,736 [TestNG-test=Regression  Test-2] INFO : Entered  password :Sumedh@03
+2023-10-25 11:36:08,740 [TestNG-test=Regression  Test-3] INFO : Entered User name   :: Sumedh@03
+2023-10-25 11:36:08,842 [TestNG-test=Regression  Test-3] INFO : Clicked On Remember Me
+2023-10-25 11:36:09,273 [TestNG-test=Regression  Test-1] INFO : Clicked on login button
+2023-10-25 11:36:09,310 [TestNG-test=Regression  Test-1] INFO : Got the error message  :Please enter your password.
+2023-10-25 11:36:09,311 [TestNG-test=Regression  Test-1] INFO : Login sholud not happen with blank password
+2023-10-25 11:36:09,404 [TestNG-test=Regression  Test-1] INFO : Closing the browser :
+2023-10-25 11:36:09,405 [TestNG-test=Regression  Test-1] INFO : Set driver : chrome
+2023-10-25 11:36:09,889 [TestNG-test=Regression  Test-2] INFO : Clicked on login button
+2023-10-25 11:36:09,925 [TestNG-test=Regression  Test-3] INFO : Clicked LOgin Btn
+2023-10-25 11:36:10,864 [TestNG-test=Regression  Test-1] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:36:10,870 [TestNG-test=Regression  Test-1] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:36:10,996 [TestNG-test=Regression  Test-1] INFO : Inside the Class ::com.tekarck.testCases.TC04A_TestForgotPassword
+2023-10-25 11:36:10,997 [TestNG-test=Regression  Test-1] INFO : Inside the method ::forgotPwdLinkValidation
+2023-10-25 11:36:11,280 [TestNG-test=Regression  Test-1] INFO : Clicked on forgot password
+2023-10-25 11:36:11,407 [TestNG-test=Regression  Test-1] INFO : Entered User Name : : anusha@tek.com
+2023-10-25 11:36:11,631 [TestNG-test=Regression  Test-1] INFO : Clicked on Continue Btn
+2023-10-25 11:36:11,638 [TestNG-test=Regression  Test-1] INFO : Checking for Forgot password page title : : Check Your Email | Salesforce
+2023-10-25 11:36:11,638 [TestNG-test=Regression  Test-1] INFO : Navigated to forgot password page with title  : : Check Your Email | Salesforce
+2023-10-25 11:36:11,717 [TestNG-test=Regression  Test-1] INFO : Closing the browser :
+2023-10-25 11:36:11,718 [TestNG-test=Regression  Test-1] INFO : Set driver : chrome
+2023-10-25 11:36:11,813 [TestNG-test=Regression  Test-2] INFO : After successfull login Home page title should be :Home Page ~ Salesforce - Developer Edition
+2023-10-25 11:36:11,872 [TestNG-test=Regression  Test-2] INFO : Closing the browser :
+2023-10-25 11:36:11,873 [TestNG-test=Regression  Test-2] INFO : Set driver : chrome
+2023-10-25 11:36:12,698 [TestNG-test=Regression  Test-3] INFO : Clicked Logout Btn
+2023-10-25 11:36:13,300 [TestNG-test=Regression  Test-1] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:36:13,311 [TestNG-test=Regression  Test-1] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:36:13,431 [TestNG-test=Regression  Test-1] INFO : Inside the Class ::com.tekarck.testCases.TC04B_InvalidUserNameAndPassword
+2023-10-25 11:36:13,431 [TestNG-test=Regression  Test-1] INFO : Inside the method ::loginToAppWithInvalidCreds
+2023-10-25 11:36:13,475 [TestNG-test=Regression  Test-3] INFO : Entered User name present in the Uaser Name Text Box :: anusha@tek.com
+2023-10-25 11:36:13,496 [TestNG-test=Regression  Test-2] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:36:13,506 [TestNG-test=Regression  Test-2] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:36:13,566 [TestNG-test=Regression  Test-3] INFO : Closing the browser :
+2023-10-25 11:36:13,568 [TestNG-test=Regression  Test-3] INFO : Set driver : chrome
+2023-10-25 11:36:13,630 [TestNG-test=Regression  Test-2] INFO : Inside the Class ::com.tekarck.testCases.TC05_ValidateUserMenuDropDown
+2023-10-25 11:36:13,631 [TestNG-test=Regression  Test-2] INFO : Inside the method ::validateUserMenuDropDown
+2023-10-25 11:36:13,846 [TestNG-test=Regression  Test-1] INFO : Inside the method :: anusha@t.com
+2023-10-25 11:36:13,942 [TestNG-test=Regression  Test-1] INFO : Inside the method :: Anusha
+2023-10-25 11:36:14,153 [TestNG-test=Regression  Test-2] INFO : Entered UserName :: anusha@tek.com
+2023-10-25 11:36:14,325 [TestNG-test=Regression  Test-2] INFO : Entered password :: Sumedh@03
+2023-10-25 11:36:15,245 [TestNG-test=Regression  Test-2] INFO : Clicked on Login Button 
+2023-10-25 11:36:15,294 [TestNG-test=Regression  Test-3] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:36:15,299 [TestNG-test=Regression  Test-3] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:36:18,234 [TestNG-test=Regression  Test-2] INFO : Clicked on UserMenu  
+2023-10-25 11:36:18,326 [TestNG-test=Regression  Test-2] INFO : Validation for User Menu Items Started.... 
+2023-10-25 11:36:18,326 [TestNG-test=Regression  Test-2] INFO : All User menu items are present.... 
+2023-10-25 11:36:18,326 [TestNG-test=Regression  Test-2] INFO : My Profile ,My Settings ,Developer Console , Switch to Lightning Experience, Logout
+2023-10-25 11:36:18,400 [TestNG-test=Regression  Test-2] INFO : Closing the browser :
+2023-10-25 11:36:18,401 [TestNG-test=Regression  Test-2] INFO : Set driver : chrome
+2023-10-25 11:36:18,838 [TestNG-test=Regression  Test-3] INFO : Closing the browser :
+2023-10-25 11:36:19,954 [TestNG-test=Regression  Test-2] INFO : Launching the application : https://login.salesforce.com/
+2023-10-25 11:36:19,958 [TestNG-test=Regression  Test-2] INFO : Login Page title :Login | Salesforce
+2023-10-25 11:36:24,612 [TestNG-test=Regression  Test-1] INFO : Clicked loin Btn....
+2023-10-25 11:36:24,658 [TestNG-test=Regression  Test-1] INFO : Got The error message.... :: Please check your username and password. If you still can't log in, contact your Salesforce administrator.
+2023-10-25 11:36:24,720 [TestNG-test=Regression  Test-1] INFO : Closing the browser :
+2023-10-25 11:36:24,984 [TestNG-test=Regression  Test-2] INFO : Closing the browser :

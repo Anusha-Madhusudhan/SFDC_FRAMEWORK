@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-09T22:04:27 EDT" name="Regression  Suite" finished-at="2023-10-09T22:04:51 EDT" duration-ms="24087">
+  <suite started-at="2023-10-25T11:36:04 EDT" name="Regression  Suite" finished-at="2023-10-25T11:36:24 EDT" duration-ms="20539">
     <groups>
     </groups>
-    <test started-at="2023-10-09T22:04:27 EDT" name="Regression  Test" finished-at="2023-10-09T22:04:51 EDT" duration-ms="24087">
+    <test started-at="2023-10-25T11:36:04 EDT" name="Regression  Test" finished-at="2023-10-25T11:36:24 EDT" duration-ms="20539">
       <class name="com.tekarck.testCases.TC04A_TestForgotPassword">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,boolean)[pri:0, instance:com.tekarck.testCases.TC04A_TestForgotPassword@8317c52]" started-at="2023-10-09T22:04:41 EDT" name="setUp" finished-at="2023-10-09T22:04:45 EDT" duration-ms="3907" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,boolean)[pri:0, instance:com.tekarck.testCases.TC04A_TestForgotPassword@471a9022]" started-at="2023-10-25T11:36:09 EDT" name="setUp" finished-at="2023-10-25T11:36:10 EDT" duration-ms="1588" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -28,7 +28,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="forgotPwdLinkValidation(java.lang.reflect.Method)[pri:0, instance:com.tekarck.testCases.TC04A_TestForgotPassword@8317c52]" started-at="2023-10-09T22:04:45 EDT" name="forgotPwdLinkValidation" finished-at="2023-10-09T22:04:46 EDT" duration-ms="1049" status="PASS">
+        <test-method signature="forgotPwdLinkValidation(java.lang.reflect.Method)[pri:0, instance:com.tekarck.testCases.TC04A_TestForgotPassword@471a9022]" started-at="2023-10-25T11:36:10 EDT" name="forgotPwdLinkValidation" finished-at="2023-10-25T11:36:11 EDT" duration-ms="644" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -39,13 +39,13 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- forgotPwdLinkValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tekarck.testCases.TC04A_TestForgotPassword@8317c52]" started-at="2023-10-09T22:04:46 EDT" name="tearDown" finished-at="2023-10-09T22:04:46 EDT" duration-ms="190" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tekarck.testCases.TC04A_TestForgotPassword@471a9022]" started-at="2023-10-25T11:36:11 EDT" name="tearDown" finished-at="2023-10-25T11:36:11 EDT" duration-ms="80" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.tekarck.testCases.TC04A_TestForgotPassword -->
       <class name="com.tekarck.testCases.TC01_LoginErrorMessage">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,boolean)[pri:0, instance:com.tekarck.testCases.TC01_LoginErrorMessage@78ffe6dc]" started-at="2023-10-09T22:04:40 EDT" name="setUp" finished-at="2023-10-09T22:04:43 EDT" duration-ms="2651" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,boolean)[pri:0, instance:com.tekarck.testCases.TC01_LoginErrorMessage@77659b30]" started-at="2023-10-25T11:36:04 EDT" name="setUp" finished-at="2023-10-25T11:36:07 EDT" duration-ms="3286" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -66,7 +66,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="validateLoginToTheApplnWithBlankPassword(java.lang.reflect.Method)[pri:0, instance:com.tekarck.testCases.TC01_LoginErrorMessage@78ffe6dc]" started-at="2023-10-09T22:04:43 EDT" name="validateLoginToTheApplnWithBlankPassword" finished-at="2023-10-09T22:04:44 EDT" duration-ms="1699" status="PASS">
+        <test-method signature="validateLoginToTheApplnWithBlankPassword(java.lang.reflect.Method)[pri:0, instance:com.tekarck.testCases.TC01_LoginErrorMessage@77659b30]" started-at="2023-10-25T11:36:07 EDT" name="validateLoginToTheApplnWithBlankPassword" finished-at="2023-10-25T11:36:09 EDT" duration-ms="1421" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -77,13 +77,13 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateLoginToTheApplnWithBlankPassword -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tekarck.testCases.TC01_LoginErrorMessage@78ffe6dc]" started-at="2023-10-09T22:04:44 EDT" name="tearDown" finished-at="2023-10-09T22:04:44 EDT" duration-ms="119" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tekarck.testCases.TC01_LoginErrorMessage@77659b30]" started-at="2023-10-25T11:36:09 EDT" name="tearDown" finished-at="2023-10-25T11:36:09 EDT" duration-ms="78" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.tekarck.testCases.TC01_LoginErrorMessage -->
       <class name="com.tekarck.testCases.TC03_CheckRememberMe">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,boolean)[pri:0, instance:com.tekarck.testCases.TC03_CheckRememberMe@1fb700ee]" started-at="2023-10-09T22:04:28 EDT" name="setUp" finished-at="2023-10-09T22:04:34 EDT" duration-ms="6754" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,boolean)[pri:0, instance:com.tekarck.testCases.TC03_CheckRememberMe@15f47664]" started-at="2023-10-25T11:36:04 EDT" name="setUp" finished-at="2023-10-25T11:36:07 EDT" duration-ms="2826" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -104,7 +104,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginAndCheckRememberMe(java.lang.reflect.Method)[pri:0, instance:com.tekarck.testCases.TC03_CheckRememberMe@1fb700ee]" started-at="2023-10-09T22:04:34 EDT" name="loginAndCheckRememberMe" finished-at="2023-10-09T22:04:41 EDT" duration-ms="6532" status="PASS">
+        <test-method signature="loginAndCheckRememberMe(java.lang.reflect.Method)[pri:0, instance:com.tekarck.testCases.TC03_CheckRememberMe@15f47664]" started-at="2023-10-25T11:36:07 EDT" name="loginAndCheckRememberMe" finished-at="2023-10-25T11:36:13 EDT" duration-ms="6038" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -115,13 +115,13 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAndCheckRememberMe -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tekarck.testCases.TC03_CheckRememberMe@1fb700ee]" started-at="2023-10-09T22:04:41 EDT" name="tearDown" finished-at="2023-10-09T22:04:41 EDT" duration-ms="129" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tekarck.testCases.TC03_CheckRememberMe@15f47664]" started-at="2023-10-25T11:36:13 EDT" name="tearDown" finished-at="2023-10-25T11:36:13 EDT" duration-ms="90" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.tekarck.testCases.TC03_CheckRememberMe -->
       <class name="com.tekarck.testCases.TC08_DelevolperConsole">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,boolean)[pri:0, instance:com.tekarck.testCases.TC08_DelevolperConsole@609db43b]" started-at="2023-10-09T22:04:28 EDT" name="setUp" finished-at="2023-10-09T22:04:35 EDT" duration-ms="7259" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,boolean)[pri:0, instance:com.tekarck.testCases.TC08_DelevolperConsole@19976a65]" started-at="2023-10-25T11:36:13 EDT" name="setUp" finished-at="2023-10-25T11:36:15 EDT" duration-ms="1851" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -142,17 +142,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyDelevolperConsole()[pri:0, instance:com.tekarck.testCases.TC08_DelevolperConsole@609db43b]" started-at="2023-10-09T22:04:35 EDT" name="verifyDelevolperConsole" finished-at="2023-10-09T22:04:42 EDT" duration-ms="6768" status="PASS">
+        <test-method signature="verifyDelevolperConsole()[pri:0, instance:com.tekarck.testCases.TC08_DelevolperConsole@19976a65]" started-at="2023-10-25T11:36:15 EDT" name="verifyDelevolperConsole" finished-at="2023-10-25T11:36:18 EDT" duration-ms="3326" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyDelevolperConsole -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tekarck.testCases.TC08_DelevolperConsole@609db43b]" started-at="2023-10-09T22:04:42 EDT" name="tearDown" finished-at="2023-10-09T22:04:42 EDT" duration-ms="180" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tekarck.testCases.TC08_DelevolperConsole@19976a65]" started-at="2023-10-25T11:36:18 EDT" name="tearDown" finished-at="2023-10-25T11:36:18 EDT" duration-ms="94" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.tekarck.testCases.TC08_DelevolperConsole -->
       <class name="com.tekarck.testCases.TC09_Logout">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,boolean)[pri:0, instance:com.tekarck.testCases.TC09_Logout@4a668b6e]" started-at="2023-10-09T22:04:28 EDT" name="setUp" finished-at="2023-10-09T22:04:37 EDT" duration-ms="9138" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,boolean)[pri:0, instance:com.tekarck.testCases.TC09_Logout@a1f72f5]" started-at="2023-10-25T11:36:18 EDT" name="setUp" finished-at="2023-10-25T11:36:20 EDT" duration-ms="1682" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -173,17 +173,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyLogout()[pri:0, instance:com.tekarck.testCases.TC09_Logout@4a668b6e]" started-at="2023-10-09T22:04:37 EDT" name="verifyLogout" finished-at="2023-10-09T22:04:44 EDT" duration-ms="6996" status="PASS">
+        <test-method signature="verifyLogout()[pri:0, instance:com.tekarck.testCases.TC09_Logout@a1f72f5]" started-at="2023-10-25T11:36:20 EDT" name="verifyLogout" finished-at="2023-10-25T11:36:24 EDT" duration-ms="4817" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogout -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tekarck.testCases.TC09_Logout@4a668b6e]" started-at="2023-10-09T22:04:44 EDT" name="tearDown" finished-at="2023-10-09T22:04:44 EDT" duration-ms="126" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tekarck.testCases.TC09_Logout@a1f72f5]" started-at="2023-10-25T11:36:24 EDT" name="tearDown" finished-at="2023-10-25T11:36:24 EDT" duration-ms="85" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.tekarck.testCases.TC09_Logout -->
       <class name="com.tekarck.testCases.TC04B_InvalidUserNameAndPassword">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,boolean)[pri:0, instance:com.tekarck.testCases.TC04B_InvalidUserNameAndPassword@4f67eb2a]" started-at="2023-10-09T22:04:28 EDT" name="setUp" finished-at="2023-10-09T22:04:37 EDT" duration-ms="9245" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,boolean)[pri:0, instance:com.tekarck.testCases.TC04B_InvalidUserNameAndPassword@dc9876b]" started-at="2023-10-25T11:36:11 EDT" name="setUp" finished-at="2023-10-25T11:36:13 EDT" duration-ms="1712" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -204,7 +204,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginToAppWithInvalidCreds(java.lang.reflect.Method)[pri:0, instance:com.tekarck.testCases.TC04B_InvalidUserNameAndPassword@4f67eb2a]" started-at="2023-10-09T22:04:37 EDT" name="loginToAppWithInvalidCreds" finished-at="2023-10-09T22:04:48 EDT" duration-ms="11250" status="PASS">
+        <test-method signature="loginToAppWithInvalidCreds(java.lang.reflect.Method)[pri:0, instance:com.tekarck.testCases.TC04B_InvalidUserNameAndPassword@dc9876b]" started-at="2023-10-25T11:36:13 EDT" name="loginToAppWithInvalidCreds" finished-at="2023-10-25T11:36:24 EDT" duration-ms="11229" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -215,13 +215,13 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginToAppWithInvalidCreds -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tekarck.testCases.TC04B_InvalidUserNameAndPassword@4f67eb2a]" started-at="2023-10-09T22:04:48 EDT" name="tearDown" finished-at="2023-10-09T22:04:48 EDT" duration-ms="128" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tekarck.testCases.TC04B_InvalidUserNameAndPassword@dc9876b]" started-at="2023-10-25T11:36:24 EDT" name="tearDown" finished-at="2023-10-25T11:36:24 EDT" duration-ms="62" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.tekarck.testCases.TC04B_InvalidUserNameAndPassword -->
       <class name="com.tekarck.testCases.TC02_ValidLoginToSalesForce">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,boolean)[pri:0, instance:com.tekarck.testCases.TC02_ValidLoginToSalesForce@5f683daf]" started-at="2023-10-09T22:04:28 EDT" name="setUp" finished-at="2023-10-09T22:04:37 EDT" duration-ms="9185" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,boolean)[pri:0, instance:com.tekarck.testCases.TC02_ValidLoginToSalesForce@e25951c]" started-at="2023-10-25T11:36:04 EDT" name="setUp" finished-at="2023-10-25T11:36:07 EDT" duration-ms="2859" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -242,7 +242,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginToSalesForceAppwithValidUserAndPwd(java.lang.reflect.Method)[pri:0, instance:com.tekarck.testCases.TC02_ValidLoginToSalesForce@5f683daf]" started-at="2023-10-09T22:04:37 EDT" name="loginToSalesForceAppwithValidUserAndPwd" finished-at="2023-10-09T22:04:40 EDT" duration-ms="2970" status="PASS">
+        <test-method signature="loginToSalesForceAppwithValidUserAndPwd(java.lang.reflect.Method)[pri:0, instance:com.tekarck.testCases.TC02_ValidLoginToSalesForce@e25951c]" started-at="2023-10-25T11:36:07 EDT" name="loginToSalesForceAppwithValidUserAndPwd" finished-at="2023-10-25T11:36:11 EDT" duration-ms="4350" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -253,13 +253,13 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginToSalesForceAppwithValidUserAndPwd -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tekarck.testCases.TC02_ValidLoginToSalesForce@5f683daf]" started-at="2023-10-09T22:04:40 EDT" name="tearDown" finished-at="2023-10-09T22:04:40 EDT" duration-ms="153" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tekarck.testCases.TC02_ValidLoginToSalesForce@e25951c]" started-at="2023-10-25T11:36:11 EDT" name="tearDown" finished-at="2023-10-25T11:36:11 EDT" duration-ms="58" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.tekarck.testCases.TC02_ValidLoginToSalesForce -->
       <class name="com.tekarck.testCases.TC05_ValidateUserMenuDropDown">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,boolean)[pri:0, instance:com.tekarck.testCases.TC05_ValidateUserMenuDropDown@76f2bbc1]" started-at="2023-10-09T22:04:42 EDT" name="setUp" finished-at="2023-10-09T22:04:45 EDT" duration-ms="2908" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,boolean)[pri:0, instance:com.tekarck.testCases.TC05_ValidateUserMenuDropDown@2f666ebb]" started-at="2023-10-25T11:36:11 EDT" name="setUp" finished-at="2023-10-25T11:36:13 EDT" duration-ms="1757" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -280,7 +280,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="validateUserMenuDropDown(java.lang.reflect.Method)[pri:0, instance:com.tekarck.testCases.TC05_ValidateUserMenuDropDown@76f2bbc1]" started-at="2023-10-09T22:04:45 EDT" name="validateUserMenuDropDown" finished-at="2023-10-09T22:04:51 EDT" duration-ms="6528" status="PASS">
+        <test-method signature="validateUserMenuDropDown(java.lang.reflect.Method)[pri:0, instance:com.tekarck.testCases.TC05_ValidateUserMenuDropDown@2f666ebb]" started-at="2023-10-25T11:36:13 EDT" name="validateUserMenuDropDown" finished-at="2023-10-25T11:36:18 EDT" duration-ms="4696" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -291,7 +291,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateUserMenuDropDown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tekarck.testCases.TC05_ValidateUserMenuDropDown@76f2bbc1]" started-at="2023-10-09T22:04:51 EDT" name="tearDown" finished-at="2023-10-09T22:04:51 EDT" duration-ms="128" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tekarck.testCases.TC05_ValidateUserMenuDropDown@2f666ebb]" started-at="2023-10-25T11:36:18 EDT" name="tearDown" finished-at="2023-10-25T11:36:18 EDT" duration-ms="73" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

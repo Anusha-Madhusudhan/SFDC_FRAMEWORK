@@ -4,19 +4,20 @@
 	<listeners>
 		<listener class-name="com.tekarch.listeners.SFDC_Listener"></listener>
 	</listeners>
-  <test thread-count="5" name="Regression  Test" parallel="classes">
+  <test thread-count="3" name="Regression  Test" parallel="classes">
 	  <parameter name="browser" value="chrome"></parameter>
 	   <parameter name="URL" value="https://login.salesforce.com/"></parameter>
 	   <parameter name="isHeadless" value="true"></parameter>
     <classes>
-      <class name="com.tekarck.testCases.TC08_DelevolperConsole"/>
-      <class name="com.tekarck.testCases.TC03_CheckRememberMe"/>
-      <class name="com.tekarck.testCases.TC04B_InvalidUserNameAndPassword"/>
-      <class name="com.tekarck.testCases.TC09_Logout"/>
-      <class name="com.tekarck.testCases.TC02_ValidLoginToSalesForce"/>
       <class name="com.tekarck.testCases.TC01_LoginErrorMessage"/>
+        <class name="com.tekarck.testCases.TC02_ValidLoginToSalesForce"/>
+      <class name="com.tekarck.testCases.TC03_CheckRememberMe"/>
       <class name="com.tekarck.testCases.TC04A_TestForgotPassword"/>
+      <class name="com.tekarck.testCases.TC04B_InvalidUserNameAndPassword"/>
       <class name="com.tekarck.testCases.TC05_ValidateUserMenuDropDown"/>
+       <class name="com.tekarck.testCases.TC08_DelevolperConsole"/>
+       <class name="com.tekarck.testCases.TC09_Logout"/>
+      
     </classes>
   </test> <!-- Regression  Test -->
 </suite> <!-- Regression  Suite -->

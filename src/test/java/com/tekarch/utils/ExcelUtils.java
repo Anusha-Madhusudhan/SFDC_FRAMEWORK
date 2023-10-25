@@ -51,7 +51,7 @@ public class ExcelUtils {
 	 cell=row.getCell(cellNum);
 	 
 	 String cellValue=cell.getStringCellValue();
-	 wb.close();
+//	 wb.close();   // made this comment bcz i got error while running tests parallel
 	
 	return cellValue;
 	
